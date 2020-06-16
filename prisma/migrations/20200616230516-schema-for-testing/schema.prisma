@@ -1,0 +1,14 @@
+datasource sqlite {
+  provider = "sqlite"
+  url = "***"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Todo {
+  id          String  @id
+  text        String
+  isCompleted Boolean @default(false)
+}

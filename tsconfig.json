@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    // Output Options
+    "target": "es2015",
+    "module": "commonjs",
+    "jsx": "react",
+    "noEmitOnError": true,
+    "newLine": "lf",
+    "outDir": "dist/",
+    "baseUrl": "./",
+    "declaration": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+
+    // Type-Checking Options
+    "lib": ["esnext"],
+    "strict": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+
+    // Module Resolution Options
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowJs": false
+  },
+  "include": ["src/", "tests/"]
+}

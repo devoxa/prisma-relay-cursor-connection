@@ -1,0 +1,25 @@
+{
+  "imageSize": 75,
+  "projectName": "prisma-relay-cursor-connection",
+  "projectOwner": "devoxa",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "queicherius",
+      "name": "David Reeß",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/4615516?v=4",
+      "profile": "https://www.david-reess.de",
+      "contributions": [
+        "code",
+        "doc",
+        "test"
+      ]
+    }
+  ],
+  "files": [
+    "README.md"
+  ],
+  "contributorsPerLine": 7
+}

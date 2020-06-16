@@ -1,0 +1,42 @@
+{
+  "name": "@devoxa/prisma-relay-cursor-connection",
+  "description": "Extend Prisma's `findMany` method to support the Relay Cursor Connections",
+  "version": "0.1.0",
+  "main": "dist/src/index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/devoxa/prisma-relay-cursor-connection"
+  },
+  "scripts": {
+    "prisma": "prisma",
+    "test": "jest",
+    "format": "prettier --ignore-path='.gitignore' --list-different --write .",
+    "format:check": "prettier --ignore-path='.gitignore' --check .",
+    "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.ts'",
+    "build": "rm -rf dist/ && tsc",
+    "preversion": "yarn build"
+  },
+  "eslintConfig": {
+    "extends": "@devoxa"
+  },
+  "prettier": "@devoxa/prettier-config",
+  "peerDependencies": {
+    "@prisma/client": "^2.0.0"
+  },
+  "devDependencies": {
+    "@devoxa/eslint-config": "^1.0.0",
+    "@devoxa/prettier-config": "^1.0.0",
+    "@prisma/cli": "^2.0.0",
+    "@prisma/client": "^2.0.0",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

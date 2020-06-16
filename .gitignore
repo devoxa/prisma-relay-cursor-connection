@@ -1,0 +1,14 @@
+# Compiled Output
+dist/
+
+# Tests
+coverage/
+prisma/dev.db
+
+# Dependencies
+node_modules/
+yarn-debug.log*
+yarn-error.log*
+
+# Development Environments
+.history/

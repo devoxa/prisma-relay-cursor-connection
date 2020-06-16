@@ -1,0 +1,551 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (after with last) 1`] = `[Error: "after" can not be used with "last"]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (after without first) 1`] = `[Error: One of "first" or "last" must be provided]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (before with first) 1`] = `[Error: "before" can not be used with "first"]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (before without last) 1`] = `[Error: One of "first" or "last" must be provided]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (both after & before) 1`] = `[Error: One of "first" or "last" must be provided]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (both first & last) 1`] = `[Error: Only one of "first" and "last" can be set]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (kitchensink) 1`] = `[Error: Only one of "first" and "last" can be set]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (negative first) 1`] = `[Error: "first" can not be less than 0]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (negative last) 1`] = `[Error: "last" can not be less than 0]`;
+
+exports[`prisma-relay-cursor-connection errors for invalid arguments (no first & no last) 1`] = `[Error: One of "first" or "last" must be provided]`;
+
+exports[`prisma-relay-cursor-connection returns all TODOs 1`] = `
+Object {
+  "endCursor": "id_20",
+  "hasNextPage": false,
+  "hasPreviousPage": false,
+  "startCursor": "id_01",
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the first 5 TODOs 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_01",
+      "node": Object {
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    Object {
+      "cursor": "id_02",
+      "node": Object {
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    Object {
+      "cursor": "id_03",
+      "node": Object {
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    Object {
+      "cursor": "id_05",
+      "node": Object {
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_05",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 5th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_06",
+      "node": Object {
+        "id": "id_06",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+    },
+    Object {
+      "cursor": "id_07",
+      "node": Object {
+        "id": "id_07",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+    },
+    Object {
+      "cursor": "id_08",
+      "node": Object {
+        "id": "id_08",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+    },
+    Object {
+      "cursor": "id_09",
+      "node": Object {
+        "id": "id_09",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+    },
+    Object {
+      "cursor": "id_10",
+      "node": Object {
+        "id": "id_10",
+        "isCompleted": true,
+        "text": "deserunt rerum occaecati",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_10",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "id_06",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 15th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_16",
+      "node": Object {
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+    Object {
+      "cursor": "id_17",
+      "node": Object {
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    Object {
+      "cursor": "id_18",
+      "node": Object {
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    Object {
+      "cursor": "id_19",
+      "node": Object {
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "id_20",
+      "node": Object {
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "id_16",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 16th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_17",
+      "node": Object {
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    Object {
+      "cursor": "id_18",
+      "node": Object {
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    Object {
+      "cursor": "id_19",
+      "node": Object {
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "id_20",
+      "node": Object {
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "id_17",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 20th todo 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the first 5 completed TODOs 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "id": "id_04",
+        "isCompleted": true,
+      },
+    },
+    Object {
+      "cursor": "id_05",
+      "node": Object {
+        "id": "id_05",
+        "isCompleted": true,
+      },
+    },
+    Object {
+      "cursor": "id_06",
+      "node": Object {
+        "id": "id_06",
+        "isCompleted": true,
+      },
+    },
+    Object {
+      "cursor": "id_08",
+      "node": Object {
+        "id": "id_08",
+        "isCompleted": true,
+      },
+    },
+    Object {
+      "cursor": "id_09",
+      "node": Object {
+        "id": "id_09",
+        "isCompleted": true,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_09",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_04",
+  },
+  "totalCount": 11,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the last 5 TODOs 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_16",
+      "node": Object {
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+    Object {
+      "cursor": "id_17",
+      "node": Object {
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    Object {
+      "cursor": "id_18",
+      "node": Object {
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    Object {
+      "cursor": "id_19",
+      "node": Object {
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "id_20",
+      "node": Object {
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "id_16",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the last 5 TODOs before the 1st todo 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the last 5 TODOs before the 5th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_01",
+      "node": Object {
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    Object {
+      "cursor": "id_02",
+      "node": Object {
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    Object {
+      "cursor": "id_03",
+      "node": Object {
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_04",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the last 5 TODOs before the 6th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_01",
+      "node": Object {
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    Object {
+      "cursor": "id_02",
+      "node": Object {
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    Object {
+      "cursor": "id_03",
+      "node": Object {
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    Object {
+      "cursor": "id_05",
+      "node": Object {
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_05",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the last 5 TODOs before the 16th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_11",
+      "node": Object {
+        "id": "id_11",
+        "isCompleted": false,
+        "text": "unde et quasi",
+      },
+    },
+    Object {
+      "cursor": "id_12",
+      "node": Object {
+        "id": "id_12",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+    },
+    Object {
+      "cursor": "id_13",
+      "node": Object {
+        "id": "id_13",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+    },
+    Object {
+      "cursor": "id_14",
+      "node": Object {
+        "id": "id_14",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+    },
+    Object {
+      "cursor": "id_15",
+      "node": Object {
+        "id": "id_15",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_15",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "id_11",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection returns the paginated TODOs with the base client (sanity check) 1`] = `
+Array [
+  Object {
+    "id": "id_06",
+    "isCompleted": true,
+    "text": "ut sunt consequuntur",
+  },
+  Object {
+    "id": "id_07",
+    "isCompleted": false,
+    "text": "accusamus aut labore",
+  },
+  Object {
+    "id": "id_08",
+    "isCompleted": true,
+    "text": "et quo quia",
+  },
+  Object {
+    "id": "id_09",
+    "isCompleted": true,
+    "text": "accusantium a excepturi",
+  },
+  Object {
+    "id": "id_10",
+    "isCompleted": true,
+    "text": "deserunt rerum occaecati",
+  },
+]
+`;
