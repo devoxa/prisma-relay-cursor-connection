@@ -12,7 +12,7 @@ jobs:
       - node/with-cache:
           steps:
             - run: yarn install
-            - run: yarn prisma migrate up --experimental
+            - run: yarn prisma migrate up --experimental --create-db
             - run: yarn test --coverage
             - run: bash <(curl -s https://codecov.io/bash)
             - run: yarn format:check

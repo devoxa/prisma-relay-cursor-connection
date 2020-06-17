@@ -90,7 +90,7 @@ result.edges[0].node.text
 
 ```bash
 # Setup the test database
-yarn prisma migrate up --experimental
+yarn prisma migrate up --experimental --create-db
 yarn prisma generate
 
 # Run the tests
