@@ -8,6 +8,8 @@ exports[`prisma-relay-cursor-connection errors for invalid arguments (before wit
 
 exports[`prisma-relay-cursor-connection errors for invalid arguments (before without last) 1`] = `[Error: One of "first" or "last" must be provided]`;
 
+exports[`prisma-relay-cursor-connection errors for invalid arguments (both after & before with first) 1`] = `[Error: Only one of "after" and "before" can be set]`;
+
 exports[`prisma-relay-cursor-connection errors for invalid arguments (both after & before) 1`] = `[Error: One of "first" or "last" must be provided]`;
 
 exports[`prisma-relay-cursor-connection errors for invalid arguments (both first & last) 1`] = `[Error: Only one of "first" and "last" can be set]`;

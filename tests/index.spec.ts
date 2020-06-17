@@ -245,6 +245,22 @@ describe('prisma-relay-cursor-connection', () => {
     expect(error).toMatchSnapshot()
   })
 
+  it('errors for invalid arguments (both after & before with first)', async () => {
+    let error
+
+    try {
+      await findManyCursorConnection(
+        (args) => client.todo.findMany(args),
+        () => client.todo.count(),
+        { first: 5, after: 'id_05', before: 'id_15' }
+      )
+    } catch (err) {
+      error = err
+    }
+
+    expect(error).toMatchSnapshot()
+  })
+
   it('errors for invalid arguments (after without first)', async () => {
     let error
 
