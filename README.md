@@ -5,7 +5,7 @@
 
 <!-- Description -->
 <h4 align="center">
-  Extend [Prisma's](https://www.prisma.io/) `findMany` method to support [Relay Cursor Connections](https://relay.dev/graphql/connections.htm)
+  Extend <a href="https://www.prisma.io/">Prisma's</a> <code>findMany</code> method to support <a href="https://relay.dev/graphql/connections.htm">Relay Cursor Connections</a>
 </h4>
 
 <!-- Badges -->
