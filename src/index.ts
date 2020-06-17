@@ -7,66 +7,71 @@ export async function findManyCursorConnection<Model extends { id: string }>(
   aggregate: () => Promise<number>,
   args: ConnectionArguments
 ): Promise<Connection<Model>> {
-  // Make sure the connection arguments are valid
-  validateArgs(args)
-
-  // Fetch one additional node from the back when paginating forwards with "first",
-  // or from the front when paginating backwards with "last"
-  const originalLength = (args.first ? args.first : args.last) as number // TS: This is always set
-  const first = args.first ? args.first + 1 : undefined
-  const last = args.last ? args.last + 1 : undefined
-
-  // Convert `first` & `last` into prisma `take`
-  const take = first ? first : last ? -1 * last : undefined
-
-  // Convert `after` & `before` into prisma `cursor` & `skip`
-  const after = args.after ? { id: args.after } : undefined
-  const before = args.before ? { id: args.before } : undefined
-  const cursor = before || after
-  const skip = cursor ? 1 : undefined
-
-  // Execute the underlying query operations
-  const nodes = await findMany({ cursor, take, skip })
-  const totalCount = await aggregate()
-
-  // Check if we got an additional node, indicating a previous/next page
-  const hasExtraNode = nodes.length > originalLength
-
-  // Remove the extra node from the results
-  if (hasExtraNode && first) {
-    nodes.pop()
+  // Make sure the connection arguments are valid and throw an error otherwise
+  // istanbul ignore next
+  if (!validateArgs(args)) {
+    throw new Error('This code path can never happen, only here for type safety')
   }
 
-  if (hasExtraNode && last) {
-    nodes.shift()
+  let nodes: Array<Model>
+  let totalCount: number
+  let hasNextPage: boolean
+  let hasPreviousPage: boolean
+
+  if (isForwardPagination(args)) {
+    // Fetch one additional node to determine if there is a next page
+    const take = args.first + 1
+
+    // Convert `after` into prisma `cursor` & `skip`
+    const cursor = args.after ? { id: args.after } : undefined
+    const skip = cursor ? 1 : undefined
+
+    // Execute the underlying query operations
+    nodes = await findMany({ cursor, take, skip })
+    totalCount = await aggregate()
+
+    // See if we are "after" another node, indicating a previous page
+    hasPreviousPage = !!args.after
+
+    // See if we have an additional node, indicating a next page
+    hasNextPage = nodes.length > args.first
+
+    // Remove the extra node (last element) from the results
+    if (hasNextPage) nodes.pop()
+  } else {
+    // Fetch one additional node to determine if there is a previous page
+    const take = -1 * (args.last + 1)
+
+    // Convert `before` into prisma `cursor` & `skip`
+    const cursor = args.before ? { id: args.before } : undefined
+    const skip = cursor ? 1 : undefined
+
+    // Execute the underlying query operations
+    nodes = await findMany({ cursor, take, skip })
+    totalCount = await aggregate()
+
+    // See if we are "before" another node, indicating a next page
+    hasNextPage = !!args.before
+
+    // See if we have an additional node, indicating a previous page
+    hasPreviousPage = nodes.length > args.last
+
+    // Remove the extra node (first element) from the results
+    if (hasPreviousPage) nodes.shift()
   }
 
   // The cursors are always the first & last elements of the result set
   const startCursor = nodes.length > 0 ? nodes[0].id : undefined
   const endCursor = nodes.length > 0 ? nodes[nodes.length - 1].id : undefined
 
-  // If paginating forward:
-  // - For the next page, see if we had an extra node in the result set
-  // - For the previous page, see if we are "after" another node (so there has to be more before this)
-  // If paginating backward:
-  // - For the next page, see if we are "before" another node (so there has to be more after this)
-  // - For the previous page, see if we had an extra node in the result set
-  const hasNextPage = first ? hasExtraNode : !!args.before
-  const hasPreviousPage = first ? !!args.after : hasExtraNode
-
   return {
     edges: nodes.map((node) => ({ cursor: node.id, node })),
-    pageInfo: {
-      hasNextPage,
-      hasPreviousPage,
-      startCursor,
-      endCursor,
-    },
+    pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
 }
 
-function validateArgs(args: ConnectionArguments) {
+function validateArgs(args: ConnectionArguments): args is ConnectionArgumentsUnion {
   if (args.first === undefined && args.last === undefined) {
     throw new Error('One of "first" or "last" must be provided')
   }
@@ -94,4 +99,22 @@ function validateArgs(args: ConnectionArguments) {
   if (args.last != null && args.last < 0) {
     throw new Error('"last" can not be less than 0')
   }
+
+  return true
+}
+
+type ConnectionArgumentsUnion = ForwardPaginationArguments | BackwardPaginationArguments
+
+type ForwardPaginationArguments = {
+  first: number
+  after?: string
+}
+
+type BackwardPaginationArguments = {
+  last: number
+  before?: string
+}
+
+function isForwardPagination(args: ConnectionArgumentsUnion): args is ForwardPaginationArguments {
+  return 'first' in args && args.first != null
 }
