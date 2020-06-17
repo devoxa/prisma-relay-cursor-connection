@@ -54,7 +54,10 @@ This module has a peer dependency on `@prisma/client@^2.0.0`.
 ## Usage
 
 ```ts
-import { findManyCursorConnection, ConnectionArguments } from '@devoxa/prisma-relay-cursor-connection'
+import {
+  findManyCursorConnection,
+  ConnectionArguments,
+} from '@devoxa/prisma-relay-cursor-connection'
 
 const result = await findManyCursorConnection(
   (args) => client.todo.findMany(args),
