@@ -80,10 +80,7 @@ import {
 const result = await findManyCursorConnection(
   (args) => client.todo.findMany(args),
   () => client.todo.count(),
-
-  // Relay Cursor Connection Arguments (one of [first] | [first, after] | [last] | [last, before])
-  // Type: ConnectionArguments
-  { first: 5, after: '5c11e0fa-fd6b-44ee-9016-0809ee2f2b9a' }
+  { first: 5, after: '5c11e0fa-fd6b-44ee-9016-0809ee2f2b9a' } // typeof ConnectionArguments
 )
 ```
 
@@ -100,7 +97,7 @@ const baseArgs = {
 const result = await findManyCursorConnection(
   (args) => client.todo.findMany({ ...args, ...baseArgs }),
   () => client.todo.count(baseArgs),
-  { first: 5, after: '5c11e0fa-fd6b-44ee-9016-0809ee2f2b9a' }
+  { last: 5, before: '5c11e0fa-fd6b-44ee-9016-0809ee2f2b9a' }
 )
 
 // Type error: Property text does not exist
@@ -135,6 +132,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)
