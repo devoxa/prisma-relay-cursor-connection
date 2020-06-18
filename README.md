@@ -128,12 +128,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://www.david-reess.de"><img src="https://avatars3.githubusercontent.com/u/4615516?v=4" width="75px;" alt=""/><br /><sub><b>David Reeß</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Code">💻</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Documentation">📖</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://marcjulian.de/?ref=github"><img src="https://avatars1.githubusercontent.com/u/8985933?v=4" width="75px;" alt=""/><br /><sub><b>Marc</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=marcjulian" title="Code">💻</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)
