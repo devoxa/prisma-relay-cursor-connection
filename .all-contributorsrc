@@ -27,6 +27,15 @@
         "test"
       ]
     }
+    {
+      "login": "marcjulian",
+      "name": "Marc",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8985933?v=4",
+      "profile": "https://marcjulian.de/?ref=github",
+      "contributions": [
+        "code"
+      ]
+    }
   ],
   "files": [
     "README.md"
