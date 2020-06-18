@@ -16,6 +16,16 @@
         "doc",
         "test"
       ]
+    },
+    {
+      "login": "ctrlplusb",
+      "name": "Sean Matheson",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12164768?v=4",
+      "profile": "https://twitter.com/controlplusb",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "files": [
