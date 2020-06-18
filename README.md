@@ -129,6 +129,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://www.david-reess.de"><img src="https://avatars3.githubusercontent.com/u/4615516?v=4" width="75px;" alt=""/><br /><sub><b>David Reeß</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Code">💻</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Documentation">📖</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://marcjulian.de/?ref=github"><img src="https://avatars1.githubusercontent.com/u/8985933?v=4" width="75px;" alt=""/><br /><sub><b>Marc</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=marcjulian" title="Code">💻</a></td>
+    <td align="center"><a href="https://twitter.com/controlplusb"><img src="https://avatars2.githubusercontent.com/u/12164768?v=4" width="75px;" alt=""/><br /><sub><b>Sean Matheson</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=ctrlplusb" title="Code">💻</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=ctrlplusb" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
