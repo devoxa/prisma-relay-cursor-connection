@@ -1,26 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (after with last) 1`] = `[Error: "after" can not be used with "last"]`;
+exports[`prisma-relay-cursor-connection errors for invalid arguments (after with last) 1`] = `[Error: "after" needs to be used with "first"]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (after without first) 1`] = `[Error: One of "first" or "last" must be provided]`;
+exports[`prisma-relay-cursor-connection errors for invalid arguments (after without first) 1`] = `[Error: "after" needs to be used with "first"]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (before with first) 1`] = `[Error: "before" can not be used with "first"]`;
+exports[`prisma-relay-cursor-connection errors for invalid arguments (before with first) 1`] = `[Error: "before" needs to be used with "last"]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (before without last) 1`] = `[Error: One of "first" or "last" must be provided]`;
+exports[`prisma-relay-cursor-connection errors for invalid arguments (before without last) 1`] = `[Error: "before" needs to be used with "last"]`;
 
 exports[`prisma-relay-cursor-connection errors for invalid arguments (both after & before with first) 1`] = `[Error: Only one of "after" and "before" can be set]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (both after & before) 1`] = `[Error: One of "first" or "last" must be provided]`;
+exports[`prisma-relay-cursor-connection errors for invalid arguments (both after & before) 1`] = `[Error: Only one of "after" and "before" can be set]`;
 
 exports[`prisma-relay-cursor-connection errors for invalid arguments (both first & last) 1`] = `[Error: Only one of "first" and "last" can be set]`;
 
 exports[`prisma-relay-cursor-connection errors for invalid arguments (kitchensink) 1`] = `[Error: Only one of "first" and "last" can be set]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (negative first) 1`] = `[Error: "first" can not be less than 0]`;
+exports[`prisma-relay-cursor-connection errors for invalid arguments (negative first) 1`] = `[Error: "first" has to be positive]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (negative last) 1`] = `[Error: "last" can not be less than 0]`;
-
-exports[`prisma-relay-cursor-connection errors for invalid arguments (no first & no last) 1`] = `[Error: One of "first" or "last" must be provided]`;
+exports[`prisma-relay-cursor-connection errors for invalid arguments (negative last) 1`] = `[Error: "last" has to be positive]`;
 
 exports[`prisma-relay-cursor-connection returns all TODOs 1`] = `
 Object {

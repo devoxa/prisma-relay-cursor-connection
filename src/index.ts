@@ -5,7 +5,7 @@ export * from './interfaces'
 export async function findManyCursorConnection<Model extends { id: string }>(
   findMany: (args: PrismaFindManyArguments) => Promise<Model[]>,
   aggregate: () => Promise<number>,
-  args: ConnectionArguments
+  args: ConnectionArguments = {}
 ): Promise<Connection<Model>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
@@ -38,7 +38,7 @@ export async function findManyCursorConnection<Model extends { id: string }>(
 
     // Remove the extra node (last element) from the results
     if (hasNextPage) nodes.pop()
-  } else {
+  } else if (isBackwardPagination(args)) {
     // Fetch one additional node to determine if there is a previous page
     const take = -1 * (args.last + 1)
 
@@ -58,6 +58,14 @@ export async function findManyCursorConnection<Model extends { id: string }>(
 
     // Remove the extra node (first element) from the results
     if (hasPreviousPage) nodes.shift()
+  } else {
+    // Execute the underlying query operations
+    nodes = await findMany({})
+    totalCount = await aggregate()
+
+    // Since we are getting all nodes, there are no pages
+    hasNextPage = false
+    hasPreviousPage = false
   }
 
   // The cursors are always the first & last elements of the result set
@@ -72,10 +80,7 @@ export async function findManyCursorConnection<Model extends { id: string }>(
 }
 
 function validateArgs(args: ConnectionArguments): args is ConnectionArgumentsUnion {
-  if (args.first === undefined && args.last === undefined) {
-    throw new Error('One of "first" or "last" must be provided')
-  }
-
+  // Only one of `first` and `last` / `after` and `before` can be set
   if (args.first != null && args.last != null) {
     throw new Error('Only one of "first" and "last" can be set')
   }
@@ -84,37 +89,41 @@ function validateArgs(args: ConnectionArguments): args is ConnectionArgumentsUni
     throw new Error('Only one of "after" and "before" can be set')
   }
 
-  if (args.after != null && args.last != null) {
-    throw new Error('"after" can not be used with "last"')
+  // If `after` is set, `first` has to be set
+  if (args.after != null && args.first == null) {
+    throw new Error('"after" needs to be used with "first"')
   }
 
-  if (args.before != null && args.first != null) {
-    throw new Error('"before" can not be used with "first"')
+  // If `before` is set, `last` has to be set
+  if (args.before != null && args.last == null) {
+    throw new Error('"before" needs to be used with "last"')
   }
 
-  if (args.first != null && args.first < 0) {
-    throw new Error('"first" can not be less than 0')
+  // `first` and `last` have to be positive
+  if (args.first != null && args.first <= 0) {
+    throw new Error('"first" has to be positive')
   }
 
-  if (args.last != null && args.last < 0) {
-    throw new Error('"last" can not be less than 0')
+  if (args.last != null && args.last <= 0) {
+    throw new Error('"last" has to be positive')
   }
 
   return true
 }
 
-type ConnectionArgumentsUnion = ForwardPaginationArguments | BackwardPaginationArguments
+type ConnectionArgumentsUnion =
+  | ForwardPaginationArguments
+  | BackwardPaginationArguments
+  | NoPaginationArguments
 
-type ForwardPaginationArguments = {
-  first: number
-  after?: string
-}
-
-type BackwardPaginationArguments = {
-  last: number
-  before?: string
-}
+type ForwardPaginationArguments = { first: number; after?: string }
+type BackwardPaginationArguments = { last: number; before?: string }
+type NoPaginationArguments = {}
 
 function isForwardPagination(args: ConnectionArgumentsUnion): args is ForwardPaginationArguments {
   return 'first' in args && args.first != null
+}
+
+function isBackwardPagination(args: ConnectionArgumentsUnion): args is BackwardPaginationArguments {
+  return 'last' in args && args.last != null
 }

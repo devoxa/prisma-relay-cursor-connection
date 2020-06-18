@@ -30,8 +30,8 @@ describe('prisma-relay-cursor-connection', () => {
     expect(result).toMatchSnapshot()
   })
 
-  const VALID_CASES: Array<[string, ConnectionArguments]> = [
-    ['returns all TODOs', { first: 10000 }],
+  const VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+    ['returns all TODOs', undefined],
     ['returns the first 5 TODOs', { first: 5 }],
     ['returns the first 5 TODOs after the 1st todo', { first: 5, after: 'id_01' }],
     ['returns the first 5 TODOs after the 5th todo', { first: 5, after: 'id_05' }],
@@ -82,7 +82,6 @@ describe('prisma-relay-cursor-connection', () => {
   const INVALID_CASES: Array<[string, ConnectionArguments]> = [
     ['errors for invalid arguments (negative first)', { first: -5 }],
     ['errors for invalid arguments (negative last)', { last: -5 }],
-    ['errors for invalid arguments (no first & no last)', {}],
     ['errors for invalid arguments (both first & last)', { first: 5, last: 5 }],
     ['errors for invalid arguments (both after & before)', { after: 'id_05', before: 'id_15' }],
     [
