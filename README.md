@@ -53,6 +53,24 @@ This module has a peer dependency on `@prisma/client@^2.0.0`.
 
 ## Usage
 
+This module validates the connection arguments to make sure they work with Prisma. The following
+combinations are supported:
+
+- `{}` All resources
+- `{ first: number }` The first X resources
+- `{ first: number, after: string }` The first X resources after the id Y
+- `{ last: number }` The last X resources
+- `{ last: number, before: string }` The last X resources before the id Y
+
+Two cases need to be checked in your code if you are passing in user-provided data to prevent the
+user from reading out too many resources at once:
+
+- One of `first` | `last` has to be defined
+- `first` | `last` have to be below a reasonable maximum (e.g. 100)
+
+If you are using opaque cursors, you will also need to decode them before passing them into this
+module.
+
 ```ts
 import {
   findManyCursorConnection,
