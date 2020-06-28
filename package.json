@@ -28,7 +28,7 @@
     "@devoxa/prettier-config": "^1.0.0",
     "@prisma/cli": "^2.0.0",
     "@prisma/client": "^2.0.0",
-    "@types/jest": "^25.2.2",
+    "@types/jest": "^26.0.3",
     "@types/node": "^14.0.1",
     "eslint": "^7.0.0",
     "jest": "^26.0.1",
