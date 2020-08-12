@@ -26,14 +26,14 @@
   "devDependencies": {
     "@devoxa/eslint-config": "^1.0.0",
     "@devoxa/prettier-config": "^1.0.0",
-    "@prisma/cli": "^2.2.0",
-    "@prisma/client": "^2.2.0",
+    "@prisma/cli": "^2.4.1",
+    "@prisma/client": "^2.4.1",
     "@types/jest": "^26.0.3",
     "@types/node": "^14.0.1",
-    "eslint": "^7.0.0",
+    "eslint": "^7.6.0",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
-    "ts-jest": "^26.0.0",
+    "ts-jest": "^26.2.0",
     "typescript": "^3.9.2"
   },
   "publishConfig": {
