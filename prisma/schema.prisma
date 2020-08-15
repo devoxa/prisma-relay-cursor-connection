@@ -14,9 +14,8 @@ model Todo {
 }
 
 model User {
-  id           Int       @id @default(autoincrement())
+  id    Int    @id
   email String @unique
-
   username String
   isAdmin  Boolean? @default(false)
 

@@ -107,31 +107,6 @@
       }
     },
     {
-      "tag": "CreateDirective",
-      "location": {
-        "path": {
-          "tag": "Field",
-          "model": "User",
-          "field": "id"
-        },
-        "directive": "default"
-      }
-    },
-    {
-      "tag": "CreateArgument",
-      "location": {
-        "tag": "Directive",
-        "path": {
-          "tag": "Field",
-          "model": "User",
-          "field": "id"
-        },
-        "directive": "default"
-      },
-      "argument": "",
-      "value": "autoincrement()"
-    },
-    {
       "tag": "CreateField",
       "model": "User",
       "field": "email",
