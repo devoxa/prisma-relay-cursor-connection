@@ -1,6 +1,6 @@
 // Prisma Arguments
-export interface PrismaFindManyArguments {
-  cursor?: { id: string }
+export interface PrismaFindManyArguments<T> {
+  cursor?: T
   take?: number
   skip?: number
 }

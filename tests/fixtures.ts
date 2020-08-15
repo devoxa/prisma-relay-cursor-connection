@@ -1,4 +1,6 @@
-export const TODO_FIXTURES = [
+import { TodoCreateInput, UserCreateInput } from '@prisma/client'
+
+export const TODO_FIXTURES: TodoCreateInput[] = [
   { id: 'id_01', text: 'veritatis molestias qui', isCompleted: false },
   { id: 'id_02', text: 'occaecati a dolor', isCompleted: false },
   { id: 'id_03', text: 'ut enim quia', isCompleted: false },
@@ -19,4 +21,27 @@ export const TODO_FIXTURES = [
   { id: 'id_18', text: 'quos rerum aut', isCompleted: true },
   { id: 'id_19', text: 'ullam a voluptatem', isCompleted: false },
   { id: 'id_20', text: 'dolorum deserunt quis', isCompleted: true },
+]
+
+export const USER_FIXTURES: UserCreateInput[] = [
+  { email: 'user1@email.com', username: 'user1' },
+  { email: 'user2@email.com', username: 'user2', isAdmin: true },
+  { email: 'user3@email.com', username: 'user2', isAdmin: false },
+  { email: 'user4@email.com', username: 'user4' },
+  { email: 'user5@email.com', username: 'user5' },
+  { email: 'user6@email.com', username: 'user6' },
+  { email: 'user7@email.com', username: 'user7' },
+  { email: 'user8@email.com', username: 'user8' },
+  { email: 'user9@email.com', username: 'user9' },
+  { email: 'user10@email.com', username: 'user10' },
+  { email: 'user11@email.com', username: 'user11' },
+  { email: 'user12@email.com', username: 'user12' },
+  { email: 'user13@email.com', username: 'user13' },
+  { email: 'user14@email.com', username: 'user14' },
+  { email: 'user15@email.com', username: 'user15' },
+  { email: 'user16@email.com', username: 'user16' },
+  { email: 'user17@email.com', username: 'user17' },
+  { email: 'user18@email.com', username: 'user18' },
+  { email: 'user19@email.com', username: 'user19' },
+  { email: 'user20@email.com', username: 'user20' },
 ]

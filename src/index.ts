@@ -2,10 +2,16 @@ import { PrismaFindManyArguments, ConnectionArguments, Connection } from './inte
 
 export * from './interfaces'
 
-export async function findManyCursorConnection<Model extends { id: string }>(
-  findMany: (args: PrismaFindManyArguments) => Promise<Model[]>,
+export async function findManyCursorConnection<
+  Model = { id: string },
+  // Cursor
+  C = { id: string }
+>(
+  findMany: (args: PrismaFindManyArguments<C>) => Promise<Model[]>,
   aggregate: () => Promise<number>,
-  args: ConnectionArguments = {}
+  args: ConnectionArguments = {},
+  getCursor: (node: Model) => C = (node: Model) =>
+    (({ id: ((node as unknown) as { id: string }).id } as unknown) as C)
 ): Promise<Connection<Model>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
@@ -23,7 +29,7 @@ export async function findManyCursorConnection<Model extends { id: string }>(
     const take = args.first + 1
 
     // Convert `after` into prisma `cursor` & `skip`
-    const cursor = args.after ? { id: args.after } : undefined
+    const cursor = args.after ? fromCursorHash<C>(args.after) : undefined
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
@@ -43,7 +49,7 @@ export async function findManyCursorConnection<Model extends { id: string }>(
     const take = -1 * (args.last + 1)
 
     // Convert `before` into prisma `cursor` & `skip`
-    const cursor = args.before ? { id: args.before } : undefined
+    const cursor = args.before ? fromCursorHash<C>(args.before) : undefined
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
@@ -69,11 +75,11 @@ export async function findManyCursorConnection<Model extends { id: string }>(
   }
 
   // The cursors are always the first & last elements of the result set
-  const startCursor = nodes.length > 0 ? nodes[0].id : undefined
-  const endCursor = nodes.length > 0 ? nodes[nodes.length - 1].id : undefined
+  const startCursor = nodes.length > 0 ? toCursorHash(getCursor(nodes[0])) : undefined
+  const endCursor = nodes.length > 0 ? toCursorHash(getCursor(nodes[nodes.length - 1])) : undefined
 
   return {
-    edges: nodes.map((node) => ({ cursor: node.id, node })),
+    edges: nodes.map((node) => ({ cursor: toCursorHash(getCursor(node)), node })),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
@@ -126,4 +132,12 @@ function isForwardPagination(args: ConnectionArgumentsUnion): args is ForwardPag
 
 function isBackwardPagination(args: ConnectionArgumentsUnion): args is BackwardPaginationArguments {
   return 'last' in args && args.last != null
+}
+
+export function toCursorHash<T = { id: string }>(cursor: T): string {
+  return Buffer.from(JSON.stringify(cursor)).toString('base64')
+}
+
+export function fromCursorHash<T = { id: string }>(cursor: string): T {
+  return JSON.parse(Buffer.from(cursor, 'base64').toString('ascii'))
 }

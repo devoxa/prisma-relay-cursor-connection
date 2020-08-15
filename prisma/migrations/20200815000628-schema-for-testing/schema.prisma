@@ -12,3 +12,13 @@ model Todo {
   text        String
   isCompleted Boolean @default(false)
 }
+
+model User {
+  id           Int       @id @default(autoincrement())
+  email String @unique
+
+  username String
+  isAdmin   Boolean? @default(false)
+
+  @@unique([username, isAdmin])
+}
