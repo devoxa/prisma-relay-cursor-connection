@@ -1,6 +1,12 @@
-import { PrismaClient, UserWhereUniqueInput, User } from '@prisma/client'
-import { findManyCursorConnection, ConnectionArguments, toCursorHash, fromCursorHash } from '../src'
-import { TODO_FIXTURES, USER_FIXTURES } from './fixtures'
+import {
+  PrismaClient,
+  UserWhereUniqueInput,
+  User,
+  ProfileWhereUniqueInput,
+  Profile,
+} from '@prisma/client'
+import { findManyCursorConnection, ConnectionArguments } from '../src'
+import { TODO_FIXTURES, USER_FIXTURES, PROFILE_FIXTURES } from './fixtures'
 
 describe('prisma-relay-cursor-connection', () => {
   let client: PrismaClient
@@ -9,16 +15,10 @@ describe('prisma-relay-cursor-connection', () => {
     client = new PrismaClient()
 
     await client.todo.deleteMany({})
-    await client.user.deleteMany({})
 
     // Build up the fixtures sequentially so they are in a consistent order
     for (let i = 0; i !== TODO_FIXTURES.length; i++) {
       await client.todo.create({ data: TODO_FIXTURES[i] })
-    }
-
-    // Build up the fixtures sequentially so they are in a consistent order
-    for (let i = 0; i !== USER_FIXTURES.length; i++) {
-      await client.user.create({ data: USER_FIXTURES[i] })
     }
   })
 
@@ -39,44 +39,16 @@ describe('prisma-relay-cursor-connection', () => {
   const VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
     ['returns all TODOs', undefined],
     ['returns the first 5 TODOs', { first: 5 }],
-
-    [
-      'returns the first 5 TODOs after the 1st todo',
-      { first: 5, after: toCursorHash({ id: 'id_01' }) },
-    ],
-    [
-      'returns the first 5 TODOs after the 5th todo',
-      { first: 5, after: toCursorHash({ id: 'id_05' }) },
-    ],
-    [
-      'returns the first 5 TODOs after the 15th todo',
-      { first: 5, after: toCursorHash({ id: 'id_15' }) },
-    ],
-    [
-      'returns the first 5 TODOs after the 16th todo',
-      { first: 5, after: toCursorHash({ id: 'id_16' }) },
-    ],
-    [
-      'returns the first 5 TODOs after the 20th todo',
-      { first: 5, after: toCursorHash({ id: 'id_20' }) },
-    ],
+    ['returns the first 5 TODOs after the 1st todo', { first: 5, after: 'id_01' }],
+    ['returns the first 5 TODOs after the 5th todo', { first: 5, after: 'id_05' }],
+    ['returns the first 5 TODOs after the 15th todo', { first: 5, after: 'id_15' }],
+    ['returns the first 5 TODOs after the 16th todo', { first: 5, after: 'id_16' }],
+    ['returns the first 5 TODOs after the 20th todo', { first: 5, after: 'id_20' }],
     ['returns the last 5 TODOs', { last: 5 }],
-    [
-      'returns the last 5 TODOs before the 1st todo',
-      { last: 5, before: toCursorHash({ id: 'id_01' }) },
-    ],
-    [
-      'returns the last 5 TODOs before the 5th todo',
-      { last: 5, before: toCursorHash({ id: 'id_05' }) },
-    ],
-    [
-      'returns the last 5 TODOs before the 6th todo',
-      { last: 5, before: toCursorHash({ id: 'id_06' }) },
-    ],
-    [
-      'returns the last 5 TODOs before the 16th todo',
-      { last: 5, before: toCursorHash({ id: 'id_16' }) },
-    ],
+    ['returns the last 5 TODOs before the 1st todo', { last: 5, before: 'id_01' }],
+    ['returns the last 5 TODOs before the 5th todo', { last: 5, before: 'id_05' }],
+    ['returns the last 5 TODOs before the 6th todo', { last: 5, before: 'id_06' }],
+    ['returns the last 5 TODOs before the 16th todo', { last: 5, before: 'id_16' }],
   ]
 
   test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
@@ -117,38 +89,18 @@ describe('prisma-relay-cursor-connection', () => {
     ['errors for invalid arguments (negative first)', { first: -5 }],
     ['errors for invalid arguments (negative last)', { last: -5 }],
     ['errors for invalid arguments (both first & last)', { first: 5, last: 5 }],
-    [
-      'errors for invalid arguments (both after & before)',
-      { after: toCursorHash({ id: 'id_05' }), before: toCursorHash({ id: 'id_15' }) },
-    ],
+    ['errors for invalid arguments (both after & before)', { after: 'id_05', before: 'id_15' }],
     [
       'errors for invalid arguments (both after & before with first)',
-      { first: 5, after: toCursorHash({ id: 'id_05' }), before: toCursorHash({ id: 'id_15' }) },
+      { first: 5, after: 'id_05', before: 'id_15' },
     ],
-    [
-      'errors for invalid arguments (after without first)',
-      { after: toCursorHash({ id: 'id_05' }) },
-    ],
-    [
-      'errors for invalid arguments (before without last)',
-      { before: toCursorHash({ id: 'id_15' }) },
-    ],
-    [
-      'errors for invalid arguments (after with last)',
-      { last: 5, after: toCursorHash({ id: 'id_05' }) },
-    ],
-    [
-      'errors for invalid arguments (before with first)',
-      { first: 5, before: toCursorHash({ id: 'id_15' }) },
-    ],
+    ['errors for invalid arguments (after without first)', { after: 'id_05' }],
+    ['errors for invalid arguments (before without last)', { before: 'id_15' }],
+    ['errors for invalid arguments (after with last)', { last: 5, after: 'id_05' }],
+    ['errors for invalid arguments (before with first)', { first: 5, before: 'id_15' }],
     [
       'errors for invalid arguments (kitchensink)',
-      {
-        first: 5,
-        after: toCursorHash({ id: 'id_05' }),
-        last: 5,
-        before: toCursorHash({ id: 'id_15' }),
-      },
+      { first: 5, after: 'id_05', last: 5, before: 'id_15' },
     ],
   ]
 
@@ -169,106 +121,156 @@ describe('prisma-relay-cursor-connection', () => {
     expect(error).toMatchSnapshot()
   })
 
-  const NUMBER_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
-    ['returns all USERs', undefined],
-    ['returns the first 5 USERs', { first: 5 }],
-    ['returns the first 5 USERs after the 1st user', { first: 5, after: toCursorHash({ id: 1 }) }],
-    ['returns the first 5 USERs after the 5th user', { first: 5, after: toCursorHash({ id: 5 }) }],
-    [
-      'returns the first 5 USERs after the 15th user',
-      { first: 5, after: toCursorHash({ id: 15 }) },
-    ],
-    [
-      'returns the first 5 USERs after the 16th user',
-      { first: 5, after: toCursorHash({ id: 16 }) },
-    ],
-    [
-      'returns the first 5 USERs after the 20th user',
-      { first: 5, after: toCursorHash({ id: 20 }) },
-    ],
-    ['returns the last 5 USERs', { last: 5 }],
-    ['returns the last 5 USERs before the 1st user', { last: 5, before: toCursorHash({ id: 1 }) }],
-    ['returns the last 5 USERs before the 5th user', { last: 5, before: toCursorHash({ id: 5 }) }],
-    ['returns the last 5 USERs before the 6th user', { last: 5, before: toCursorHash({ id: 6 }) }],
-    [
-      'returns the last 5 USERs before the 16th user',
-      { last: 5, before: toCursorHash({ id: 16 }) },
-    ],
-  ]
+  describe('number id and unique field', () => {
+    beforeAll(async () => {
+      await client.user.deleteMany({})
 
-  test.each(NUMBER_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
-    const result = await findManyCursorConnection<User, Pick<UserWhereUniqueInput, 'id'>>(
-      (args) => client.user.findMany(args),
-      () => client.user.count(),
-      connectionArgs,
-      (node) => ({ id: node.id })
-    )
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== USER_FIXTURES.length; i++) {
+        await client.user.create({ data: USER_FIXTURES[i] })
+      }
+    })
 
-    expect(result).toMatchSnapshot()
-  })
+    it('returns all USERs with the base client (sanity check)', async () => {
+      const result = await client.user.findMany({})
+      expect(result).toEqual(USER_FIXTURES)
+    })
 
-  const UNIQUE_FIELD_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
-    [
-      'returns the first 5 USERs after user1@email.com',
-      { first: 5, after: toCursorHash({ email: 'user1@email.com' }) },
-    ],
-  ]
+    it('returns the paginated USERs with the base client (sanity check)', async () => {
+      const result = await client.user.findMany({ cursor: { id: 5 }, take: 5, skip: 1 })
+      expect(result).toMatchSnapshot()
+    })
 
-  test.each(UNIQUE_FIELD_VALID_CASES)('%s', async (name, connectionArgs) => {
-    const result = await findManyCursorConnection<User, Pick<UserWhereUniqueInput, 'email'>>(
-      (args) => client.user.findMany(args),
-      () => client.user.count(),
-      connectionArgs,
-      (node) => ({ email: node.email })
-    )
+    const NUMBER_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      ['returns all USERs', undefined],
+      ['returns the first 5 USERs', { first: 5 }],
+      [
+        'returns the first 5 USERs after the 1st user',
+        { first: 5, after: encodeCursor({ id: 1 }) },
+      ],
+      [
+        'returns the first 5 USERs after the 5th user',
+        { first: 5, after: encodeCursor({ id: 5 }) },
+      ],
+      [
+        'returns the first 5 USERs after the 15th user',
+        { first: 5, after: encodeCursor({ id: 15 }) },
+      ],
+      [
+        'returns the first 5 USERs after the 16th user',
+        { first: 5, after: encodeCursor({ id: 16 }) },
+      ],
+      [
+        'returns the first 5 USERs after the 20th user',
+        { first: 5, after: encodeCursor({ id: 20 }) },
+      ],
+      ['returns the last 5 USERs', { last: 5 }],
+      [
+        'returns the last 5 USERs before the 1st user',
+        { last: 5, before: encodeCursor({ id: 1 }) },
+      ],
+      [
+        'returns the last 5 USERs before the 5th user',
+        { last: 5, before: encodeCursor({ id: 5 }) },
+      ],
+      [
+        'returns the last 5 USERs before the 6th user',
+        { last: 5, before: encodeCursor({ id: 6 }) },
+      ],
+      [
+        'returns the last 5 USERs before the 16th user',
+        { last: 5, before: encodeCursor({ id: 16 }) },
+      ],
+    ]
 
-    expect(result).toMatchSnapshot()
-  })
-
-  const MULTI_FIELD_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
-    [
-      'returns the first 5 USERs after username: user1, isAdmin: true',
-      { first: 5, after: toCursorHash({ email: 'user1@email.com' }) },
-    ],
-  ]
-
-  test.each(MULTI_FIELD_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
-    const result = await findManyCursorConnection<
-      User,
-      Pick<UserWhereUniqueInput, 'username_isAdmin'>
-    >(
-      (args) => client.user.findMany(args),
-      () => client.user.count(),
-      connectionArgs,
-      (node) => ({
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        username_isAdmin: {
-          isAdmin: node.isAdmin as boolean,
-          username: node.username,
-        },
-      })
-    )
-
-    expect(result).toMatchSnapshot()
-  })
-
-  describe('toCursorHash', () => {
-    it('cursor object to base64 string cursor', () => {
-      expect(toCursorHash({ id: '1234' })).toEqual('eyJpZCI6IjEyMzQifQ==')
-      expect(toCursorHash({ recipeId: '1234', authorId: '12334' })).toEqual(
-        'eyJyZWNpcGVJZCI6IjEyMzQiLCJhdXRob3JJZCI6IjEyMzM0In0='
+    test.each(NUMBER_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection<User, Pick<UserWhereUniqueInput, 'id'>>(
+        (args) => client.user.findMany(args),
+        () => client.user.count(),
+        connectionArgs,
+        {
+          getCursor: (node) => ({ id: node.id }),
+          decodeCursor,
+          encodeCursor,
+        }
       )
+
+      expect(result).toMatchSnapshot()
+    })
+    const UNIQUE_FIELD_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      [
+        'returns the first 5 USERs after user1@email.com',
+        { first: 5, after: encodeCursor({ email: 'user1@email.com' }) },
+      ],
+    ]
+
+    test.each(UNIQUE_FIELD_VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection<User, Pick<UserWhereUniqueInput, 'email'>>(
+        (args) => client.user.findMany(args),
+        () => client.user.count(),
+        connectionArgs,
+        {
+          getCursor: (node) => ({ email: node.email }),
+          decodeCursor: (cursor) => JSON.parse(Buffer.from(cursor, 'base64').toString('ascii')),
+          encodeCursor: (prismaCursor) =>
+            Buffer.from(JSON.stringify(prismaCursor)).toString('base64'),
+        }
+      )
+
+      expect(result).toMatchSnapshot()
     })
   })
 
-  describe('fromCursorHash', () => {
-    it('base64 string cursor to cursor object', () => {
-      expect(fromCursorHash(toCursorHash({ id: '1234' }))).toEqual({ id: '1234' })
-      expect(fromCursorHash(toCursorHash({ id: 1234 }))).toEqual({ id: 1234 })
-      expect(fromCursorHash(toCursorHash({ recipeId: '1234', authorId: '12334' }))).toEqual({
-        recipeId: '1234',
-        authorId: '12334',
-      })
+  describe('multi field id', () => {
+    beforeAll(async () => {
+      await client.profile.deleteMany({})
+
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== PROFILE_FIXTURES.length; i++) {
+        await client.profile.create({ data: PROFILE_FIXTURES[i] })
+      }
+    })
+
+    const MULTI_FIELD_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      [
+        'returns the first 5 PROFILEs after firstname: foo1, lastname: bar1',
+        {
+          first: 5,
+          // eslint-disable-next-line @typescript-eslint/camelcase
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo1', lastname: 'bar1' } }),
+        },
+      ],
+    ]
+
+    test.each(MULTI_FIELD_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection<
+        Profile,
+        Pick<ProfileWhereUniqueInput, 'firstname_lastname'>
+      >(
+        (args) => client.profile.findMany(args),
+        () => client.profile.count(),
+        connectionArgs,
+        {
+          getCursor: (node) => ({
+            // eslint-disable-next-line @typescript-eslint/camelcase
+            firstname_lastname: {
+              firstname: node.firstname,
+              lastname: node.lastname,
+            },
+          }),
+          decodeCursor,
+          encodeCursor,
+        }
+      )
+
+      expect(result).toMatchSnapshot()
     })
   })
 })
+
+function decodeCursor(cursor: string) {
+  return JSON.parse(Buffer.from(cursor, 'base64').toString('ascii'))
+}
+function encodeCursor<Cursor>(prismaCursor: Cursor) {
+  return Buffer.from(JSON.stringify(prismaCursor)).toString('base64')
+}

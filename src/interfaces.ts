@@ -1,6 +1,6 @@
 // Prisma Arguments
-export interface PrismaFindManyArguments<T> {
-  cursor?: T
+export interface PrismaFindManyArguments<Cursor> {
+  cursor?: Cursor
   take?: number
   skip?: number
 }
@@ -30,4 +30,10 @@ export interface PageInfo {
   hasPreviousPage: boolean
   startCursor?: string
   endCursor?: string
+}
+
+export interface Options<Model, Cursor> {
+  getCursor(node: Model): Cursor
+  encodeCursor(cursorObject: Cursor): string
+  decodeCursor(cursorStr: string): Cursor
 }

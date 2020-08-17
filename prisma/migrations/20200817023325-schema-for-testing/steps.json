@@ -125,54 +125,33 @@
       }
     },
     {
+      "tag": "CreateModel",
+      "model": "Profile"
+    },
+    {
       "tag": "CreateField",
-      "model": "User",
-      "field": "username",
+      "model": "Profile",
+      "field": "firstname",
       "type": "String",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "User",
-      "field": "isAdmin",
-      "type": "Boolean",
-      "arity": "Optional"
-    },
-    {
-      "tag": "CreateDirective",
-      "location": {
-        "path": {
-          "tag": "Field",
-          "model": "User",
-          "field": "isAdmin"
-        },
-        "directive": "default"
-      }
-    },
-    {
-      "tag": "CreateArgument",
-      "location": {
-        "tag": "Directive",
-        "path": {
-          "tag": "Field",
-          "model": "User",
-          "field": "isAdmin"
-        },
-        "directive": "default"
-      },
-      "argument": "",
-      "value": "false"
+      "model": "Profile",
+      "field": "lastname",
+      "type": "String",
+      "arity": "Required"
     },
     {
       "tag": "CreateDirective",
       "location": {
         "path": {
           "tag": "Model",
-          "model": "User",
+          "model": "Profile",
           "arguments": [
             {
               "name": "",
-              "value": "[username, isAdmin]"
+              "value": "[firstname, lastname]"
             }
           ]
         },
