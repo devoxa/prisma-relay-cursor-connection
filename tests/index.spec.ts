@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import {
   PrismaClient,
   UserWhereUniqueInput,
@@ -137,8 +138,15 @@ describe('prisma-relay-cursor-connection', () => {
     })
 
     it('returns the paginated USERs with the base client (sanity check)', async () => {
-      const result = await client.user.findMany({ cursor: { id: 5 }, take: 5, skip: 1 })
-      expect(result).toMatchSnapshot()
+      const idResult = await client.user.findMany({ cursor: { id: 5 }, take: 5, skip: 1 })
+      expect(idResult).toMatchSnapshot()
+
+      const emailResult = await client.user.findMany({
+        cursor: { email: 'user5@email.com' },
+        take: 5,
+        skip: 1,
+      })
+      expect(emailResult).toMatchSnapshot()
     })
 
     const NUMBER_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
@@ -197,10 +205,43 @@ describe('prisma-relay-cursor-connection', () => {
 
       expect(result).toMatchSnapshot()
     })
+
     const UNIQUE_FIELD_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
       [
-        'returns the first 5 USERs after user1@email.com',
+        'returns the first 5 USERs after the 1st user',
         { first: 5, after: encodeCursor({ email: 'user1@email.com' }) },
+      ],
+      [
+        'returns the first 5 USERs after the 5th user',
+        { first: 5, after: encodeCursor({ email: 'user5@email.com' }) },
+      ],
+      [
+        'returns the first 5 USERs after the 15th user',
+        { first: 5, after: encodeCursor({ email: 'user15@email.com' }) },
+      ],
+      [
+        'returns the first 5 USERs after the 16th user',
+        { first: 5, after: encodeCursor({ email: 'user16@email.com' }) },
+      ],
+      [
+        'returns the first 5 USERs after the 20th user',
+        { first: 5, after: encodeCursor({ email: 'user20@email.com' }) },
+      ],
+      [
+        'returns the last 5 USERs before the 1st user',
+        { last: 5, before: encodeCursor({ email: 'user1@email.com' }) },
+      ],
+      [
+        'returns the last 5 USERs before the 5th user',
+        { last: 5, before: encodeCursor({ email: 'user5@email.com' }) },
+      ],
+      [
+        'returns the last 5 USERs before the 6th user',
+        { last: 5, before: encodeCursor({ email: 'user6@email.com' }) },
+      ],
+      [
+        'returns the last 5 USERs before the 16th user',
+        { last: 5, before: encodeCursor({ email: 'user16@email.com' }) },
       ],
     ]
 
@@ -231,13 +272,82 @@ describe('prisma-relay-cursor-connection', () => {
       }
     })
 
+    it('returns all PROFILEs with the base client (sanity check)', async () => {
+      const result = await client.profile.findMany({})
+      expect(result).toEqual(PROFILE_FIXTURES)
+    })
+
+    it('returns the paginated PROFILEs with the base client (sanity check)', async () => {
+      const result = await client.profile.findMany({
+        cursor: { firstname_lastname: { firstname: 'foo5', lastname: 'bar1' } },
+        take: 5,
+        skip: 1,
+      })
+      expect(result).toMatchSnapshot()
+    })
+
     const MULTI_FIELD_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
       [
-        'returns the first 5 PROFILEs after firstname: foo1, lastname: bar1',
+        'returns the first 5 PROFILEs after the 5th profile',
         {
           first: 5,
-          // eslint-disable-next-line @typescript-eslint/camelcase
           after: encodeCursor({ firstname_lastname: { firstname: 'foo1', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the first 5 PROFILEs after the 5th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo5', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the first 5 PROFILEs after the 15th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo15', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the first 5 PROFILEs after the 16th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo16', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the first 5 PROFILEs after the 20th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo20', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the last 5 PROFILEs before the 1st profile',
+        {
+          last: 5,
+          before: encodeCursor({ firstname_lastname: { firstname: 'foo1', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the last 5 PROFILEs before the 5th profile',
+        {
+          last: 5,
+          before: encodeCursor({ firstname_lastname: { firstname: 'foo5', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the last 5 PROFILEs before the 6th profile',
+        {
+          last: 5,
+          before: encodeCursor({ firstname_lastname: { firstname: 'foo6', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the last 5 PROFILEs before the 16th profile',
+        {
+          last: 5,
+          before: encodeCursor({ firstname_lastname: { firstname: 'foo16', lastname: 'bar1' } }),
         },
       ],
     ]
