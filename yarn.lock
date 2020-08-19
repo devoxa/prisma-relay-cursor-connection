@@ -488,9 +488,9 @@
   integrity sha512-vAOBnouBgCYndXmTcGxanfmhVWUCpwr3akBXiQH+ZKzTYf/pwSsWYpeaXNQfVtUEJEQ0kumfLGdq6ZXnfX//aA==
 
 "@prisma/client@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.4.1.tgz#840d0905e9d05d84313e333a3e0370df3b9815fe"
-  integrity sha512-13aphZb34ws8GuRxVsmgiQmUJRfcnnb5/Jy78/ZkpLyCk5ZpchO/Rr1KNiF/cfLHprdKOjSvUzthcx+tubaA2A==
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.5.0.tgz#dba5ee40497f458dc0f1057fa4a0b6675548e443"
+  integrity sha512-rsgbImSVMBATLSSZEgP7pWpqV2iylDJWM2zjmL980IjTBgy63alDr0RyoOkdt8oVw4OyJW0uYpxAU2Z9bXZU9A==
   dependencies:
     pkg-up "^3.1.0"
 
