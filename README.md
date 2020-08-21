@@ -53,6 +53,8 @@ This module has a peer dependency on `@prisma/client@^2.0.0`.
 
 ## Usage
 
+### General Usage
+
 This module validates the connection arguments to make sure they work with Prisma. The following
 combinations are supported:
 
@@ -68,8 +70,8 @@ user from reading out too many resources at once:
 - One of `first` | `last` has to be defined
 - `first` | `last` have to be below a reasonable maximum (e.g. 100)
 
-If you are using opaque cursors, you will also need to decode them before passing them into this
-module.
+If you are encoding your cursors outside of this module, you will also need to decode them before
+passing them.
 
 ```ts
 import {
@@ -83,6 +85,8 @@ const result = await findManyCursorConnection(
   { first: 5, after: '5c11e0fa-fd6b-44ee-9016-0809ee2f2b9a' } // typeof ConnectionArguments
 )
 ```
+
+### Type-Safe Arguments
 
 You can also use additional `FindManyArgs` while keeping type safety intact:
 
@@ -103,6 +107,28 @@ const result = await findManyCursorConnection(
 // Type error: Property text does not exist
 result.edges[0].node.text
 ```
+
+### Custom Cursors
+
+By default, the cursor is the `id` field of your model. If you would like to use a different field,
+a compound index, or handle encoding/decoding, you can pass the following options:
+
+```ts
+import { findManyCursorConnection } from '@devoxa/prisma-relay-cursor-connection'
+
+const result = await findManyCursorConnection(
+  (args) => client.todo.findMany(args),
+  () => client.todo.count(),
+  { first: 5, after: 'eyJpZCI6MTZ9' },
+  {
+    getCursor: (node) => ({ id: node.id }),
+    encodeCursor: (cursor) => Buffer.from(JSON.stringify(cursor)).toString('base64'),
+    decodeCursor: (cursor) => JSON.parse(Buffer.from(cursor, 'base64').toString('ascii')),
+  }
+)
+```
+
+You can find more examples for custom cursors in the [unit tests](./tests/index.spec.ts).
 
 ## Contributing
 
