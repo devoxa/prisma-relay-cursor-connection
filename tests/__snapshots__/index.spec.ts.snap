@@ -20,7 +20,7 @@ exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arg
 
 exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (negative last) 1`] = `[Error: "last" has to be positive]`;
 
-exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 5th profile 1`] = `
+exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -69,7 +69,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 5th profile 2`] = `
+exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 5th profile 1`] = `
 Object {
   "edges": Array [
     Object {

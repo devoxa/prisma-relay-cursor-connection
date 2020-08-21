@@ -263,7 +263,7 @@ describe('prisma-relay-cursor-connection', () => {
 
     const MULTI_FIELD_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
       [
-        'returns the first 5 profiles after the 5th profile',
+        'returns the first 5 profiles',
         {
           first: 5,
           after: encodeCursor({ firstname_lastname: { firstname: 'foo1', lastname: 'bar1' } }),
