@@ -2,7 +2,8 @@
 
 **Features**
 
-- Add the ability to work with custom cursors & handle encoding/decoding cursors (Thanks to @jeongsd) 
+- Add the ability to work with custom cursors & handle encoding/decoding cursors (Thanks to
+  @jeongsd)
 
 # 1.0.1
 
