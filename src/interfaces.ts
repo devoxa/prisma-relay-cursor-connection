@@ -1,3 +1,10 @@
+// Prisma Relay Cursor Connection Arguments
+export interface Options<Model, Cursor> {
+  getCursor: (node: Model) => Cursor
+  encodeCursor: (cursor: Cursor) => string
+  decodeCursor: (cursorString: string) => Cursor
+}
+
 // Prisma Arguments
 export interface PrismaFindManyArguments<Cursor> {
   cursor?: Cursor
@@ -30,10 +37,4 @@ export interface PageInfo {
   hasPreviousPage: boolean
   startCursor?: string
   endCursor?: string
-}
-
-export interface Options<Model, Cursor> {
-  getCursor(node: Model): Cursor
-  encodeCursor(cursorObject: Cursor): string
-  decodeCursor(cursorStr: string): Cursor
 }

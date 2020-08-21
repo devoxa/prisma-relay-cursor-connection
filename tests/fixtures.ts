@@ -1,4 +1,4 @@
-import { TodoCreateInput, UserCreateInput, ProfileCreateInput } from '@prisma/client'
+import { ProfileCreateInput, TodoCreateInput, UserCreateInput } from '@prisma/client'
 
 export const TODO_FIXTURES: TodoCreateInput[] = [
   { id: 'id_01', text: 'veritatis molestias qui', isCompleted: false },

@@ -18,10 +18,9 @@ model User {
   email String @unique
 }
 
-
 model Profile {
   firstname String
-  lastname String
+  lastname  String
 
   @@unique([firstname, lastname])
 }

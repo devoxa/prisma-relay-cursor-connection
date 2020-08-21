@@ -1,4 +1,4 @@
-import { PrismaFindManyArguments, ConnectionArguments, Connection, Options } from './interfaces'
+import { Connection, ConnectionArguments, Options, PrismaFindManyArguments } from './interfaces'
 
 export * from './interfaces'
 
@@ -6,13 +6,15 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
   findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Model[]>,
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
-  options?: Options<Model, Cursor>
+  pOptions?: Options<Model, Cursor>
 ): Promise<Connection<Model>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
   if (!validateArgs(args)) {
     throw new Error('This code path can never happen, only here for type safety')
   }
+
+  const options = pOptions || getDefaultOptions()
 
   let nodes: Array<Model>
   let totalCount: number
@@ -24,7 +26,7 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
     const take = args.first + 1
 
     // Convert `after` into prisma `cursor` & `skip`
-    const cursor = toPrismaCursor(args.after, options)
+    const cursor = decodeCursor(args.after, options)
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
@@ -44,7 +46,7 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
     const take = -1 * (args.last + 1)
 
     // Convert `before` into prisma `cursor` & `skip`
-    const cursor = toPrismaCursor(args.before, options)
+    const cursor = decodeCursor(args.before, options)
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
@@ -70,11 +72,11 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
   }
 
   // The cursors are always the first & last elements of the result set
-  const startCursor = nodes.length > 0 ? nodeToCursor(nodes[0], options) : undefined
-  const endCursor = nodes.length > 0 ? nodeToCursor(nodes[nodes.length - 1], options) : undefined
+  const startCursor = nodes.length > 0 ? encodeCursor(nodes[0], options) : undefined
+  const endCursor = nodes.length > 0 ? encodeCursor(nodes[nodes.length - 1], options) : undefined
 
   return {
-    edges: nodes.map((node) => ({ cursor: nodeToCursor(node, options), node })),
+    edges: nodes.map((node) => ({ cursor: encodeCursor(node, options), node })),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
@@ -121,6 +123,15 @@ type ForwardPaginationArguments = { first: number; after?: string }
 type BackwardPaginationArguments = { last: number; before?: string }
 type NoPaginationArguments = {}
 
+function getDefaultOptions<Model, Cursor>() {
+  return {
+    getCursor: (node: Model) =>
+      (({ id: ((node as unknown) as { id: string }).id } as unknown) as Cursor),
+    encodeCursor: (cursor: Cursor) => ((cursor as unknown) as { id: string }).id,
+    decodeCursor: (cursorString: string) => (({ id: cursorString } as unknown) as Cursor),
+  }
+}
+
 function isForwardPagination(args: ConnectionArgumentsUnion): args is ForwardPaginationArguments {
   return 'first' in args && args.first != null
 }
@@ -129,25 +140,17 @@ function isBackwardPagination(args: ConnectionArgumentsUnion): args is BackwardP
   return 'last' in args && args.last != null
 }
 
-function nodeToCursor<Model = { id: string }, Cursor = { id: string }>(
-  node: Model,
-  options?: Options<Model, Cursor>
-): string {
-  if (options?.getCursor) {
-    return options.encodeCursor(options.getCursor(node))
+function decodeCursor<Model, Cursor>(
+  connectionCursor: string | undefined,
+  options: Options<Model, Cursor>
+): Cursor | undefined {
+  if (!connectionCursor) {
+    return undefined
   }
 
-  return ((node as unknown) as { id: string }).id
+  return options.decodeCursor(connectionCursor)
 }
 
-function toPrismaCursor<Model = { id: string }, Cursor = { id: string }>(
-  connectionCursor?: string,
-  options?: Options<Model, Cursor>
-): Cursor | undefined {
-  if (!connectionCursor) return undefined
-  if (options?.decodeCursor) {
-    return options.decodeCursor(connectionCursor)
-  }
-
-  return ({ id: connectionCursor } as unknown) as Cursor
+function encodeCursor<Model, Cursor>(node: Model, options: Options<Model, Cursor>): string {
+  return options.encodeCursor(options.getCursor(node))
 }
