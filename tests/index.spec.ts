@@ -98,7 +98,7 @@ describe('prisma-relay-cursor-connection', () => {
     })
   })
 
-  describe('number id and unique field', () => {
+  describe('number id', () => {
     beforeAll(async () => {
       await client.user.deleteMany({})
 
@@ -114,15 +114,8 @@ describe('prisma-relay-cursor-connection', () => {
     })
 
     it('returns the paginated users with the base client (sanity check)', async () => {
-      const idResult = await client.user.findMany({ cursor: { id: 5 }, take: 5, skip: 1 })
-      expect(idResult).toMatchSnapshot()
-
-      const emailResult = await client.user.findMany({
-        cursor: { email: 'user5@email.com' },
-        take: 5,
-        skip: 1,
-      })
-      expect(emailResult).toMatchSnapshot()
+      const result = await client.user.findMany({ cursor: { id: 5 }, take: 5, skip: 1 })
+      expect(result).toMatchSnapshot()
     })
 
     const NUMBER_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
@@ -179,6 +172,31 @@ describe('prisma-relay-cursor-connection', () => {
         }
       )
 
+      expect(result).toMatchSnapshot()
+    })
+  })
+
+  describe('unique field', () => {
+    beforeAll(async () => {
+      await client.user.deleteMany({})
+
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== USER_FIXTURES.length; i++) {
+        await client.user.create({ data: USER_FIXTURES[i] })
+      }
+    })
+
+    it('returns all users with the base client (sanity check)', async () => {
+      const result = await client.user.findMany({})
+      expect(result).toEqual(USER_FIXTURES)
+    })
+
+    it('returns the paginated users with the base client (sanity check)', async () => {
+      const result = await client.user.findMany({
+        cursor: { email: 'user5@email.com' },
+        take: 5,
+        skip: 1,
+      })
       expect(result).toMatchSnapshot()
     })
 
@@ -262,8 +280,9 @@ describe('prisma-relay-cursor-connection', () => {
     })
 
     const MULTI_FIELD_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      ['returns the first 5 profiles', { first: 5 }],
       [
-        'returns the first 5 profiles',
+        'returns the first 5 profiles after the 1st profile',
         {
           first: 5,
           after: encodeCursor({ firstname_lastname: { firstname: 'foo1', lastname: 'bar1' } }),
