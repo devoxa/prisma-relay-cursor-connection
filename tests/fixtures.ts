@@ -1,4 +1,6 @@
-export const TODO_FIXTURES = [
+import { TodoCreateInput, UserCreateInput, ProfileCreateInput } from '@prisma/client'
+
+export const TODO_FIXTURES: TodoCreateInput[] = [
   { id: 'id_01', text: 'veritatis molestias qui', isCompleted: false },
   { id: 'id_02', text: 'occaecati a dolor', isCompleted: false },
   { id: 'id_03', text: 'ut enim quia', isCompleted: false },
@@ -19,4 +21,50 @@ export const TODO_FIXTURES = [
   { id: 'id_18', text: 'quos rerum aut', isCompleted: true },
   { id: 'id_19', text: 'ullam a voluptatem', isCompleted: false },
   { id: 'id_20', text: 'dolorum deserunt quis', isCompleted: true },
+]
+
+export const USER_FIXTURES: UserCreateInput[] = [
+  { id: 1, email: 'user1@email.com' },
+  { id: 2, email: 'user2@email.com' },
+  { id: 3, email: 'user3@email.com' },
+  { id: 4, email: 'user4@email.com' },
+  { id: 5, email: 'user5@email.com' },
+  { id: 6, email: 'user6@email.com' },
+  { id: 7, email: 'user7@email.com' },
+  { id: 8, email: 'user8@email.com' },
+  { id: 9, email: 'user9@email.com' },
+  { id: 10, email: 'user10@email.com' },
+  { id: 11, email: 'user11@email.com' },
+  { id: 12, email: 'user12@email.com' },
+  { id: 13, email: 'user13@email.com' },
+  { id: 14, email: 'user14@email.com' },
+  { id: 15, email: 'user15@email.com' },
+  { id: 16, email: 'user16@email.com' },
+  { id: 17, email: 'user17@email.com' },
+  { id: 18, email: 'user18@email.com' },
+  { id: 19, email: 'user19@email.com' },
+  { id: 20, email: 'user20@email.com' },
+]
+
+export const PROFILE_FIXTURES: ProfileCreateInput[] = [
+  { firstname: 'foo1', lastname: 'bar1' },
+  { firstname: 'foo2', lastname: 'bar1' },
+  { firstname: 'foo3', lastname: 'bar1' },
+  { firstname: 'foo4', lastname: 'bar1' },
+  { firstname: 'foo5', lastname: 'bar1' },
+  { firstname: 'foo6', lastname: 'bar1' },
+  { firstname: 'foo7', lastname: 'bar1' },
+  { firstname: 'foo8', lastname: 'bar1' },
+  { firstname: 'foo9', lastname: 'bar1' },
+  { firstname: 'foo10', lastname: 'bar1' },
+  { firstname: 'foo11', lastname: 'bar1' },
+  { firstname: 'foo12', lastname: 'bar1' },
+  { firstname: 'foo13', lastname: 'bar1' },
+  { firstname: 'foo14', lastname: 'bar1' },
+  { firstname: 'foo15', lastname: 'bar1' },
+  { firstname: 'foo16', lastname: 'bar1' },
+  { firstname: 'foo17', lastname: 'bar1' },
+  { firstname: 'foo18', lastname: 'bar1' },
+  { firstname: 'foo19', lastname: 'bar1' },
+  { firstname: 'foo20', lastname: 'bar1' },
 ]

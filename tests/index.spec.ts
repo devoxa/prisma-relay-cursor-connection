@@ -1,6 +1,13 @@
-import { PrismaClient } from '@prisma/client'
+/* eslint-disable @typescript-eslint/camelcase */
+import {
+  PrismaClient,
+  UserWhereUniqueInput,
+  User,
+  ProfileWhereUniqueInput,
+  Profile,
+} from '@prisma/client'
 import { findManyCursorConnection, ConnectionArguments } from '../src'
-import { TODO_FIXTURES } from './fixtures'
+import { TODO_FIXTURES, USER_FIXTURES, PROFILE_FIXTURES } from './fixtures'
 
 describe('prisma-relay-cursor-connection', () => {
   let client: PrismaClient
@@ -114,4 +121,266 @@ describe('prisma-relay-cursor-connection', () => {
     expect(error).not.toEqual(undefined)
     expect(error).toMatchSnapshot()
   })
+
+  describe('number id and unique field', () => {
+    beforeAll(async () => {
+      await client.user.deleteMany({})
+
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== USER_FIXTURES.length; i++) {
+        await client.user.create({ data: USER_FIXTURES[i] })
+      }
+    })
+
+    it('returns all USERs with the base client (sanity check)', async () => {
+      const result = await client.user.findMany({})
+      expect(result).toEqual(USER_FIXTURES)
+    })
+
+    it('returns the paginated USERs with the base client (sanity check)', async () => {
+      const idResult = await client.user.findMany({ cursor: { id: 5 }, take: 5, skip: 1 })
+      expect(idResult).toMatchSnapshot()
+
+      const emailResult = await client.user.findMany({
+        cursor: { email: 'user5@email.com' },
+        take: 5,
+        skip: 1,
+      })
+      expect(emailResult).toMatchSnapshot()
+    })
+
+    const NUMBER_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      ['returns all USERs', undefined],
+      ['returns the first 5 USERs', { first: 5 }],
+      [
+        'returns the first 5 USERs after the 1st user',
+        { first: 5, after: encodeCursor({ id: 1 }) },
+      ],
+      [
+        'returns the first 5 USERs after the 5th user',
+        { first: 5, after: encodeCursor({ id: 5 }) },
+      ],
+      [
+        'returns the first 5 USERs after the 15th user',
+        { first: 5, after: encodeCursor({ id: 15 }) },
+      ],
+      [
+        'returns the first 5 USERs after the 16th user',
+        { first: 5, after: encodeCursor({ id: 16 }) },
+      ],
+      [
+        'returns the first 5 USERs after the 20th user',
+        { first: 5, after: encodeCursor({ id: 20 }) },
+      ],
+      ['returns the last 5 USERs', { last: 5 }],
+      [
+        'returns the last 5 USERs before the 1st user',
+        { last: 5, before: encodeCursor({ id: 1 }) },
+      ],
+      [
+        'returns the last 5 USERs before the 5th user',
+        { last: 5, before: encodeCursor({ id: 5 }) },
+      ],
+      [
+        'returns the last 5 USERs before the 6th user',
+        { last: 5, before: encodeCursor({ id: 6 }) },
+      ],
+      [
+        'returns the last 5 USERs before the 16th user',
+        { last: 5, before: encodeCursor({ id: 16 }) },
+      ],
+    ]
+
+    test.each(NUMBER_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection<User, Pick<UserWhereUniqueInput, 'id'>>(
+        (args) => client.user.findMany(args),
+        () => client.user.count(),
+        connectionArgs,
+        {
+          getCursor: (node) => ({ id: node.id }),
+          decodeCursor,
+          encodeCursor,
+        }
+      )
+
+      expect(result).toMatchSnapshot()
+    })
+
+    const UNIQUE_FIELD_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      [
+        'returns the first 5 USERs after the 1st user',
+        { first: 5, after: encodeCursor({ email: 'user1@email.com' }) },
+      ],
+      [
+        'returns the first 5 USERs after the 5th user',
+        { first: 5, after: encodeCursor({ email: 'user5@email.com' }) },
+      ],
+      [
+        'returns the first 5 USERs after the 15th user',
+        { first: 5, after: encodeCursor({ email: 'user15@email.com' }) },
+      ],
+      [
+        'returns the first 5 USERs after the 16th user',
+        { first: 5, after: encodeCursor({ email: 'user16@email.com' }) },
+      ],
+      [
+        'returns the first 5 USERs after the 20th user',
+        { first: 5, after: encodeCursor({ email: 'user20@email.com' }) },
+      ],
+      [
+        'returns the last 5 USERs before the 1st user',
+        { last: 5, before: encodeCursor({ email: 'user1@email.com' }) },
+      ],
+      [
+        'returns the last 5 USERs before the 5th user',
+        { last: 5, before: encodeCursor({ email: 'user5@email.com' }) },
+      ],
+      [
+        'returns the last 5 USERs before the 6th user',
+        { last: 5, before: encodeCursor({ email: 'user6@email.com' }) },
+      ],
+      [
+        'returns the last 5 USERs before the 16th user',
+        { last: 5, before: encodeCursor({ email: 'user16@email.com' }) },
+      ],
+    ]
+
+    test.each(UNIQUE_FIELD_VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection<User, Pick<UserWhereUniqueInput, 'email'>>(
+        (args) => client.user.findMany(args),
+        () => client.user.count(),
+        connectionArgs,
+        {
+          getCursor: (node) => ({ email: node.email }),
+          decodeCursor: (cursor) => JSON.parse(Buffer.from(cursor, 'base64').toString('ascii')),
+          encodeCursor: (prismaCursor) =>
+            Buffer.from(JSON.stringify(prismaCursor)).toString('base64'),
+        }
+      )
+
+      expect(result).toMatchSnapshot()
+    })
+  })
+
+  describe('multi field id', () => {
+    beforeAll(async () => {
+      await client.profile.deleteMany({})
+
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== PROFILE_FIXTURES.length; i++) {
+        await client.profile.create({ data: PROFILE_FIXTURES[i] })
+      }
+    })
+
+    it('returns all PROFILEs with the base client (sanity check)', async () => {
+      const result = await client.profile.findMany({})
+      expect(result).toEqual(PROFILE_FIXTURES)
+    })
+
+    it('returns the paginated PROFILEs with the base client (sanity check)', async () => {
+      const result = await client.profile.findMany({
+        cursor: { firstname_lastname: { firstname: 'foo5', lastname: 'bar1' } },
+        take: 5,
+        skip: 1,
+      })
+      expect(result).toMatchSnapshot()
+    })
+
+    const MULTI_FIELD_ID_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      [
+        'returns the first 5 PROFILEs after the 5th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo1', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the first 5 PROFILEs after the 5th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo5', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the first 5 PROFILEs after the 15th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo15', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the first 5 PROFILEs after the 16th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo16', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the first 5 PROFILEs after the 20th profile',
+        {
+          first: 5,
+          after: encodeCursor({ firstname_lastname: { firstname: 'foo20', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the last 5 PROFILEs before the 1st profile',
+        {
+          last: 5,
+          before: encodeCursor({ firstname_lastname: { firstname: 'foo1', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the last 5 PROFILEs before the 5th profile',
+        {
+          last: 5,
+          before: encodeCursor({ firstname_lastname: { firstname: 'foo5', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the last 5 PROFILEs before the 6th profile',
+        {
+          last: 5,
+          before: encodeCursor({ firstname_lastname: { firstname: 'foo6', lastname: 'bar1' } }),
+        },
+      ],
+      [
+        'returns the last 5 PROFILEs before the 16th profile',
+        {
+          last: 5,
+          before: encodeCursor({ firstname_lastname: { firstname: 'foo16', lastname: 'bar1' } }),
+        },
+      ],
+    ]
+
+    test.each(MULTI_FIELD_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection<
+        Profile,
+        Pick<ProfileWhereUniqueInput, 'firstname_lastname'>
+      >(
+        (args) => client.profile.findMany(args),
+        () => client.profile.count(),
+        connectionArgs,
+        {
+          getCursor: (node) => ({
+            // eslint-disable-next-line @typescript-eslint/camelcase
+            firstname_lastname: {
+              firstname: node.firstname,
+              lastname: node.lastname,
+            },
+          }),
+          decodeCursor,
+          encodeCursor,
+        }
+      )
+
+      expect(result).toMatchSnapshot()
+    })
+  })
 })
+
+function decodeCursor(cursor: string) {
+  return JSON.parse(Buffer.from(cursor, 'base64').toString('ascii'))
+}
+function encodeCursor<Cursor>(prismaCursor: Cursor) {
+  return Buffer.from(JSON.stringify(prismaCursor)).toString('base64')
+}
