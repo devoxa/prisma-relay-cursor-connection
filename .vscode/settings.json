@@ -1,0 +1,12 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": { "source.organizeImports": true },
+  "[typescript]": { "editor.formatOnSave": true },
+  "[json]": { "editor.formatOnSave": true },
+  "[prisma]": { "editor.formatOnSave": true, "editor.defaultFormatter": "Prisma.prisma" },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true
+  }
+}

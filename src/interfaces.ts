@@ -1,6 +1,13 @@
+// Prisma Relay Cursor Connection Arguments
+export interface Options<Model, Cursor> {
+  getCursor: (node: Model) => Cursor
+  encodeCursor: (cursor: Cursor) => string
+  decodeCursor: (cursorString: string) => Cursor
+}
+
 // Prisma Arguments
-export interface PrismaFindManyArguments {
-  cursor?: { id: string }
+export interface PrismaFindManyArguments<Cursor> {
+  cursor?: Cursor
   take?: number
   skip?: number
 }

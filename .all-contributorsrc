@@ -26,7 +26,7 @@
         "code",
         "test"
       ]
-    }
+    },
     {
       "login": "marcjulian",
       "name": "Marc",
@@ -35,10 +35,21 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jeongsd",
+      "name": "Jeong Seong Dae",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7903426?v=4",
+      "profile": "http://jeongsd.dev",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "files": [
     "README.md"
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "commitConvention": "none"
 }

@@ -1,26 +1,1126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (after with last) 1`] = `[Error: "after" needs to be used with "first"]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (after with last) 1`] = `[Error: "after" needs to be used with "first"]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (after without first) 1`] = `[Error: "after" needs to be used with "first"]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (after without first) 1`] = `[Error: "after" needs to be used with "first"]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (before with first) 1`] = `[Error: "before" needs to be used with "last"]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (before with first) 1`] = `[Error: "before" needs to be used with "last"]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (before without last) 1`] = `[Error: "before" needs to be used with "last"]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (before without last) 1`] = `[Error: "before" needs to be used with "last"]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (both after & before with first) 1`] = `[Error: Only one of "after" and "before" can be set]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (both after & before with first) 1`] = `[Error: Only one of "after" and "before" can be set]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (both after & before) 1`] = `[Error: Only one of "after" and "before" can be set]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (both after & before) 1`] = `[Error: Only one of "after" and "before" can be set]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (both first & last) 1`] = `[Error: Only one of "first" and "last" can be set]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (both first & last) 1`] = `[Error: Only one of "first" and "last" can be set]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (kitchensink) 1`] = `[Error: Only one of "first" and "last" can be set]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (kitchensink) 1`] = `[Error: Only one of "first" and "last" can be set]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (negative first) 1`] = `[Error: "first" has to be positive]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (negative first) 1`] = `[Error: "first" has to be positive]`;
 
-exports[`prisma-relay-cursor-connection errors for invalid arguments (negative last) 1`] = `[Error: "last" has to be positive]`;
+exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (negative last) 1`] = `[Error: "last" has to be positive]`;
 
-exports[`prisma-relay-cursor-connection returns all TODOs 1`] = `
+exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo1",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo10",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTEiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo11",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTIiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo12",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo13",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 1st profile 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo10",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTEiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo11",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTIiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo12",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo13",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTQiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo14",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTQiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 5th profile 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo6",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo7",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vOCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo8",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vOSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo9",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vOSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 15th profile 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTYiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo16",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTciLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo17",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTgiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo18",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTkiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo19",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo2",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTYiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 16th profile 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTciLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo17",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTgiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo18",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTkiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo19",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo2",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMjAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo20",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMjAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTciLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 20th profile 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo3",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo4",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo5",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo6",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo7",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 1st profile 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 5th profile 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTkiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo19",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo2",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMjAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo20",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo3",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo4",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTkiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 6th profile 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo2",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMjAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo20",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo3",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo4",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+      "node": Object {
+        "firstname": "foo5",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 16th profile 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTEiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo11",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTIiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo12",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo13",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTQiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo14",
+        "lastname": "bar1",
+      },
+    },
+    Object {
+      "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTUiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+      "node": Object {
+        "firstname": "foo15",
+        "lastname": "bar1",
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTUiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTEiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection multi field id returns the paginated profiles with the base client (sanity check) 1`] = `
+Array [
+  Object {
+    "firstname": "foo6",
+    "lastname": "bar1",
+  },
+  Object {
+    "firstname": "foo7",
+    "lastname": "bar1",
+  },
+  Object {
+    "firstname": "foo8",
+    "lastname": "bar1",
+  },
+  Object {
+    "firstname": "foo9",
+    "lastname": "bar1",
+  },
+]
+`;
+
+exports[`prisma-relay-cursor-connection number id returns all users 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6MX0=",
+      "node": Object {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6Mn0=",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6M30=",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NH0=",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NX0=",
+      "node": Object {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6Nn0=",
+      "node": Object {
+        "email": "user6@email.com",
+        "id": 6,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6N30=",
+      "node": Object {
+        "email": "user7@email.com",
+        "id": 7,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6OH0=",
+      "node": Object {
+        "email": "user8@email.com",
+        "id": 8,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6OX0=",
+      "node": Object {
+        "email": "user9@email.com",
+        "id": 9,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTB9",
+      "node": Object {
+        "email": "user10@email.com",
+        "id": 10,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTF9",
+      "node": Object {
+        "email": "user11@email.com",
+        "id": 11,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTJ9",
+      "node": Object {
+        "email": "user12@email.com",
+        "id": 12,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTN9",
+      "node": Object {
+        "email": "user13@email.com",
+        "id": 13,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTR9",
+      "node": Object {
+        "email": "user14@email.com",
+        "id": 14,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTV9",
+      "node": Object {
+        "email": "user15@email.com",
+        "id": 15,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTZ9",
+      "node": Object {
+        "email": "user16@email.com",
+        "id": 16,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTd9",
+      "node": Object {
+        "email": "user17@email.com",
+        "id": 17,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTh9",
+      "node": Object {
+        "email": "user18@email.com",
+        "id": 18,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTl9",
+      "node": Object {
+        "email": "user19@email.com",
+        "id": 19,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MjB9",
+      "node": Object {
+        "email": "user20@email.com",
+        "id": 20,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6MjB9",
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "startCursor": "eyJpZCI6MX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the first 5 users 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6MX0=",
+      "node": Object {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6Mn0=",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6M30=",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NH0=",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NX0=",
+      "node": Object {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6NX0=",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "eyJpZCI6MX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 1st user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6Mn0=",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6M30=",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NH0=",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NX0=",
+      "node": Object {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6Nn0=",
+      "node": Object {
+        "email": "user6@email.com",
+        "id": 6,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6Nn0=",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJpZCI6Mn0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 5th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6Nn0=",
+      "node": Object {
+        "email": "user6@email.com",
+        "id": 6,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6N30=",
+      "node": Object {
+        "email": "user7@email.com",
+        "id": 7,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6OH0=",
+      "node": Object {
+        "email": "user8@email.com",
+        "id": 8,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6OX0=",
+      "node": Object {
+        "email": "user9@email.com",
+        "id": 9,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTB9",
+      "node": Object {
+        "email": "user10@email.com",
+        "id": 10,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6MTB9",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJpZCI6Nn0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 15th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6MTZ9",
+      "node": Object {
+        "email": "user16@email.com",
+        "id": 16,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTd9",
+      "node": Object {
+        "email": "user17@email.com",
+        "id": 17,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTh9",
+      "node": Object {
+        "email": "user18@email.com",
+        "id": 18,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTl9",
+      "node": Object {
+        "email": "user19@email.com",
+        "id": 19,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MjB9",
+      "node": Object {
+        "email": "user20@email.com",
+        "id": 20,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6MjB9",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "eyJpZCI6MTZ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 16th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6MTd9",
+      "node": Object {
+        "email": "user17@email.com",
+        "id": 17,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTh9",
+      "node": Object {
+        "email": "user18@email.com",
+        "id": 18,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTl9",
+      "node": Object {
+        "email": "user19@email.com",
+        "id": 19,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MjB9",
+      "node": Object {
+        "email": "user20@email.com",
+        "id": 20,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6MjB9",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "eyJpZCI6MTd9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 20th user 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the last 5 users 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6MTZ9",
+      "node": Object {
+        "email": "user16@email.com",
+        "id": 16,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTd9",
+      "node": Object {
+        "email": "user17@email.com",
+        "id": 17,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTh9",
+      "node": Object {
+        "email": "user18@email.com",
+        "id": 18,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTl9",
+      "node": Object {
+        "email": "user19@email.com",
+        "id": 19,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MjB9",
+      "node": Object {
+        "email": "user20@email.com",
+        "id": 20,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6MjB9",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "eyJpZCI6MTZ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 1st user 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 5th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6MX0=",
+      "node": Object {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6Mn0=",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6M30=",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NH0=",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6NH0=",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "eyJpZCI6MX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 6th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6MX0=",
+      "node": Object {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6Mn0=",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6M30=",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NH0=",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6NX0=",
+      "node": Object {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6NX0=",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "eyJpZCI6MX0=",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 16th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJpZCI6MTF9",
+      "node": Object {
+        "email": "user11@email.com",
+        "id": 11,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTJ9",
+      "node": Object {
+        "email": "user12@email.com",
+        "id": 12,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTN9",
+      "node": Object {
+        "email": "user13@email.com",
+        "id": 13,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTR9",
+      "node": Object {
+        "email": "user14@email.com",
+        "id": 14,
+      },
+    },
+    Object {
+      "cursor": "eyJpZCI6MTV9",
+      "node": Object {
+        "email": "user15@email.com",
+        "id": 15,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJpZCI6MTV9",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJpZCI6MTF9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the paginated users with the base client (sanity check) 1`] = `
+Array [
+  Object {
+    "email": "user6@email.com",
+    "id": 6,
+  },
+  Object {
+    "email": "user7@email.com",
+    "id": 7,
+  },
+  Object {
+    "email": "user8@email.com",
+    "id": 8,
+  },
+  Object {
+    "email": "user9@email.com",
+    "id": 9,
+  },
+  Object {
+    "email": "user10@email.com",
+    "id": 10,
+  },
+]
+`;
+
+exports[`prisma-relay-cursor-connection string id returns all todos 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -194,7 +1294,56 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the first 5 TODOs 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the first 5 completed todos 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "id": "id_04",
+        "isCompleted": true,
+      },
+    },
+    Object {
+      "cursor": "id_05",
+      "node": Object {
+        "id": "id_05",
+        "isCompleted": true,
+      },
+    },
+    Object {
+      "cursor": "id_06",
+      "node": Object {
+        "id": "id_06",
+        "isCompleted": true,
+      },
+    },
+    Object {
+      "cursor": "id_08",
+      "node": Object {
+        "id": "id_08",
+        "isCompleted": true,
+      },
+    },
+    Object {
+      "cursor": "id_09",
+      "node": Object {
+        "id": "id_09",
+        "isCompleted": true,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_09",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_04",
+  },
+  "totalCount": 11,
+}
+`;
+
+exports[`prisma-relay-cursor-connection string id returns the first 5 todos 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -248,7 +1397,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 1st todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 1st todo 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -302,7 +1451,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 5th todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 5th todo 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -356,7 +1505,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 15th todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 15th todo 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -410,7 +1559,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 16th todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 16th todo 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -456,7 +1605,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the first 5 TODOs after the 20th todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 20th todo 1`] = `
 Object {
   "edges": Array [],
   "pageInfo": Object {
@@ -469,56 +1618,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the first 5 completed TODOs 1`] = `
-Object {
-  "edges": Array [
-    Object {
-      "cursor": "id_04",
-      "node": Object {
-        "id": "id_04",
-        "isCompleted": true,
-      },
-    },
-    Object {
-      "cursor": "id_05",
-      "node": Object {
-        "id": "id_05",
-        "isCompleted": true,
-      },
-    },
-    Object {
-      "cursor": "id_06",
-      "node": Object {
-        "id": "id_06",
-        "isCompleted": true,
-      },
-    },
-    Object {
-      "cursor": "id_08",
-      "node": Object {
-        "id": "id_08",
-        "isCompleted": true,
-      },
-    },
-    Object {
-      "cursor": "id_09",
-      "node": Object {
-        "id": "id_09",
-        "isCompleted": true,
-      },
-    },
-  ],
-  "pageInfo": Object {
-    "endCursor": "id_09",
-    "hasNextPage": true,
-    "hasPreviousPage": false,
-    "startCursor": "id_04",
-  },
-  "totalCount": 11,
-}
-`;
-
-exports[`prisma-relay-cursor-connection returns the last 5 TODOs 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the last 5 todos 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -572,7 +1672,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the last 5 TODOs before the 1st todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 1st todo 1`] = `
 Object {
   "edges": Array [],
   "pageInfo": Object {
@@ -585,7 +1685,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the last 5 TODOs before the 5th todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 5th todo 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -631,7 +1731,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the last 5 TODOs before the 6th todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 6th todo 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -685,7 +1785,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the last 5 TODOs before the 16th todo 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 16th todo 1`] = `
 Object {
   "edges": Array [
     Object {
@@ -739,7 +1839,7 @@ Object {
 }
 `;
 
-exports[`prisma-relay-cursor-connection returns the paginated TODOs with the base client (sanity check) 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the paginated todos with the base client (sanity check) 1`] = `
 Array [
   Object {
     "id": "id_06",
@@ -765,6 +1865,386 @@ Array [
     "id": "id_10",
     "isCompleted": true,
     "text": "deserunt rerum occaecati",
+  },
+]
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 1st user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user6@email.com",
+        "id": 6,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 5th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user6@email.com",
+        "id": 6,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI3QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user7@email.com",
+        "id": 7,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI4QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user8@email.com",
+        "id": 8,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI5QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user9@email.com",
+        "id": 9,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxMEBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user10@email.com",
+        "id": 10,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXIxMEBlbWFpbC5jb20ifQ==",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 15th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxNkBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user16@email.com",
+        "id": 16,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxN0BlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user17@email.com",
+        "id": 17,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxOEBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user18@email.com",
+        "id": 18,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxOUBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user19@email.com",
+        "id": 19,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user20@email.com",
+        "id": 20,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxNkBlbWFpbC5jb20ifQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 16th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxN0BlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user17@email.com",
+        "id": 17,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxOEBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user18@email.com",
+        "id": 18,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxOUBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user19@email.com",
+        "id": 19,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user20@email.com",
+        "id": 20,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxN0BlbWFpbC5jb20ifQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 20th user 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 1st user 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 5th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 6th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
+      "node": Object {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 16th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxMUBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user11@email.com",
+        "id": 11,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxMkBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user12@email.com",
+        "id": 12,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxM0BlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user13@email.com",
+        "id": 13,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxNEBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user14@email.com",
+        "id": 14,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxNUBlbWFpbC5jb20ifQ==",
+      "node": Object {
+        "email": "user15@email.com",
+        "id": 15,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXIxNUBlbWFpbC5jb20ifQ==",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxMUBlbWFpbC5jb20ifQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection unique field returns the paginated users with the base client (sanity check) 1`] = `
+Array [
+  Object {
+    "email": "user6@email.com",
+    "id": 6,
+  },
+  Object {
+    "email": "user7@email.com",
+    "id": 7,
+  },
+  Object {
+    "email": "user8@email.com",
+    "id": 8,
+  },
+  Object {
+    "email": "user9@email.com",
+    "id": 9,
+  },
+  Object {
+    "email": "user10@email.com",
+    "id": 10,
   },
 ]
 `;

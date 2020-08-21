@@ -12,3 +12,15 @@ model Todo {
   text        String
   isCompleted Boolean @default(false)
 }
+
+model User {
+  id    Int    @id
+  email String @unique
+}
+
+model Profile {
+  firstname String
+  lastname  String
+
+  @@unique([firstname, lastname])
+}

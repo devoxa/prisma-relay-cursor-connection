@@ -53,6 +53,8 @@ This module has a peer dependency on `@prisma/client@^2.0.0`.
 
 ## Usage
 
+### General Usage
+
 This module validates the connection arguments to make sure they work with Prisma. The following
 combinations are supported:
 
@@ -68,8 +70,8 @@ user from reading out too many resources at once:
 - One of `first` | `last` has to be defined
 - `first` | `last` have to be below a reasonable maximum (e.g. 100)
 
-If you are using opaque cursors, you will also need to decode them before passing them into this
-module.
+If you are encoding your cursors outside of this module, you will also need to decode them before
+passing them.
 
 ```ts
 import {
@@ -83,6 +85,8 @@ const result = await findManyCursorConnection(
   { first: 5, after: '5c11e0fa-fd6b-44ee-9016-0809ee2f2b9a' } // typeof ConnectionArguments
 )
 ```
+
+### Type-Safe Arguments
 
 You can also use additional `FindManyArgs` while keeping type safety intact:
 
@@ -103,6 +107,28 @@ const result = await findManyCursorConnection(
 // Type error: Property text does not exist
 result.edges[0].node.text
 ```
+
+### Custom Cursors
+
+By default, the cursor is the `id` field of your model. If you would like to use a different field,
+a compound index, or handle encoding/decoding, you can pass the following options:
+
+```ts
+import { findManyCursorConnection } from '@devoxa/prisma-relay-cursor-connection'
+
+const result = await findManyCursorConnection(
+  (args) => client.todo.findMany(args),
+  () => client.todo.count(),
+  { first: 5, after: 'eyJpZCI6MTZ9' },
+  {
+    getCursor: (node) => ({ id: node.id }),
+    encodeCursor: (cursor) => Buffer.from(JSON.stringify(cursor)).toString('base64'),
+    decodeCursor: (cursor) => JSON.parse(Buffer.from(cursor, 'base64').toString('ascii')),
+  }
+)
+```
+
+You can find more examples for custom cursors in the [unit tests](./tests/index.spec.ts).
 
 ## Contributing
 
@@ -127,6 +153,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.david-reess.de"><img src="https://avatars3.githubusercontent.com/u/4615516?v=4" width="75px;" alt=""/><br /><sub><b>David Reeß</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Code">💻</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Documentation">📖</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=queicherius" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://twitter.com/controlplusb"><img src="https://avatars2.githubusercontent.com/u/12164768?v=4" width="75px;" alt=""/><br /><sub><b>Sean Matheson</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=ctrlplusb" title="Code">💻</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=ctrlplusb" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://marcjulian.de/?ref=github"><img src="https://avatars1.githubusercontent.com/u/8985933?v=4" width="75px;" alt=""/><br /><sub><b>Marc</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=marcjulian" title="Code">💻</a></td>
+    <td align="center"><a href="http://jeongsd.dev"><img src="https://avatars1.githubusercontent.com/u/7903426?v=4" width="75px;" alt=""/><br /><sub><b>Jeong Seong Dae</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=jeongsd" title="Code">💻</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=jeongsd" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
