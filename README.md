@@ -17,9 +17,9 @@
     />
   </a>
 
-  <a href="https://app.circleci.com/pipelines/github/devoxa/prisma-relay-cursor-connection?branch=master">
+  <a href="https://github.com/devoxa/prisma-relay-cursor-connection/actions?query=branch%3Amaster+workflow%3A%22Continuous+Integration%22">
     <img
-      src="https://img.shields.io/circleci/build/github/devoxa/prisma-relay-cursor-connection/master?style=flat-square"
+      src="https://img.shields.io/github/workflow/status/devoxa/prisma-relay-cursor-connection/Continuous%20Integration?style=flat-square"
       alt="Build Status"
     />
   </a>
