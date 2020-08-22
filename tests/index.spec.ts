@@ -18,6 +18,7 @@ function decodeCursor(cursor: string) {
 }
 
 describe('prisma-relay-cursor-connection', () => {
+  jest.setTimeout(10000)
   let client: PrismaClient
 
   beforeAll(async () => {

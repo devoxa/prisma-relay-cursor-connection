@@ -1,0 +1,44 @@
+name: Continuous Integration
+
+on: [push]
+
+jobs:
+  test-and-build:
+    name: 'Test & Build'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout the repository'
+        uses: actions/checkout@v2
+
+      - name: 'Setup Node.JS'
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+
+      - name: 'Cache dependencies'
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: 'Install dependencies'
+        run: yarn install --frozen-lockfile
+
+      - name: 'Migrate database'
+        run: yarn prisma migrate up --experimental --create-db
+
+      - name: 'Run tests'
+        run: yarn test --coverage
+
+      - name: 'Save test coverage'
+        uses: codecov/codecov-action@v1
+
+      - name: 'Check code formatting'
+        run: yarn format:check
+
+      - name: 'Run linter'
+        run: yarn lint
+
+      - name: 'Build package'
+        run: yarn build
