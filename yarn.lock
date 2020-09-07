@@ -499,9 +499,9 @@
     chalk "^4.0.0"
 
 "@prisma/cli@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@prisma/cli/-/cli-2.5.1.tgz#fef4da2ed1b7f032b3a9bcce97d0a119b148ceb1"
-  integrity sha512-cu7YiskmiXZ6FXNf/8gfkzB10AjoHiCIHUgBOPNnS6lXJPU1Krh6TQOEXH6tNTB19XeUXO7KetTcqKGW48IkMQ==
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@prisma/cli/-/cli-2.6.2.tgz#52fb447f702f159c9a218f720b0b809581815a0b"
+  integrity sha512-aDzA1kWwmfyt1FeTzayZ6fDc9uXRo+gt+KFsR9bNqHtdge2aZLA9N/ft9+1627HOADIQgfTFw41K0GOMBJQ48w==
 
 "@prisma/client@^2.5.1":
   version "2.6.2"
