@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 import {
   PrismaClient,
   Profile,
@@ -357,7 +356,6 @@ describe('prisma-relay-cursor-connection', () => {
         connectionArgs,
         {
           getCursor: (node) => ({
-            // eslint-disable-next-line @typescript-eslint/camelcase
             firstname_lastname: {
               firstname: node.firstname,
               lastname: node.lastname,

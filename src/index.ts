@@ -121,7 +121,7 @@ type ConnectionArgumentsUnion =
 
 type ForwardPaginationArguments = { first: number; after?: string }
 type BackwardPaginationArguments = { last: number; before?: string }
-type NoPaginationArguments = {}
+type NoPaginationArguments = Record<string, unknown>
 
 function getDefaultOptions<Model, Cursor>() {
   return {
