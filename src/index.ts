@@ -1,4 +1,3 @@
-import { GraphQLResolveInfo } from 'graphql'
 import graphqlFields from 'graphql-fields'
 import { Connection, ConnectionArguments, Options, PrismaFindManyArguments } from './interfaces'
 
@@ -9,7 +8,6 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
   pOptions?: Options<Model, Cursor>,
-  info?: GraphQLResolveInfo
 ): Promise<Connection<Model>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
@@ -17,9 +15,9 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
     throw new Error('This code path can never happen, only here for type safety')
   }
 
-  const topLevelFields = info && Object.keys(graphqlFields(info))
 
   const options = pOptions || getDefaultOptions()
+  const topLevelFields = options.info && Object.keys(graphqlFields(options.info))
 
   let nodes: Array<Model>
   let totalCount: number
@@ -139,6 +137,7 @@ function getDefaultOptions<Model, Cursor>() {
       (({ id: ((node as unknown) as { id: string }).id } as unknown) as Cursor),
     encodeCursor: (cursor: Cursor) => ((cursor as unknown) as { id: string }).id,
     decodeCursor: (cursorString: string) => (({ id: cursorString } as unknown) as Cursor),
+    info: undefined
   }
 }
 

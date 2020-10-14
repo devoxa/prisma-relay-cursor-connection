@@ -1,8 +1,11 @@
+import { GraphQLResolveInfo } from 'graphql';
+
 // Prisma Relay Cursor Connection Arguments
 export interface Options<Model, Cursor> {
   getCursor: (node: Model) => Cursor
   encodeCursor: (cursor: Cursor) => string
-  decodeCursor: (cursorString: string) => Cursor
+  decodeCursor: (cursorString: string) => Cursor,
+  info?: GraphQLResolveInfo;
 }
 
 // Prisma Arguments
