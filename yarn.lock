@@ -558,9 +558,9 @@
     "@prisma/engines" "2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111"
 
 "@prisma/client@^2.5.1":
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.10.1.tgz#96fe79ad0d7763d0eda1ea91870a8882e4dbb21f"
-  integrity sha512-VwasxCCwdRmrcVVoLwXTEbwrBiqOYr2Umqw9btvMvHGRhA1nRKCvmt7SCiCjGrx6CuC8eCG/HGxruv04001YKQ==
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.10.2.tgz#2f37f3ea9aefa24cd80f1ff2e196250a5ec7ba75"
+  integrity sha512-55YKXgm5IQP/roKZCTn8ySFjgNwMSS/x3kOcUuDzpDtHXGpSXUkpeH6eqwnj6iq17DLxYqqw8gDGb4+WnIlohw==
   dependencies:
     "@prisma/engines-version" "2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111"
 
