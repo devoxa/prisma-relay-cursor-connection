@@ -134,8 +134,7 @@ You can find more examples for custom cursors in the [unit tests](./tests/index.
 
 ```bash
 # Setup the test database
-yarn prisma migrate up --experimental --create-db
-yarn prisma generate
+yarn prisma migrate dev --preview-feature
 
 # Run the tests
 yarn test

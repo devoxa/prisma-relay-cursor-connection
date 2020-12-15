@@ -26,7 +26,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: 'Migrate database'
-        run: yarn prisma migrate up --experimental --create-db
+        run: yarn prisma migrate deploy --preview-feature
 
       - name: 'Run tests'
         run: yarn test --coverage
