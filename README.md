@@ -100,7 +100,7 @@ const baseArgs = {
 
 const result = await findManyCursorConnection(
   (args) => client.todo.findMany({ ...args, ...baseArgs }),
-  () => client.todo.count(baseArgs),
+  () => client.todo.count({ where: baseArgs.where }),
   { last: 5, before: '5c11e0fa-fd6b-44ee-9016-0809ee2f2b9a' }
 )
 

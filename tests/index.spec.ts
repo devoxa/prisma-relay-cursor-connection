@@ -1,10 +1,4 @@
-import {
-  PrismaClient,
-  Profile,
-  ProfileWhereUniqueInput,
-  User,
-  UserWhereUniqueInput,
-} from '@prisma/client'
+import { Prisma, PrismaClient, Profile, User } from '@prisma/client'
 import { ConnectionArguments, findManyCursorConnection } from '../src'
 import { PROFILE_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
 
@@ -81,7 +75,7 @@ describe('prisma-relay-cursor-connection', () => {
 
       const result = await findManyCursorConnection(
         (args) => client.todo.findMany({ ...args, ...baseArgs }),
-        () => client.todo.count(baseArgs),
+        () => client.todo.count({ where: baseArgs.where }),
         { first: 5 }
       )
 
@@ -161,7 +155,7 @@ describe('prisma-relay-cursor-connection', () => {
     ]
 
     test.each(NUMBER_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
-      const result = await findManyCursorConnection<User, Pick<UserWhereUniqueInput, 'id'>>(
+      const result = await findManyCursorConnection<User, Pick<Prisma.UserWhereUniqueInput, 'id'>>(
         (args) => client.user.findMany(args),
         () => client.user.count(),
         connectionArgs,
@@ -240,7 +234,10 @@ describe('prisma-relay-cursor-connection', () => {
     ]
 
     test.each(UNIQUE_FIELD_VALID_CASES)('%s', async (name, connectionArgs) => {
-      const result = await findManyCursorConnection<User, Pick<UserWhereUniqueInput, 'email'>>(
+      const result = await findManyCursorConnection<
+        User,
+        Pick<Prisma.UserWhereUniqueInput, 'email'>
+      >(
         (args) => client.user.findMany(args),
         () => client.user.count(),
         connectionArgs,
@@ -349,7 +346,7 @@ describe('prisma-relay-cursor-connection', () => {
     test.each(MULTI_FIELD_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
       const result = await findManyCursorConnection<
         Profile,
-        Pick<ProfileWhereUniqueInput, 'firstname_lastname'>
+        Pick<Prisma.ProfileWhereUniqueInput, 'firstname_lastname'>
       >(
         (args) => client.profile.findMany(args),
         () => client.profile.count(),

@@ -1,6 +1,6 @@
-import { ProfileCreateInput, TodoCreateInput, UserCreateInput } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 
-export const TODO_FIXTURES: TodoCreateInput[] = [
+export const TODO_FIXTURES: Prisma.TodoCreateInput[] = [
   { id: 'id_01', text: 'veritatis molestias qui', isCompleted: false },
   { id: 'id_02', text: 'occaecati a dolor', isCompleted: false },
   { id: 'id_03', text: 'ut enim quia', isCompleted: false },
@@ -23,7 +23,7 @@ export const TODO_FIXTURES: TodoCreateInput[] = [
   { id: 'id_20', text: 'dolorum deserunt quis', isCompleted: true },
 ]
 
-export const USER_FIXTURES: UserCreateInput[] = [
+export const USER_FIXTURES: Prisma.UserCreateInput[] = [
   { id: 1, email: 'user1@email.com' },
   { id: 2, email: 'user2@email.com' },
   { id: 3, email: 'user3@email.com' },
@@ -46,7 +46,7 @@ export const USER_FIXTURES: UserCreateInput[] = [
   { id: 20, email: 'user20@email.com' },
 ]
 
-export const PROFILE_FIXTURES: ProfileCreateInput[] = [
+export const PROFILE_FIXTURES: Prisma.ProfileCreateInput[] = [
   { firstname: 'foo1', lastname: 'bar1' },
   { firstname: 'foo2', lastname: 'bar1' },
   { firstname: 'foo3', lastname: 'bar1' },
