@@ -518,16 +518,16 @@
     fastq "^1.6.0"
 
 "@prisma/client@^2.5.1":
-  version "2.16.1"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.16.1.tgz#3aed1506f4090734735d1036bfdaee997032e793"
-  integrity sha512-g4zXwC9PRtlrad/CBu+lXHRhvkEz4QW9tDn7bJGwCVNeLi+gLzSbEHjo3xLZgI3+Jp+40flOzrJrYP0bkNCpdQ==
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.17.0.tgz#e38462796c2e824504763416f5e3a7219d70652d"
+  integrity sha512-tzsBxtx9J1epOGCiBeXur1tEz81UIdWg2G/HpDmflXKcv/MJb+KCWSKSsEW49eXcvVwRgxNyxLoCO6CwvjQKcg==
   dependencies:
-    "@prisma/engines-version" "2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03"
+    "@prisma/engines-version" "2.17.0-35.3c463ebd78b1d21d8fdacdd27899e280cf686223"
 
-"@prisma/engines-version@2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03":
-  version "2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03"
-  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03.tgz#52c026a05f6c109dd642c1edcc60ca45b01021ca"
-  integrity sha512-BkqxSWOc9aNYXjtmRtaLy2fKIeJ3+NKimRL1gKWXMjtxhKS5E3wvyxwZamtfIpEaZELGAO3x5+gqwoR9kS2oZA==
+"@prisma/engines-version@2.17.0-35.3c463ebd78b1d21d8fdacdd27899e280cf686223":
+  version "2.17.0-35.3c463ebd78b1d21d8fdacdd27899e280cf686223"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-2.17.0-35.3c463ebd78b1d21d8fdacdd27899e280cf686223.tgz#9ae6ed4467a0febff8afaf216c1bb67225f51b84"
+  integrity sha512-9idv5blqPUlvUPVT48eVi3T0RS/NBklUcjrla3jWyV8AYfB2BdaG/Zci7H5ajyYLnfZZHG9tBpP0LcveQCFH8A==
 
 "@prisma/engines@2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03":
   version "2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03"
