@@ -24,7 +24,7 @@
     "@prisma/client": "^2.0.0"
   },
   "devDependencies": {
-    "@devoxa/eslint-config": "^1.0.0",
+    "@devoxa/eslint-config": "^2.0.5",
     "@devoxa/prettier-config": "^1.0.0",
     "@prisma/client": "^2.5.1",
     "@types/jest": "^26.0.3",
