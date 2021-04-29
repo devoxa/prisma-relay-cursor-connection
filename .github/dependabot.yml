@@ -1,0 +1,29 @@
+version: 2
+registries:
+  npm-registry-registry-npmjs-org:
+    type: npm-registry
+    url: https://registry.npmjs.org
+    token: "${{secrets.NPM_REGISTRY_REGISTRY_NPMJS_ORG_TOKEN}}"
+
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 15.0.0
+  - dependency-name: prisma
+    versions:
+    - 2.20.0
+  - dependency-name: "@prisma/cli"
+    versions:
+    - 2.16.0
+  - dependency-name: "@prisma/client"
+    versions:
+    - 2.15.0
+    - 2.16.0
+  registries:
+  - npm-registry-registry-npmjs-org
