@@ -1,5 +1,418 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 users after the 1st user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
+      "mailExtension": "email.com",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
+      "mailExtension": "email.com",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
+      "mailExtension": "email.com",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
+      "mailExtension": "email.com",
+      "node": Object {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
+      "mailExtension": "email.com",
+      "node": Object {
+        "email": "user6@email.com",
+        "id": 6,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 users after the 5th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
+      "mailExtension": "user6",
+      "node": Object {
+        "email": "user6@email.com",
+        "id": 6,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI3QGVtYWlsLmNvbSJ9",
+      "mailExtension": "user7",
+      "node": Object {
+        "email": "user7@email.com",
+        "id": 7,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI4QGVtYWlsLmNvbSJ9",
+      "mailExtension": "user8",
+      "node": Object {
+        "email": "user8@email.com",
+        "id": 8,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI5QGVtYWlsLmNvbSJ9",
+      "mailExtension": "user9",
+      "node": Object {
+        "email": "user9@email.com",
+        "id": 9,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxMEBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user10",
+      "node": Object {
+        "email": "user10@email.com",
+        "id": 10,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXIxMEBlbWFpbC5jb20ifQ==",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 users after the 15th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxNkBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user16",
+      "node": Object {
+        "email": "user16@email.com",
+        "id": 16,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxN0BlbWFpbC5jb20ifQ==",
+      "mailExtension": "user17",
+      "node": Object {
+        "email": "user17@email.com",
+        "id": 17,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxOEBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user18",
+      "node": Object {
+        "email": "user18@email.com",
+        "id": 18,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxOUBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user19",
+      "node": Object {
+        "email": "user19@email.com",
+        "id": 19,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user20",
+      "node": Object {
+        "email": "user20@email.com",
+        "id": 20,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxNkBlbWFpbC5jb20ifQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 users after the 16th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxN0BlbWFpbC5jb20ifQ==",
+      "mailExtension": "user17",
+      "node": Object {
+        "email": "user17@email.com",
+        "id": 17,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxOEBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user18",
+      "node": Object {
+        "email": "user18@email.com",
+        "id": 18,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxOUBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user19",
+      "node": Object {
+        "email": "user19@email.com",
+        "id": 19,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user20",
+      "node": Object {
+        "email": "user20@email.com",
+        "id": 20,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxN0BlbWFpbC5jb20ifQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 users after the 20th user 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 users before the 1st user 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 users before the 5th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
+      "mailExtension": "user1",
+      "node": Object {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
+      "mailExtension": "user2",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
+      "mailExtension": "user3",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
+      "mailExtension": "user4",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 users before the 6th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
+      "mailExtension": "user1",
+      "node": Object {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
+      "mailExtension": "user2",
+      "node": Object {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
+      "mailExtension": "user3",
+      "node": Object {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
+      "mailExtension": "user4",
+      "node": Object {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
+      "mailExtension": "user5",
+      "node": Object {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 users before the 16th user 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxMUBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user11",
+      "node": Object {
+        "email": "user11@email.com",
+        "id": 11,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxMkBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user12",
+      "node": Object {
+        "email": "user12@email.com",
+        "id": 12,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxM0BlbWFpbC5jb20ifQ==",
+      "mailExtension": "user13",
+      "node": Object {
+        "email": "user13@email.com",
+        "id": 13,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxNEBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user14",
+      "node": Object {
+        "email": "user14@email.com",
+        "id": 14,
+      },
+    },
+    Object {
+      "cursor": "eyJlbWFpbCI6InVzZXIxNUBlbWFpbC5jb20ifQ==",
+      "mailExtension": "user15",
+      "node": Object {
+        "email": "user15@email.com",
+        "id": 15,
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "eyJlbWFpbCI6InVzZXIxNUBlbWFpbC5jb20ifQ==",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "eyJlbWFpbCI6InVzZXIxMUBlbWFpbC5jb20ifQ==",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns the paginated users with the base client (sanity check) 1`] = `
+Array [
+  Object {
+    "email": "user6@email.com",
+    "id": 6,
+  },
+  Object {
+    "email": "user7@email.com",
+    "id": 7,
+  },
+  Object {
+    "email": "user8@email.com",
+    "id": 8,
+  },
+  Object {
+    "email": "user9@email.com",
+    "id": 9,
+  },
+  Object {
+    "email": "user10@email.com",
+    "id": 10,
+  },
+]
+`;
+
 exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (after with last) 1`] = `[Error: "after" needs to be used with "first"]`;
 
 exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (after without first) 1`] = `[Error: "after" needs to be used with "first"]`;
