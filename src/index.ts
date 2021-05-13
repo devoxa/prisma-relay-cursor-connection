@@ -1,3 +1,4 @@
+import graphqlFields from 'graphql-fields'
 import { Connection, ConnectionArguments, Options, PrismaFindManyArguments } from './interfaces'
 
 export * from './interfaces'
@@ -6,7 +7,7 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
   findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Model[]>,
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
-  pOptions?: Options<Model, Cursor>
+  pOptions?: Options<Model, Cursor>,
 ): Promise<Connection<Model>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
@@ -14,7 +15,9 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
     throw new Error('This code path can never happen, only here for type safety')
   }
 
+
   const options = pOptions || getDefaultOptions()
+  const topLevelFields = options.info && Object.keys(graphqlFields(options.info))
 
   let nodes: Array<Model>
   let totalCount: number
@@ -31,7 +34,8 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
 
     // Execute the underlying query operations
     nodes = await findMany({ cursor, take, skip })
-    totalCount = await aggregate()
+    totalCount =
+      topLevelFields === undefined || topLevelFields.includes('totalCount') ? await aggregate() : -1
 
     // See if we are "after" another node, indicating a previous page
     hasPreviousPage = !!args.after
@@ -51,7 +55,8 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
 
     // Execute the underlying query operations
     nodes = await findMany({ cursor, take, skip })
-    totalCount = await aggregate()
+    totalCount =
+      topLevelFields === undefined || topLevelFields.includes('totalCount') ? await aggregate() : -1
 
     // See if we are "before" another node, indicating a next page
     hasNextPage = !!args.before
@@ -63,8 +68,11 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
     if (hasPreviousPage) nodes.shift()
   } else {
     // Execute the underlying query operations
-    nodes = await findMany({})
-    totalCount = await aggregate()
+    nodes = await findMany({
+      take: topLevelFields === undefined || topLevelFields.includes('edges') ? undefined : 0,
+    })
+    totalCount =
+      topLevelFields === undefined || topLevelFields.includes('totalCount') ? await aggregate() : -1
 
     // Since we are getting all nodes, there are no pages
     hasNextPage = false
@@ -129,6 +137,7 @@ function getDefaultOptions<Model, Cursor>() {
       (({ id: ((node as unknown) as { id: string }).id } as unknown) as Cursor),
     encodeCursor: (cursor: Cursor) => ((cursor as unknown) as { id: string }).id,
     decodeCursor: (cursorString: string) => (({ id: cursorString } as unknown) as Cursor),
+    info: undefined
   }
 }
 
