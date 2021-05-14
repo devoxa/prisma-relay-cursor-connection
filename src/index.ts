@@ -1,12 +1,13 @@
-import { Connection, ConnectionArguments, Options, PrismaFindManyArguments } from './interfaces'
+import { Connection, ConnectionArguments, Edge, Options, PrismaFindManyArguments } from './interfaces';
 
 export * from './interfaces'
 
-export async function findManyCursorConnection<Model = { id: string }, Cursor = { id: string }>(
+export async function findManyCursorConnection<Model = { id: string }, Cursor = { id: string }, CustomEdge extends Edge<Model> = Edge<Model>>(
   findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Model[]>,
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
-  pOptions?: Options<Model, Cursor>
+  pOptions?: Options<Model, Cursor>,
+  nodeToCustomEdge?: (node: Model) => Omit<CustomEdge, 'cursor'>
 ): Promise<Connection<Model>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
@@ -75,8 +76,11 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
   const startCursor = nodes.length > 0 ? encodeCursor(nodes[0], options) : undefined
   const endCursor = nodes.length > 0 ? encodeCursor(nodes[nodes.length - 1], options) : undefined
 
+
+  const nodeToEdgeFn = nodeToCustomEdge || (((node) => ({node}) as unknown) as (node: Model) => Omit<CustomEdge, 'cursor'>)
+
   return {
-    edges: nodes.map((node) => ({ cursor: encodeCursor(node, options), node })),
+    edges: nodes.map((node) => ({ cursor: encodeCursor(node, options), ...nodeToEdgeFn(node) })),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
@@ -123,7 +127,7 @@ type ForwardPaginationArguments = { first: number; after?: string }
 type BackwardPaginationArguments = { last: number; before?: string }
 type NoPaginationArguments = Record<string, unknown>
 
-function getDefaultOptions<Model, Cursor>() {
+function getDefaultOptions<Model, Cursor>(): Options<Model, Cursor> {
   return {
     getCursor: (node: Model) =>
       (({ id: ((node as unknown) as { id: string }).id } as unknown) as Cursor),

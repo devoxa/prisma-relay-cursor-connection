@@ -367,6 +367,90 @@ describe('prisma-relay-cursor-connection', () => {
     })
   })
 
+  describe('custom edge fields', () => {
+    beforeAll(async () => {
+      await client.user.deleteMany({})
+
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== USER_FIXTURES.length; i++) {
+        await client.user.create({ data: USER_FIXTURES[i] })
+      }
+    })
+
+    it('returns all users with the base client (sanity check)', async () => {
+      const result = await client.user.findMany({})
+      expect(result).toEqual(USER_FIXTURES)
+    })
+
+    it('returns the paginated users with the base client (sanity check)', async () => {
+      const result = await client.user.findMany({
+        cursor: { email: 'user5@email.com' },
+        take: 5,
+        skip: 1,
+      })
+      expect(result).toMatchSnapshot()
+    })
+
+    const UNIQUE_FIELD_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      [
+        'returns the first 5 users after the 1st user',
+        { first: 5, after: encodeCursor({ email: 'user1@email.com' }) },
+      ],
+      [
+        'returns the first 5 users after the 5th user',
+        { first: 5, after: encodeCursor({ email: 'user5@email.com' }) },
+      ],
+      [
+        'returns the first 5 users after the 15th user',
+        { first: 5, after: encodeCursor({ email: 'user15@email.com' }) },
+      ],
+      [
+        'returns the first 5 users after the 16th user',
+        { first: 5, after: encodeCursor({ email: 'user16@email.com' }) },
+      ],
+      [
+        'returns the first 5 users after the 20th user',
+        { first: 5, after: encodeCursor({ email: 'user20@email.com' }) },
+      ],
+      [
+        'returns the last 5 users before the 1st user',
+        { last: 5, before: encodeCursor({ email: 'user1@email.com' }) },
+      ],
+      [
+        'returns the last 5 users before the 5th user',
+        { last: 5, before: encodeCursor({ email: 'user5@email.com' }) },
+      ],
+      [
+        'returns the last 5 users before the 6th user',
+        { last: 5, before: encodeCursor({ email: 'user6@email.com' }) },
+      ],
+      [
+        'returns the last 5 users before the 16th user',
+        { last: 5, before: encodeCursor({ email: 'user16@email.com' }) },
+      ],
+    ]
+
+    test.each(UNIQUE_FIELD_VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection<
+        User,
+        Pick<Prisma.UserWhereUniqueInput, 'email'>
+        >(
+        (args) => client.user.findMany(args),
+        () => client.user.count(),
+        connectionArgs,
+        {
+          getCursor: (node) => ({ email: node.email }),
+          decodeCursor,
+          encodeCursor,
+        },
+        (node) => ({ node, mailExtension: node.email.replace(/^[^@]+@/, '') })
+      )
+
+      expect(result).toMatchSnapshot()
+    })
+
+  })
+
   describe('invalid arguments', () => {
     const INVALID_CASES: Array<[string, ConnectionArguments]> = [
       ['errors for invalid arguments (negative first)', { first: -5 }],
