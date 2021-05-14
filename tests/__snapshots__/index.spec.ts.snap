@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`prisma-relay-cursor-connection custom edge fields returns all todos 1`] = `
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns all todos 1`] = `
 Object {
   "edges": Array [
     Object {
       "cursor": "id_01",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
@@ -15,6 +16,7 @@ Object {
     Object {
       "cursor": "id_02",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
@@ -24,6 +26,7 @@ Object {
     Object {
       "cursor": "id_03",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
@@ -33,6 +36,7 @@ Object {
     Object {
       "cursor": "id_04",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
@@ -42,6 +46,7 @@ Object {
     Object {
       "cursor": "id_05",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
@@ -51,6 +56,7 @@ Object {
     Object {
       "cursor": "id_06",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
@@ -60,6 +66,7 @@ Object {
     Object {
       "cursor": "id_07",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_07",
         "isCompleted": false,
         "text": "accusamus aut labore",
@@ -69,6 +76,7 @@ Object {
     Object {
       "cursor": "id_08",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_08",
         "isCompleted": true,
         "text": "et quo quia",
@@ -78,6 +86,7 @@ Object {
     Object {
       "cursor": "id_09",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_09",
         "isCompleted": true,
         "text": "accusantium a excepturi",
@@ -87,6 +96,7 @@ Object {
     Object {
       "cursor": "id_10",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_10",
         "isCompleted": true,
         "text": "deserunt rerum occaecati",
@@ -96,6 +106,7 @@ Object {
     Object {
       "cursor": "id_11",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_11",
         "isCompleted": false,
         "text": "unde et quasi",
@@ -105,6 +116,7 @@ Object {
     Object {
       "cursor": "id_12",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_12",
         "isCompleted": false,
         "text": "et autem sapiente",
@@ -114,6 +126,7 @@ Object {
     Object {
       "cursor": "id_13",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_13",
         "isCompleted": false,
         "text": "deleniti fuga et",
@@ -123,6 +136,7 @@ Object {
     Object {
       "cursor": "id_14",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_14",
         "isCompleted": true,
         "text": "ea molestiae similique",
@@ -132,6 +146,7 @@ Object {
     Object {
       "cursor": "id_15",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_15",
         "isCompleted": false,
         "text": "doloribus ea aut",
@@ -141,6 +156,7 @@ Object {
     Object {
       "cursor": "id_16",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
@@ -150,6 +166,7 @@ Object {
     Object {
       "cursor": "id_17",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
@@ -159,6 +176,7 @@ Object {
     Object {
       "cursor": "id_18",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
@@ -168,6 +186,7 @@ Object {
     Object {
       "cursor": "id_19",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
@@ -177,6 +196,803 @@ Object {
     Object {
       "cursor": "id_20",
       "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+      "textLength": 21,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the first 5 todos 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_01",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+      "textLength": 23,
+    },
+    Object {
+      "cursor": "id_02",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_03",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+      "textLength": 12,
+    },
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+      "textLength": 20,
+    },
+    Object {
+      "cursor": "id_05",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+      "textLength": 21,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_05",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the first 5 todos after the 1st todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_02",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_03",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+      "textLength": 12,
+    },
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+      "textLength": 20,
+    },
+    Object {
+      "cursor": "id_05",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+      "textLength": 21,
+    },
+    Object {
+      "cursor": "id_06",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_06",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+      "textLength": 20,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_06",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "id_02",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the first 5 todos after the 5th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_06",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_06",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+      "textLength": 20,
+    },
+    Object {
+      "cursor": "id_07",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_07",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+      "textLength": 20,
+    },
+    Object {
+      "cursor": "id_08",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_08",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+      "textLength": 11,
+    },
+    Object {
+      "cursor": "id_09",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_09",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+      "textLength": 23,
+    },
+    Object {
+      "cursor": "id_10",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_10",
+        "isCompleted": true,
+        "text": "deserunt rerum occaecati",
+      },
+      "textLength": 24,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_10",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "id_06",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the first 5 todos after the 15th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_16",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+      "textLength": 19,
+    },
+    Object {
+      "cursor": "id_17",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_18",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+      "textLength": 14,
+    },
+    Object {
+      "cursor": "id_19",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+      "textLength": 18,
+    },
+    Object {
+      "cursor": "id_20",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+      "textLength": 21,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "id_16",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the first 5 todos after the 16th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_17",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_18",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+      "textLength": 14,
+    },
+    Object {
+      "cursor": "id_19",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+      "textLength": 18,
+    },
+    Object {
+      "cursor": "id_20",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+      "textLength": 21,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "id_17",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the first 5 todos after the 20th todo 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the last 5 todos 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_16",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+      "textLength": 19,
+    },
+    Object {
+      "cursor": "id_17",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_18",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+      "textLength": 14,
+    },
+    Object {
+      "cursor": "id_19",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+      "textLength": 18,
+    },
+    Object {
+      "cursor": "id_20",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+      "textLength": 21,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "id_16",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the last 5 todos before the 1st todo 1`] = `
+Object {
+  "edges": Array [],
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the last 5 todos before the 5th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_01",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+      "textLength": 23,
+    },
+    Object {
+      "cursor": "id_02",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_03",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+      "textLength": 12,
+    },
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+      "textLength": 20,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_04",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the last 5 todos before the 6th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_01",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+      "textLength": 23,
+    },
+    Object {
+      "cursor": "id_02",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_03",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+      "textLength": 12,
+    },
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+      "textLength": 20,
+    },
+    Object {
+      "cursor": "id_05",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+      "textLength": 21,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_05",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields deprecated nodeToEdge field: returns the last 5 todos before the 16th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_11",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_11",
+        "isCompleted": false,
+        "text": "unde et quasi",
+      },
+      "textLength": 13,
+    },
+    Object {
+      "cursor": "id_12",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_12",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_13",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_13",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+      "textLength": 16,
+    },
+    Object {
+      "cursor": "id_14",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_14",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+      "textLength": 22,
+    },
+    Object {
+      "cursor": "id_15",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_15",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+      "textLength": 16,
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "id_15",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "id_11",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection custom edge fields returns all todos 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "id_01",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+      "textLength": 23,
+    },
+    Object {
+      "cursor": "id_02",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_03",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+      "textLength": 12,
+    },
+    Object {
+      "cursor": "id_04",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+      "textLength": 20,
+    },
+    Object {
+      "cursor": "id_05",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+      "textLength": 21,
+    },
+    Object {
+      "cursor": "id_06",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_06",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+      "textLength": 20,
+    },
+    Object {
+      "cursor": "id_07",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_07",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+      "textLength": 20,
+    },
+    Object {
+      "cursor": "id_08",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_08",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+      "textLength": 11,
+    },
+    Object {
+      "cursor": "id_09",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_09",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+      "textLength": 23,
+    },
+    Object {
+      "cursor": "id_10",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_10",
+        "isCompleted": true,
+        "text": "deserunt rerum occaecati",
+      },
+      "textLength": 24,
+    },
+    Object {
+      "cursor": "id_11",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_11",
+        "isCompleted": false,
+        "text": "unde et quasi",
+      },
+      "textLength": 13,
+    },
+    Object {
+      "cursor": "id_12",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_12",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_13",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_13",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+      "textLength": 16,
+    },
+    Object {
+      "cursor": "id_14",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_14",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+      "textLength": 22,
+    },
+    Object {
+      "cursor": "id_15",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_15",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+      "textLength": 16,
+    },
+    Object {
+      "cursor": "id_16",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+      "textLength": 19,
+    },
+    Object {
+      "cursor": "id_17",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+      "textLength": 17,
+    },
+    Object {
+      "cursor": "id_18",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+      "textLength": 14,
+    },
+    Object {
+      "cursor": "id_19",
+      "node": Object {
+        "extraNodeField": "extra",
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+      "textLength": 18,
+    },
+    Object {
+      "cursor": "id_20",
+      "node": Object {
+        "extraNodeField": "extra",
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
@@ -200,6 +1016,7 @@ Object {
     Object {
       "cursor": "id_01",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
@@ -209,6 +1026,7 @@ Object {
     Object {
       "cursor": "id_02",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
@@ -218,6 +1036,7 @@ Object {
     Object {
       "cursor": "id_03",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
@@ -227,6 +1046,7 @@ Object {
     Object {
       "cursor": "id_04",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
@@ -236,6 +1056,7 @@ Object {
     Object {
       "cursor": "id_05",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
@@ -259,6 +1080,7 @@ Object {
     Object {
       "cursor": "id_02",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
@@ -268,6 +1090,7 @@ Object {
     Object {
       "cursor": "id_03",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
@@ -277,6 +1100,7 @@ Object {
     Object {
       "cursor": "id_04",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
@@ -286,6 +1110,7 @@ Object {
     Object {
       "cursor": "id_05",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
@@ -295,6 +1120,7 @@ Object {
     Object {
       "cursor": "id_06",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
@@ -318,6 +1144,7 @@ Object {
     Object {
       "cursor": "id_06",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
@@ -327,6 +1154,7 @@ Object {
     Object {
       "cursor": "id_07",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_07",
         "isCompleted": false,
         "text": "accusamus aut labore",
@@ -336,6 +1164,7 @@ Object {
     Object {
       "cursor": "id_08",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_08",
         "isCompleted": true,
         "text": "et quo quia",
@@ -345,6 +1174,7 @@ Object {
     Object {
       "cursor": "id_09",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_09",
         "isCompleted": true,
         "text": "accusantium a excepturi",
@@ -354,6 +1184,7 @@ Object {
     Object {
       "cursor": "id_10",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_10",
         "isCompleted": true,
         "text": "deserunt rerum occaecati",
@@ -377,6 +1208,7 @@ Object {
     Object {
       "cursor": "id_16",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
@@ -386,6 +1218,7 @@ Object {
     Object {
       "cursor": "id_17",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
@@ -395,6 +1228,7 @@ Object {
     Object {
       "cursor": "id_18",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
@@ -404,6 +1238,7 @@ Object {
     Object {
       "cursor": "id_19",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
@@ -413,6 +1248,7 @@ Object {
     Object {
       "cursor": "id_20",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
@@ -436,6 +1272,7 @@ Object {
     Object {
       "cursor": "id_17",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
@@ -445,6 +1282,7 @@ Object {
     Object {
       "cursor": "id_18",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
@@ -454,6 +1292,7 @@ Object {
     Object {
       "cursor": "id_19",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
@@ -463,6 +1302,7 @@ Object {
     Object {
       "cursor": "id_20",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
@@ -499,6 +1339,7 @@ Object {
     Object {
       "cursor": "id_16",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
@@ -508,6 +1349,7 @@ Object {
     Object {
       "cursor": "id_17",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
@@ -517,6 +1359,7 @@ Object {
     Object {
       "cursor": "id_18",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
@@ -526,6 +1369,7 @@ Object {
     Object {
       "cursor": "id_19",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
@@ -535,6 +1379,7 @@ Object {
     Object {
       "cursor": "id_20",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
@@ -571,6 +1416,7 @@ Object {
     Object {
       "cursor": "id_01",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
@@ -580,6 +1426,7 @@ Object {
     Object {
       "cursor": "id_02",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
@@ -589,6 +1436,7 @@ Object {
     Object {
       "cursor": "id_03",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
@@ -598,6 +1446,7 @@ Object {
     Object {
       "cursor": "id_04",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
@@ -621,6 +1470,7 @@ Object {
     Object {
       "cursor": "id_01",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
@@ -630,6 +1480,7 @@ Object {
     Object {
       "cursor": "id_02",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
@@ -639,6 +1490,7 @@ Object {
     Object {
       "cursor": "id_03",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
@@ -648,6 +1500,7 @@ Object {
     Object {
       "cursor": "id_04",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
@@ -657,6 +1510,7 @@ Object {
     Object {
       "cursor": "id_05",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
@@ -680,6 +1534,7 @@ Object {
     Object {
       "cursor": "id_11",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_11",
         "isCompleted": false,
         "text": "unde et quasi",
@@ -689,6 +1544,7 @@ Object {
     Object {
       "cursor": "id_12",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_12",
         "isCompleted": false,
         "text": "et autem sapiente",
@@ -698,6 +1554,7 @@ Object {
     Object {
       "cursor": "id_13",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_13",
         "isCompleted": false,
         "text": "deleniti fuga et",
@@ -707,6 +1564,7 @@ Object {
     Object {
       "cursor": "id_14",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_14",
         "isCompleted": true,
         "text": "ea molestiae similique",
@@ -716,6 +1574,7 @@ Object {
     Object {
       "cursor": "id_15",
       "node": Object {
+        "extraNodeField": "extra",
         "id": "id_15",
         "isCompleted": false,
         "text": "doloribus ea aut",

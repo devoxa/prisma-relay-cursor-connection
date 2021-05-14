@@ -408,9 +408,28 @@ describe('prisma-relay-cursor-connection', () => {
         () => client.todo.count(),
         connectionArgs,
         {
-          nodeToEdge: (node) => ({ node, textLength: node.text.length }),
+          modelToEdge: (model) => ({
+            node: { ...model, extraNodeField: 'extra' },
+            textLength: model.text.length
+          }),
         }
-      )
+      );
+
+      expect(result).toMatchSnapshot()
+    })
+
+    test.each(VALID_CASES)('deprecated nodeToEdge field: %s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection(
+        (args) => client.todo.findMany(args),
+        () => client.todo.count(),
+        connectionArgs,
+        {
+          nodeToEdge: (model) => ({
+            node: { ...model, extraNodeField: 'extra' },
+            textLength: model.text.length
+          }),
+        }
+      );
 
       expect(result).toMatchSnapshot()
     })
