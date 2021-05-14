@@ -141,9 +141,9 @@ function mergeDefaultOptions<Model, Cursor, CustomEdge extends Edge<Model>>(
 ): Required<Options<Model, Cursor, CustomEdge>> {
   return {
     getCursor: (node: Model) =>
-      (({ id: ((node as unknown) as { id: string }).id } as unknown) as Cursor),
-    encodeCursor: (cursor: Cursor) => ((cursor as unknown) as { id: string }).id,
-    decodeCursor: (cursorString: string) => (({ id: cursorString } as unknown) as Cursor),
+      ({ id: (node as unknown as { id: string }).id } as unknown as Cursor),
+    encodeCursor: (cursor: Cursor) => (cursor as unknown as { id: string }).id,
+    decodeCursor: (cursorString: string) => ({ id: cursorString } as unknown as Cursor),
 
     nodeToEdge: (node) => ({ node } as Omit<CustomEdge, 'cursor'>),
 
