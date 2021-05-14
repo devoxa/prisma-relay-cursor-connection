@@ -1,3 +1,9 @@
+# 1.2.0
+
+**Features**
+
+- Add the ability to define custom edges (Thanks to @ahmetuysal)
+
 # 1.1.0
 
 **Features**
