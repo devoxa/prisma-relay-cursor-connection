@@ -369,86 +369,51 @@ describe('prisma-relay-cursor-connection', () => {
 
   describe('custom edge fields', () => {
     beforeAll(async () => {
-      await client.user.deleteMany({})
+      await client.todo.deleteMany({})
 
       // Build up the fixtures sequentially so they are in a consistent order
-      for (let i = 0; i !== USER_FIXTURES.length; i++) {
-        await client.user.create({ data: USER_FIXTURES[i] })
+      for (let i = 0; i !== TODO_FIXTURES.length; i++) {
+        await client.todo.create({ data: TODO_FIXTURES[i] })
       }
     })
 
-    it('returns all users with the base client (sanity check)', async () => {
-      const result = await client.user.findMany({})
-      expect(result).toEqual(USER_FIXTURES)
+    it('returns all todos with the base client (sanity check)', async () => {
+      const result = await client.todo.findMany({})
+      expect(result).toEqual(TODO_FIXTURES)
     })
 
-    it('returns the paginated users with the base client (sanity check)', async () => {
-      const result = await client.user.findMany({
-        cursor: { email: 'user5@email.com' },
-        take: 5,
-        skip: 1,
-      })
+    it('returns the paginated todos with the base client (sanity check)', async () => {
+      const result = await client.todo.findMany({ cursor: { id: 'id_05' }, take: 5, skip: 1 })
       expect(result).toMatchSnapshot()
     })
 
-    const UNIQUE_FIELD_VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
-      [
-        'returns the first 5 users after the 1st user',
-        { first: 5, after: encodeCursor({ email: 'user1@email.com' }) },
-      ],
-      [
-        'returns the first 5 users after the 5th user',
-        { first: 5, after: encodeCursor({ email: 'user5@email.com' }) },
-      ],
-      [
-        'returns the first 5 users after the 15th user',
-        { first: 5, after: encodeCursor({ email: 'user15@email.com' }) },
-      ],
-      [
-        'returns the first 5 users after the 16th user',
-        { first: 5, after: encodeCursor({ email: 'user16@email.com' }) },
-      ],
-      [
-        'returns the first 5 users after the 20th user',
-        { first: 5, after: encodeCursor({ email: 'user20@email.com' }) },
-      ],
-      [
-        'returns the last 5 users before the 1st user',
-        { last: 5, before: encodeCursor({ email: 'user1@email.com' }) },
-      ],
-      [
-        'returns the last 5 users before the 5th user',
-        { last: 5, before: encodeCursor({ email: 'user5@email.com' }) },
-      ],
-      [
-        'returns the last 5 users before the 6th user',
-        { last: 5, before: encodeCursor({ email: 'user6@email.com' }) },
-      ],
-      [
-        'returns the last 5 users before the 16th user',
-        { last: 5, before: encodeCursor({ email: 'user16@email.com' }) },
-      ],
+    const VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      ['returns all todos', undefined],
+      ['returns the first 5 todos', { first: 5 }],
+      ['returns the first 5 todos after the 1st todo', { first: 5, after: 'id_01' }],
+      ['returns the first 5 todos after the 5th todo', { first: 5, after: 'id_05' }],
+      ['returns the first 5 todos after the 15th todo', { first: 5, after: 'id_15' }],
+      ['returns the first 5 todos after the 16th todo', { first: 5, after: 'id_16' }],
+      ['returns the first 5 todos after the 20th todo', { first: 5, after: 'id_20' }],
+      ['returns the last 5 todos', { last: 5 }],
+      ['returns the last 5 todos before the 1st todo', { last: 5, before: 'id_01' }],
+      ['returns the last 5 todos before the 5th todo', { last: 5, before: 'id_05' }],
+      ['returns the last 5 todos before the 6th todo', { last: 5, before: 'id_06' }],
+      ['returns the last 5 todos before the 16th todo', { last: 5, before: 'id_16' }],
     ]
 
-    test.each(UNIQUE_FIELD_VALID_CASES)('%s', async (name, connectionArgs) => {
-      const result = await findManyCursorConnection<
-        User,
-        Pick<Prisma.UserWhereUniqueInput, 'email'>
-        >(
-        (args) => client.user.findMany(args),
-        () => client.user.count(),
+    test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection(
+        (args) => client.todo.findMany(args),
+        () => client.todo.count(),
         connectionArgs,
         {
-          getCursor: (node) => ({ email: node.email }),
-          decodeCursor,
-          encodeCursor,
-        },
-        (node) => ({ node, mailExtension: node.email.replace(/^[^@]+@/, '') })
+          nodeToEdge: (node) => ({ node, textLength: node.text.length }),
+        }
       )
 
       expect(result).toMatchSnapshot()
     })
-
   })
 
   describe('invalid arguments', () => {

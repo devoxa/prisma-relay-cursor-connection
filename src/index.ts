@@ -1,13 +1,22 @@
-import { Connection, ConnectionArguments, Edge, Options, PrismaFindManyArguments } from './interfaces';
+import {
+  Connection,
+  ConnectionArguments,
+  Edge,
+  Options,
+  PrismaFindManyArguments,
+} from './interfaces'
 
 export * from './interfaces'
 
-export async function findManyCursorConnection<Model = { id: string }, Cursor = { id: string }, CustomEdge extends Edge<Model> = Edge<Model>>(
+export async function findManyCursorConnection<
+  Model = { id: string },
+  Cursor = { id: string },
+  CustomEdge extends Edge<Model> = Edge<Model>
+>(
   findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Model[]>,
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
-  pOptions?: Options<Model, Cursor>,
-  nodeToCustomEdge?: (node: Model) => Omit<CustomEdge, 'cursor'>
+  pOptions?: Options<Model, Cursor, CustomEdge>
 ): Promise<Connection<Model>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
@@ -15,7 +24,7 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
     throw new Error('This code path can never happen, only here for type safety')
   }
 
-  const options = pOptions || getDefaultOptions()
+  const options = mergeDefaultOptions(pOptions)
 
   let nodes: Array<Model>
   let totalCount: number
@@ -76,11 +85,11 @@ export async function findManyCursorConnection<Model = { id: string }, Cursor = 
   const startCursor = nodes.length > 0 ? encodeCursor(nodes[0], options) : undefined
   const endCursor = nodes.length > 0 ? encodeCursor(nodes[nodes.length - 1], options) : undefined
 
-
-  const nodeToEdgeFn = nodeToCustomEdge || (((node) => ({node}) as unknown) as (node: Model) => Omit<CustomEdge, 'cursor'>)
-
   return {
-    edges: nodes.map((node) => ({ cursor: encodeCursor(node, options), ...nodeToEdgeFn(node) })),
+    edges: nodes.map((node) => ({
+      cursor: encodeCursor(node, options),
+      ...options.nodeToEdge(node),
+    })),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
@@ -127,12 +136,18 @@ type ForwardPaginationArguments = { first: number; after?: string }
 type BackwardPaginationArguments = { last: number; before?: string }
 type NoPaginationArguments = Record<string, unknown>
 
-function getDefaultOptions<Model, Cursor>(): Options<Model, Cursor> {
+function mergeDefaultOptions<Model, Cursor, CustomEdge extends Edge<Model>>(
+  pOptions?: Options<Model, Cursor, CustomEdge>
+): Required<Options<Model, Cursor, CustomEdge>> {
   return {
     getCursor: (node: Model) =>
       (({ id: ((node as unknown) as { id: string }).id } as unknown) as Cursor),
     encodeCursor: (cursor: Cursor) => ((cursor as unknown) as { id: string }).id,
     decodeCursor: (cursorString: string) => (({ id: cursorString } as unknown) as Cursor),
+
+    nodeToEdge: (node) => ({ node } as Omit<CustomEdge, 'cursor'>),
+
+    ...pOptions,
   }
 }
 
@@ -144,9 +159,9 @@ function isBackwardPagination(args: ConnectionArgumentsUnion): args is BackwardP
   return 'last' in args && args.last != null
 }
 
-function decodeCursor<Model, Cursor>(
+function decodeCursor<Model, Cursor, CustomEdge extends Edge<Model>>(
   connectionCursor: string | undefined,
-  options: Options<Model, Cursor>
+  options: Required<Options<Model, Cursor, CustomEdge>>
 ): Cursor | undefined {
   if (!connectionCursor) {
     return undefined
@@ -155,6 +170,9 @@ function decodeCursor<Model, Cursor>(
   return options.decodeCursor(connectionCursor)
 }
 
-function encodeCursor<Model, Cursor>(node: Model, options: Options<Model, Cursor>): string {
+function encodeCursor<Model, Cursor, CustomEdge extends Edge<Model>>(
+  node: Model,
+  options: Required<Options<Model, Cursor, CustomEdge>>
+): string {
   return options.encodeCursor(options.getCursor(node))
 }
