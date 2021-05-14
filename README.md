@@ -130,6 +130,24 @@ const result = await findManyCursorConnection(
 
 You can find more examples for custom cursors in the [unit tests](./tests/index.spec.ts).
 
+### Custom Edges
+
+By default, the edge consists of the `cursor` and the `node`. If you would like to add additional
+fields to the edge, you can pass the following option:
+
+```ts
+import { findManyCursorConnection } from '@devoxa/prisma-relay-cursor-connection'
+
+const result = await findManyCursorConnection(
+  (args) => client.todo.findMany(args),
+  () => client.todo.count(),
+  { first: 5, after: 'eyJpZCI6MTZ9' },
+  {
+    nodeToEdge: (node) => ({ node, anotherEdgeField: node.text.length }),
+  }
+)
+```
+
 ## Contributing
 
 ```bash
