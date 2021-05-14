@@ -367,6 +367,55 @@ describe('prisma-relay-cursor-connection', () => {
     })
   })
 
+  describe('custom edge fields', () => {
+    beforeAll(async () => {
+      await client.todo.deleteMany({})
+
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TODO_FIXTURES.length; i++) {
+        await client.todo.create({ data: TODO_FIXTURES[i] })
+      }
+    })
+
+    it('returns all todos with the base client (sanity check)', async () => {
+      const result = await client.todo.findMany({})
+      expect(result).toEqual(TODO_FIXTURES)
+    })
+
+    it('returns the paginated todos with the base client (sanity check)', async () => {
+      const result = await client.todo.findMany({ cursor: { id: 'id_05' }, take: 5, skip: 1 })
+      expect(result).toMatchSnapshot()
+    })
+
+    const VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      ['returns all todos', undefined],
+      ['returns the first 5 todos', { first: 5 }],
+      ['returns the first 5 todos after the 1st todo', { first: 5, after: 'id_01' }],
+      ['returns the first 5 todos after the 5th todo', { first: 5, after: 'id_05' }],
+      ['returns the first 5 todos after the 15th todo', { first: 5, after: 'id_15' }],
+      ['returns the first 5 todos after the 16th todo', { first: 5, after: 'id_16' }],
+      ['returns the first 5 todos after the 20th todo', { first: 5, after: 'id_20' }],
+      ['returns the last 5 todos', { last: 5 }],
+      ['returns the last 5 todos before the 1st todo', { last: 5, before: 'id_01' }],
+      ['returns the last 5 todos before the 5th todo', { last: 5, before: 'id_05' }],
+      ['returns the last 5 todos before the 6th todo', { last: 5, before: 'id_06' }],
+      ['returns the last 5 todos before the 16th todo', { last: 5, before: 'id_16' }],
+    ]
+
+    test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnection(
+        (args) => client.todo.findMany(args),
+        () => client.todo.count(),
+        connectionArgs,
+        {
+          nodeToEdge: (node) => ({ node, textLength: node.text.length }),
+        }
+      )
+
+      expect(result).toMatchSnapshot()
+    })
+  })
+
   describe('invalid arguments', () => {
     const INVALID_CASES: Array<[string, ConnectionArguments]> = [
       ['errors for invalid arguments (negative first)', { first: -5 }],
