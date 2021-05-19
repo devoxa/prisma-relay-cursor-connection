@@ -409,8 +409,8 @@ describe('prisma-relay-cursor-connection', () => {
         connectionArgs,
         {
           recordToEdge: (record) => ({
-            node: { ...record, extraNodeField: 'extra' },
-            textLength: record.text.length,
+            node: { ...record, extraNodeField: 'Foo' },
+            extraEdgeField: 'Bar',
           }),
         }
       )

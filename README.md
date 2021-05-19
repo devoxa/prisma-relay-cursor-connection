@@ -144,8 +144,8 @@ const result = await findManyCursorConnection(
   { first: 5, after: 'eyJpZCI6MTZ9' },
   {
     recordToEdge: (record) => ({
-      node: { ...record, anotherNodeField: 'Foo' },
-      anotherEdgeField: 'Bar',
+      node: { ...record, extraNodeField: 'Foo' },
+      extraEdgeField: 'Bar',
     }),
   }
 )
