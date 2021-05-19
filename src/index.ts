@@ -84,7 +84,8 @@ export async function findManyCursorConnection<
 
   // The cursors are always the first & last elements of the result set
   const startCursor = records.length > 0 ? encodeCursor(records[0], options) : undefined
-  const endCursor = records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
+  const endCursor =
+    records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
 
   return {
     edges: records.map((record) => ({
@@ -137,7 +138,9 @@ type ForwardPaginationArguments = { first: number; after?: string }
 type BackwardPaginationArguments = { last: number; before?: string }
 type NoPaginationArguments = Record<string, unknown>
 
-type MergedOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>> = Required<Options<Record, Cursor, Node, CustomEdge>>
+type MergedOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>> = Required<
+  Options<Record, Cursor, Node, CustomEdge>
+>
 
 function mergeDefaultOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>>(
   pOptions?: Options<Record, Cursor, Node, CustomEdge>

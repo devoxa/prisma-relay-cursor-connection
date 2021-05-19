@@ -410,10 +410,10 @@ describe('prisma-relay-cursor-connection', () => {
         {
           recordToEdge: (record) => ({
             node: { ...record, extraNodeField: 'extra' },
-            textLength: record.text.length
+            textLength: record.text.length,
           }),
         }
-      );
+      )
 
       expect(result).toMatchSnapshot()
     })
