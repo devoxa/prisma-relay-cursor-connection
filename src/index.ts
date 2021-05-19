@@ -33,7 +33,7 @@ export async function findManyCursorConnection<
   let hasPreviousPage: boolean
 
   if (isForwardPagination(args)) {
-    // Fetch one additional node to determine if there is a next page
+    // Fetch one additional record to determine if there is a next page
     const take = args.first + 1
 
     // Convert `after` into prisma `cursor` & `skip`
@@ -44,16 +44,16 @@ export async function findManyCursorConnection<
     records = await findMany({ cursor, take, skip })
     totalCount = await aggregate()
 
-    // See if we are "after" another node, indicating a previous page
+    // See if we are "after" another record, indicating a previous page
     hasPreviousPage = !!args.after
 
-    // See if we have an additional node, indicating a next page
+    // See if we have an additional record, indicating a next page
     hasNextPage = records.length > args.first
 
-    // Remove the extra node (last element) from the results
+    // Remove the extra record (last element) from the results
     if (hasNextPage) records.pop()
   } else if (isBackwardPagination(args)) {
-    // Fetch one additional node to determine if there is a previous page
+    // Fetch one additional record to determine if there is a previous page
     const take = -1 * (args.last + 1)
 
     // Convert `before` into prisma `cursor` & `skip`
@@ -64,20 +64,20 @@ export async function findManyCursorConnection<
     records = await findMany({ cursor, take, skip })
     totalCount = await aggregate()
 
-    // See if we are "before" another node, indicating a next page
+    // See if we are "before" another record, indicating a next page
     hasNextPage = !!args.before
 
-    // See if we have an additional node, indicating a previous page
+    // See if we have an additional record, indicating a previous page
     hasPreviousPage = records.length > args.last
 
-    // Remove the extra node (first element) from the results
+    // Remove the extra record (first element) from the results
     if (hasPreviousPage) records.shift()
   } else {
     // Execute the underlying query operations
     records = await findMany({})
     totalCount = await aggregate()
 
-    // Since we are getting all nodes, there are no pages
+    // Since we are getting all records, there are no pages
     hasNextPage = false
     hasPreviousPage = false
   }
