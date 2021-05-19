@@ -121,7 +121,7 @@ const result = await findManyCursorConnection(
   () => client.todo.count(),
   { first: 5, after: 'eyJpZCI6MTZ9' },
   {
-    getCursor: (node) => ({ id: node.id }),
+    getCursor: (record) => ({ id: record.id }),
     encodeCursor: (cursor) => Buffer.from(JSON.stringify(cursor)).toString('base64'),
     decodeCursor: (cursor) => JSON.parse(Buffer.from(cursor, 'base64').toString('ascii')),
   }
@@ -130,10 +130,10 @@ const result = await findManyCursorConnection(
 
 You can find more examples for custom cursors in the [unit tests](./tests/index.spec.ts).
 
-### Custom Edges
+### Custom Edges & Nodes
 
 By default, the edge consists of the `cursor` and the `node`. If you would like to add additional
-fields to the edge, you can pass the following option:
+fields to the edge or the node, you can pass the following option:
 
 ```ts
 import { findManyCursorConnection } from '@devoxa/prisma-relay-cursor-connection'
@@ -143,7 +143,10 @@ const result = await findManyCursorConnection(
   () => client.todo.count(),
   { first: 5, after: 'eyJpZCI6MTZ9' },
   {
-    nodeToEdge: (node) => ({ node, anotherEdgeField: node.text.length }),
+    recordToEdge: (record) => ({
+      node: { ...record, anotherNodeField: 'Foo' },
+      anotherEdgeField: 'Bar',
+    }),
   }
 )
 ```

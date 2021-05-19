@@ -1,3 +1,12 @@
+# 2.0.0
+
+**Features**
+
+- **BREAKING** Add the ability to define custom nodes (Thanks to @ahmetuysal)
+  - The option `nodeToEdge` is now called `recordToEdge`
+  - The interface `Options<Record, Cursor, CustomEdge extends Edge<Record>>` is now
+    `Options<Record, Cursor, Node, CustomEdge extends Edge<Node>>`
+
 # 1.2.0
 
 **Features**
