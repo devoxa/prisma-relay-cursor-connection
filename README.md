@@ -70,9 +70,6 @@ user from reading out too many resources at once:
 - One of `first` | `last` has to be defined
 - `first` | `last` have to be below a reasonable maximum (e.g. 100)
 
-If you are encoding your cursors outside of this module, you will also need to decode them before
-passing them.
-
 ```ts
 import {
   findManyCursorConnection,
