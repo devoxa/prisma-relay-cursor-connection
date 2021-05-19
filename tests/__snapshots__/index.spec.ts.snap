@@ -5,183 +5,203 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_01",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
-      "textLength": 23,
     },
     Object {
       "cursor": "id_02",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_03",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
-      "textLength": 12,
     },
     Object {
       "cursor": "id_04",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
-      "textLength": 20,
     },
     Object {
       "cursor": "id_05",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
-      "textLength": 21,
     },
     Object {
       "cursor": "id_06",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
-      "textLength": 20,
     },
     Object {
       "cursor": "id_07",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_07",
         "isCompleted": false,
         "text": "accusamus aut labore",
       },
-      "textLength": 20,
     },
     Object {
       "cursor": "id_08",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_08",
         "isCompleted": true,
         "text": "et quo quia",
       },
-      "textLength": 11,
     },
     Object {
       "cursor": "id_09",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_09",
         "isCompleted": true,
         "text": "accusantium a excepturi",
       },
-      "textLength": 23,
     },
     Object {
       "cursor": "id_10",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_10",
         "isCompleted": true,
         "text": "deserunt rerum occaecati",
       },
-      "textLength": 24,
     },
     Object {
       "cursor": "id_11",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_11",
         "isCompleted": false,
         "text": "unde et quasi",
       },
-      "textLength": 13,
     },
     Object {
       "cursor": "id_12",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_12",
         "isCompleted": false,
         "text": "et autem sapiente",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_13",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_13",
         "isCompleted": false,
         "text": "deleniti fuga et",
       },
-      "textLength": 16,
     },
     Object {
       "cursor": "id_14",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_14",
         "isCompleted": true,
         "text": "ea molestiae similique",
       },
-      "textLength": 22,
     },
     Object {
       "cursor": "id_15",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_15",
         "isCompleted": false,
         "text": "doloribus ea aut",
       },
-      "textLength": 16,
     },
     Object {
       "cursor": "id_16",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
-      "textLength": 19,
     },
     Object {
       "cursor": "id_17",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_18",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
-      "textLength": 14,
     },
     Object {
       "cursor": "id_19",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
-      "textLength": 18,
     },
     Object {
       "cursor": "id_20",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
-      "textLength": 21,
     },
   ],
   "pageInfo": Object {
@@ -199,48 +219,53 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_01",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
-      "textLength": 23,
     },
     Object {
       "cursor": "id_02",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_03",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
-      "textLength": 12,
     },
     Object {
       "cursor": "id_04",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
-      "textLength": 20,
     },
     Object {
       "cursor": "id_05",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
-      "textLength": 21,
     },
   ],
   "pageInfo": Object {
@@ -258,48 +283,53 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_02",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_03",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
-      "textLength": 12,
     },
     Object {
       "cursor": "id_04",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
-      "textLength": 20,
     },
     Object {
       "cursor": "id_05",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
-      "textLength": 21,
     },
     Object {
       "cursor": "id_06",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
-      "textLength": 20,
     },
   ],
   "pageInfo": Object {
@@ -317,48 +347,53 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_06",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
-      "textLength": 20,
     },
     Object {
       "cursor": "id_07",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_07",
         "isCompleted": false,
         "text": "accusamus aut labore",
       },
-      "textLength": 20,
     },
     Object {
       "cursor": "id_08",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_08",
         "isCompleted": true,
         "text": "et quo quia",
       },
-      "textLength": 11,
     },
     Object {
       "cursor": "id_09",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_09",
         "isCompleted": true,
         "text": "accusantium a excepturi",
       },
-      "textLength": 23,
     },
     Object {
       "cursor": "id_10",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_10",
         "isCompleted": true,
         "text": "deserunt rerum occaecati",
       },
-      "textLength": 24,
     },
   ],
   "pageInfo": Object {
@@ -376,48 +411,53 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_16",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
-      "textLength": 19,
     },
     Object {
       "cursor": "id_17",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_18",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
-      "textLength": 14,
     },
     Object {
       "cursor": "id_19",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
-      "textLength": 18,
     },
     Object {
       "cursor": "id_20",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
-      "textLength": 21,
     },
   ],
   "pageInfo": Object {
@@ -435,39 +475,43 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_17",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_18",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
-      "textLength": 14,
     },
     Object {
       "cursor": "id_19",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
-      "textLength": 18,
     },
     Object {
       "cursor": "id_20",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
-      "textLength": 21,
     },
   ],
   "pageInfo": Object {
@@ -498,48 +542,53 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_16",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
-      "textLength": 19,
     },
     Object {
       "cursor": "id_17",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_18",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
-      "textLength": 14,
     },
     Object {
       "cursor": "id_19",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
-      "textLength": 18,
     },
     Object {
       "cursor": "id_20",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
-      "textLength": 21,
     },
   ],
   "pageInfo": Object {
@@ -570,39 +619,43 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_01",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
-      "textLength": 23,
     },
     Object {
       "cursor": "id_02",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_03",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
-      "textLength": 12,
     },
     Object {
       "cursor": "id_04",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
-      "textLength": 20,
     },
   ],
   "pageInfo": Object {
@@ -620,48 +673,53 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_01",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
-      "textLength": 23,
     },
     Object {
       "cursor": "id_02",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_03",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
-      "textLength": 12,
     },
     Object {
       "cursor": "id_04",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
-      "textLength": 20,
     },
     Object {
       "cursor": "id_05",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
-      "textLength": 21,
     },
   ],
   "pageInfo": Object {
@@ -679,48 +737,53 @@ Object {
   "edges": Array [
     Object {
       "cursor": "id_11",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_11",
         "isCompleted": false,
         "text": "unde et quasi",
       },
-      "textLength": 13,
     },
     Object {
       "cursor": "id_12",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_12",
         "isCompleted": false,
         "text": "et autem sapiente",
       },
-      "textLength": 17,
     },
     Object {
       "cursor": "id_13",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_13",
         "isCompleted": false,
         "text": "deleniti fuga et",
       },
-      "textLength": 16,
     },
     Object {
       "cursor": "id_14",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_14",
         "isCompleted": true,
         "text": "ea molestiae similique",
       },
-      "textLength": 22,
     },
     Object {
       "cursor": "id_15",
+      "extraEdgeField": "Bar",
       "node": Object {
+        "extraNodeField": "Foo",
         "id": "id_15",
         "isCompleted": false,
         "text": "doloribus ea aut",
       },
-      "textLength": 16,
     },
   ],
   "pageInfo": Object {

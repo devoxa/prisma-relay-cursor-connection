@@ -160,7 +160,7 @@ describe('prisma-relay-cursor-connection', () => {
         () => client.user.count(),
         connectionArgs,
         {
-          getCursor: (node) => ({ id: node.id }),
+          getCursor: (record) => ({ id: record.id }),
           decodeCursor,
           encodeCursor,
         }
@@ -242,7 +242,7 @@ describe('prisma-relay-cursor-connection', () => {
         () => client.user.count(),
         connectionArgs,
         {
-          getCursor: (node) => ({ email: node.email }),
+          getCursor: (record) => ({ email: record.email }),
           decodeCursor,
           encodeCursor,
         }
@@ -352,10 +352,10 @@ describe('prisma-relay-cursor-connection', () => {
         () => client.profile.count(),
         connectionArgs,
         {
-          getCursor: (node) => ({
+          getCursor: (record) => ({
             firstname_lastname: {
-              firstname: node.firstname,
-              lastname: node.lastname,
+              firstname: record.firstname,
+              lastname: record.lastname,
             },
           }),
           decodeCursor,
@@ -408,7 +408,10 @@ describe('prisma-relay-cursor-connection', () => {
         () => client.todo.count(),
         connectionArgs,
         {
-          nodeToEdge: (node) => ({ node, textLength: node.text.length }),
+          recordToEdge: (record) => ({
+            node: { ...record, extraNodeField: 'Foo' },
+            extraEdgeField: 'Bar',
+          }),
         }
       )
 

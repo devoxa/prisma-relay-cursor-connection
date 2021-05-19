@@ -9,15 +9,16 @@ import {
 export * from './interfaces'
 
 export async function findManyCursorConnection<
-  Model = { id: string },
+  Record = { id: string },
   Cursor = { id: string },
-  CustomEdge extends Edge<Model> = Edge<Model>
+  Node = Record,
+  CustomEdge extends Edge<Node> = Edge<Node>
 >(
-  findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Model[]>,
+  findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Record[]>,
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
-  pOptions?: Options<Model, Cursor, CustomEdge>
-): Promise<Connection<Model>> {
+  pOptions?: Options<Record, Cursor, Node, CustomEdge>
+): Promise<Connection<Node>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
   if (!validateArgs(args)) {
@@ -26,13 +27,13 @@ export async function findManyCursorConnection<
 
   const options = mergeDefaultOptions(pOptions)
 
-  let nodes: Array<Model>
+  let records: Array<Record>
   let totalCount: number
   let hasNextPage: boolean
   let hasPreviousPage: boolean
 
   if (isForwardPagination(args)) {
-    // Fetch one additional node to determine if there is a next page
+    // Fetch one additional record to determine if there is a next page
     const take = args.first + 1
 
     // Convert `after` into prisma `cursor` & `skip`
@@ -40,19 +41,19 @@ export async function findManyCursorConnection<
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
-    nodes = await findMany({ cursor, take, skip })
+    records = await findMany({ cursor, take, skip })
     totalCount = await aggregate()
 
-    // See if we are "after" another node, indicating a previous page
+    // See if we are "after" another record, indicating a previous page
     hasPreviousPage = !!args.after
 
-    // See if we have an additional node, indicating a next page
-    hasNextPage = nodes.length > args.first
+    // See if we have an additional record, indicating a next page
+    hasNextPage = records.length > args.first
 
-    // Remove the extra node (last element) from the results
-    if (hasNextPage) nodes.pop()
+    // Remove the extra record (last element) from the results
+    if (hasNextPage) records.pop()
   } else if (isBackwardPagination(args)) {
-    // Fetch one additional node to determine if there is a previous page
+    // Fetch one additional record to determine if there is a previous page
     const take = -1 * (args.last + 1)
 
     // Convert `before` into prisma `cursor` & `skip`
@@ -60,35 +61,36 @@ export async function findManyCursorConnection<
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
-    nodes = await findMany({ cursor, take, skip })
+    records = await findMany({ cursor, take, skip })
     totalCount = await aggregate()
 
-    // See if we are "before" another node, indicating a next page
+    // See if we are "before" another record, indicating a next page
     hasNextPage = !!args.before
 
-    // See if we have an additional node, indicating a previous page
-    hasPreviousPage = nodes.length > args.last
+    // See if we have an additional record, indicating a previous page
+    hasPreviousPage = records.length > args.last
 
-    // Remove the extra node (first element) from the results
-    if (hasPreviousPage) nodes.shift()
+    // Remove the extra record (first element) from the results
+    if (hasPreviousPage) records.shift()
   } else {
     // Execute the underlying query operations
-    nodes = await findMany({})
+    records = await findMany({})
     totalCount = await aggregate()
 
-    // Since we are getting all nodes, there are no pages
+    // Since we are getting all records, there are no pages
     hasNextPage = false
     hasPreviousPage = false
   }
 
   // The cursors are always the first & last elements of the result set
-  const startCursor = nodes.length > 0 ? encodeCursor(nodes[0], options) : undefined
-  const endCursor = nodes.length > 0 ? encodeCursor(nodes[nodes.length - 1], options) : undefined
+  const startCursor = records.length > 0 ? encodeCursor(records[0], options) : undefined
+  const endCursor =
+    records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
 
   return {
-    edges: nodes.map((node) => ({
-      cursor: encodeCursor(node, options),
-      ...options.nodeToEdge(node),
+    edges: records.map((record) => ({
+      cursor: encodeCursor(record, options),
+      ...options.recordToEdge(record),
     })),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
@@ -136,17 +138,19 @@ type ForwardPaginationArguments = { first: number; after?: string }
 type BackwardPaginationArguments = { last: number; before?: string }
 type NoPaginationArguments = Record<string, unknown>
 
-function mergeDefaultOptions<Model, Cursor, CustomEdge extends Edge<Model>>(
-  pOptions?: Options<Model, Cursor, CustomEdge>
-): Required<Options<Model, Cursor, CustomEdge>> {
+type MergedOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>> = Required<
+  Options<Record, Cursor, Node, CustomEdge>
+>
+
+function mergeDefaultOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>>(
+  pOptions?: Options<Record, Cursor, Node, CustomEdge>
+): MergedOptions<Record, Cursor, Node, CustomEdge> {
   return {
-    getCursor: (node: Model) =>
-      ({ id: (node as unknown as { id: string }).id } as unknown as Cursor),
+    getCursor: (record: Record) =>
+      ({ id: (record as unknown as { id: string }).id } as unknown as Cursor),
     encodeCursor: (cursor: Cursor) => (cursor as unknown as { id: string }).id,
     decodeCursor: (cursorString: string) => ({ id: cursorString } as unknown as Cursor),
-
-    nodeToEdge: (node) => ({ node } as Omit<CustomEdge, 'cursor'>),
-
+    recordToEdge: (record: Record) => ({ node: record } as unknown as Omit<CustomEdge, 'cursor'>),
     ...pOptions,
   }
 }
@@ -159,9 +163,9 @@ function isBackwardPagination(args: ConnectionArgumentsUnion): args is BackwardP
   return 'last' in args && args.last != null
 }
 
-function decodeCursor<Model, Cursor, CustomEdge extends Edge<Model>>(
+function decodeCursor<Record, Cursor, Node, CustomEdge extends Edge<Node>>(
   connectionCursor: string | undefined,
-  options: Required<Options<Model, Cursor, CustomEdge>>
+  options: MergedOptions<Record, Cursor, Node, CustomEdge>
 ): Cursor | undefined {
   if (!connectionCursor) {
     return undefined
@@ -170,9 +174,9 @@ function decodeCursor<Model, Cursor, CustomEdge extends Edge<Model>>(
   return options.decodeCursor(connectionCursor)
 }
 
-function encodeCursor<Model, Cursor, CustomEdge extends Edge<Model>>(
-  node: Model,
-  options: Required<Options<Model, Cursor, CustomEdge>>
+function encodeCursor<Record, Cursor, Node, CustomEdge extends Edge<Node>>(
+  record: Record,
+  options: MergedOptions<Record, Cursor, Node, CustomEdge>
 ): string {
-  return options.encodeCursor(options.getCursor(node))
+  return options.encodeCursor(options.getCursor(record))
 }

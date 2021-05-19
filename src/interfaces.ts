@@ -1,10 +1,10 @@
 // Prisma Relay Cursor Connection Arguments
-export interface Options<Model, Cursor, CustomEdge extends Edge<Model>> {
-  getCursor?: (node: Model) => Cursor
+export interface Options<Record, Cursor, Node, CustomEdge extends Edge<Node>> {
+  getCursor?: (record: Record) => Cursor
   encodeCursor?: (cursor: Cursor) => string
   decodeCursor?: (cursorString: string) => Cursor
 
-  nodeToEdge?: (node: Model) => Omit<CustomEdge, 'cursor'>
+  recordToEdge?: (record: Record) => Omit<CustomEdge, 'cursor'>
 }
 
 // Prisma Arguments
