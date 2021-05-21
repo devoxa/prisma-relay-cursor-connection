@@ -88,10 +88,13 @@ export async function findManyCursorConnection<
     records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
 
   return {
-    edges: records.map((record) => ({
-      ...options.recordToEdge(record),
-      cursor: encodeCursor(record, options),
-    }) as CustomEdge),
+    edges: records.map(
+      (record) =>
+        ({
+          ...options.recordToEdge(record),
+          cursor: encodeCursor(record, options),
+        } as CustomEdge)
+    ),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }

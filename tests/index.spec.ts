@@ -403,8 +403,12 @@ describe('prisma-relay-cursor-connection', () => {
     ]
 
     test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
-      const result = await findManyCursorConnection<Todo, { id: string }, Todo & { extraNodeField: string },
-        { extraEdgeField: string, cursor: string, node: Todo & { extraNodeField: string } }>(
+      const result = await findManyCursorConnection<
+        Todo,
+        { id: string },
+        Todo & { extraNodeField: string },
+        { extraEdgeField: string; cursor: string; node: Todo & { extraNodeField: string } }
+      >(
         (args) => client.todo.findMany(args),
         () => client.todo.count(),
         connectionArgs,
@@ -414,7 +418,7 @@ describe('prisma-relay-cursor-connection', () => {
             extraEdgeField: 'Bar',
           }),
         }
-      );
+      )
 
       expect(result).toMatchSnapshot()
 
