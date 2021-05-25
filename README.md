@@ -135,7 +135,12 @@ fields to the edge or the node, you can pass the following option:
 ```ts
 import { findManyCursorConnection } from '@devoxa/prisma-relay-cursor-connection'
 
-const result = await findManyCursorConnection(
+const result = await findManyCursorConnection<
+  Todo,
+  { id: string },
+  Todo & { extraNodeField: string },
+  { extraEdgeField: string; cursor: string; node: Todo & { extraNodeField: string } }
+>(
   (args) => client.todo.findMany(args),
   () => client.todo.count(),
   { first: 5, after: 'eyJpZCI6MTZ9' },
