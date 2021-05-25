@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient, Profile, User } from '@prisma/client'
+import { Prisma, PrismaClient, Profile, User, Todo } from '@prisma/client'
 import { ConnectionArguments, findManyCursorConnection } from '../src'
 import { PROFILE_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
 
@@ -403,7 +403,12 @@ describe('prisma-relay-cursor-connection', () => {
     ]
 
     test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
-      const result = await findManyCursorConnection(
+      const result = await findManyCursorConnection<
+        Todo,
+        { id: string },
+        Todo & { extraNodeField: string },
+        { extraEdgeField: string; cursor: string; node: Todo & { extraNodeField: string } }
+      >(
         (args) => client.todo.findMany(args),
         () => client.todo.count(),
         connectionArgs,
@@ -416,6 +421,12 @@ describe('prisma-relay-cursor-connection', () => {
       )
 
       expect(result).toMatchSnapshot()
+
+      // Test that the node.extraNodeField return types work via TS
+      result.edges[0]?.node.extraNodeField
+
+      // Test that the extraEdgeField return type work via TS
+      result.edges[0]?.extraEdgeField
     })
   })
 

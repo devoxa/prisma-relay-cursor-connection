@@ -18,7 +18,7 @@ export async function findManyCursorConnection<
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
   pOptions?: Options<Record, Cursor, Node, CustomEdge>
-): Promise<Connection<Node>> {
+): Promise<Connection<Node, CustomEdge>> {
   // Make sure the connection arguments are valid and throw an error otherwise
   // istanbul ignore next
   if (!validateArgs(args)) {
@@ -88,10 +88,13 @@ export async function findManyCursorConnection<
     records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
 
   return {
-    edges: records.map((record) => ({
-      cursor: encodeCursor(record, options),
-      ...options.recordToEdge(record),
-    })),
+    edges: records.map(
+      (record) =>
+        ({
+          ...options.recordToEdge(record),
+          cursor: encodeCursor(record, options),
+        } as CustomEdge)
+    ),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
