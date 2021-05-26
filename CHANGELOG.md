@@ -1,3 +1,9 @@
+# 2.0.1
+
+**Bugfixes**
+
+- Fix the types for custom nodes (Thanks to @ahmetuysal)
+
 # 2.0.0
 
 **Features**
