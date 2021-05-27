@@ -23,7 +23,7 @@ export interface ConnectionArguments {
 }
 
 // Relay Response
-export interface Connection<T, CustomEdge extends Edge<T>> {
+export interface Connection<T, CustomEdge extends Edge<T> = Edge<T>> {
   edges: Array<CustomEdge>
   pageInfo: PageInfo
   totalCount: number
