@@ -1,3 +1,9 @@
+# 2.0.2
+
+**Bugfixes**
+
+- Fix the `Connection` type not having a default `Edge` generic (Thanks to @nicksrandall)
+
 # 2.0.1
 
 **Bugfixes**
