@@ -1,0 +1,3 @@
+{
+  "extends": ["github>devoxa/renovate-config"]
+}

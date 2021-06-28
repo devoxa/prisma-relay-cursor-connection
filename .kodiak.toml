@@ -4,5 +4,8 @@ version = 1
 delete_branch_on_merge = true
 
 [merge.automerge_dependencies]
-usernames = ["dependabot"]
+usernames = ["renovate"]
 versions = ["minor", "patch"]
+
+[update]
+ignored_usernames = ["renovate"]
