@@ -29,7 +29,7 @@
     "@prisma/client": "2.26.0",
     "@types/jest": "26.0.23",
     "@types/node": "15.12.5",
-    "eslint": "7.29.0",
+    "eslint": "7.30.0",
     "jest": "27.0.6",
     "prettier": "2.3.2",
     "prisma": "2.26.0",
