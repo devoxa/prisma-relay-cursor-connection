@@ -37,7 +37,7 @@ jobs:
         run: yarn test --coverage
 
       - name: 'Save test coverage'
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v2
 
       - name: 'Check code formatting'
         run: yarn format:check
