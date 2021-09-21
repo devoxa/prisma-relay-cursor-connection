@@ -27,7 +27,7 @@
     "@devoxa/eslint-config": "2.0.5",
     "@devoxa/prettier-config": "1.0.1",
     "@prisma/client": "3.0.2",
-    "@types/jest": "27.0.1",
+    "@types/jest": "27.0.2",
     "@types/node": "15.12.5",
     "eslint": "7.32.0",
     "jest": "27.2.1",
