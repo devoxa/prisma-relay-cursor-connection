@@ -491,10 +491,10 @@
     eslint-config-prettier "^8.1.0"
     eslint-plugin-react "^7.21.2"
 
-"@devoxa/prettier-config@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@devoxa/prettier-config/-/prettier-config-1.0.1.tgz#3d0094298ad634b9b30bb833285858e35810520b"
-  integrity sha512-A1MFXXv2k/DMSRfFjSspNzcj/zqs+S7u1txC2Us9iCZzKHhh072yMbkHEjUjleF8CDb8/FYTRr/zIQCj5DOSSQ==
+"@devoxa/prettier-config@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@devoxa/prettier-config/-/prettier-config-1.0.2.tgz#0ccde044ec67d5702655f3eac5de2aae7d9005d6"
+  integrity sha512-dAGMCT9uZgcsxfAVVVPf7dQ8ftJUSAfih/Vupy8srSjm6vop4ItImUUch2zFekjKQ97CkxxcYizo21gVb1+U3w==
 
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
