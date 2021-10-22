@@ -49,7 +49,7 @@
 yarn add @devoxa/prisma-relay-cursor-connection
 ```
 
-This module has a peer dependency on `@prisma/client@^2.0.0`.
+This module has a peer dependency on `@prisma/client` version `^2.0.0 || ^3.0.0`.
 
 ## Usage
 
