@@ -64,6 +64,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "igo",
+      "name": "Igor Urminček",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55597?v=4",
+      "profile": "https://github.com/igo",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "files": [
