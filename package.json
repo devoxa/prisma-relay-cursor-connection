@@ -30,7 +30,7 @@
     "@types/jest": "27.0.3",
     "@types/node": "16.11.11",
     "eslint": "8.3.0",
-    "jest": "27.4.0",
+    "jest": "27.4.1",
     "prettier": "2.5.0",
     "prisma": "3.5.0",
     "ts-jest": "27.0.7",
