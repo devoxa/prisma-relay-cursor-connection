@@ -3,8 +3,9 @@ import {
   ConnectionArguments,
   Edge,
   Options,
-  PrismaFindManyArguments,
+  PrismaFindManyArguments
 } from './interfaces'
+import { createPageCursors } from './pageCursorsHelpers'
 
 export * from './interfaces'
 
@@ -33,12 +34,11 @@ export async function findManyCursorConnection<
   let hasPreviousPage: boolean
 
   if (isForwardPagination(args)) {
-    // Fetch one additional record to determine if there is a next page
-    const take = args.first + 1
-
     // Convert `after` into prisma `cursor` & `skip`
-    const cursor = decodeCursor(args.after, options)
-    const skip = cursor ? 1 : undefined
+    const inputCursor = decodeCursor(args.after, options)
+
+    // Extract the arguments for the findMany
+    const { cursor, take, skip } = options.findManyParamsWithCursor(args, inputCursor)
 
     // Execute the underlying query operations
     records = await findMany({ cursor, take, skip })
@@ -53,12 +53,12 @@ export async function findManyCursorConnection<
     // Remove the extra record (last element) from the results
     if (hasNextPage) records.pop()
   } else if (isBackwardPagination(args)) {
-    // Fetch one additional record to determine if there is a previous page
-    const take = -1 * (args.last + 1)
 
     // Convert `before` into prisma `cursor` & `skip`
-    const cursor = decodeCursor(args.before, options)
-    const skip = cursor ? 1 : undefined
+    const initialCursor = decodeCursor(args.before, options)
+
+    // Extract the arguments for the findMany
+    const { cursor, take, skip } = options.findManyParamsWithCursor(args, initialCursor)
 
     // Execute the underlying query operations
     records = await findMany({ cursor, take, skip })
@@ -90,10 +90,10 @@ export async function findManyCursorConnection<
   return {
     edges: records.map(
       (record) =>
-        ({
-          ...options.recordToEdge(record),
-          cursor: encodeCursor(record, options),
-        } as CustomEdge)
+      ({
+        ...options.recordToEdge(record),
+        cursor: encodeCursor(record, options),
+      } as CustomEdge)
     ),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
@@ -154,6 +154,16 @@ function mergeDefaultOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>
     encodeCursor: (cursor: Cursor) => (cursor as unknown as { id: string }).id,
     decodeCursor: (cursorString: string) => ({ id: cursorString } as unknown as Cursor),
     recordToEdge: (record: Record) => ({ node: record } as unknown as Omit<CustomEdge, 'cursor'>),
+    findManyParamsWithCursor: (args, cursor) => {
+      // Fetch one additional record to determine if there is a next page
+      const take = args.first ? args.first + 1 : -1 * ((args.last || 0) + 1)
+
+      // Convert `before` into prisma `cursor` & `skip`
+      const skip = cursor ? 1 : undefined
+
+      // Pass through the cursor
+      return { take, skip, cursor }
+    },
     ...pOptions,
   }
 }
@@ -182,4 +192,67 @@ function encodeCursor<Record, Cursor, Node, CustomEdge extends Edge<Node>>(
   options: MergedOptions<Record, Cursor, Node, CustomEdge>
 ): string {
   return options.encodeCursor(options.getCursor(record))
+}
+
+
+export async function findManyCursorConnectionWithPageCursors<
+  Record = { id: string },
+  Cursor = { id: string, page: number },
+  Node = Record,
+  CustomEdge extends Edge<Node> = Edge<Node>
+>(
+  findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Record[]>,
+  aggregate: () => Promise<number>,
+  args: ConnectionArguments = {},
+  pOptions?: Omit<Options<Record, Cursor, Node, CustomEdge>, "decodeCursor" | "encodeCursor" | "findManyParamsWithCursor">
+): Promise<Connection<Node, CustomEdge>> {
+
+  const options: Options<Record, Cursor, Node, CustomEdge> = {
+    ...pOptions,
+    decodeCursor: (cursor: string) => {
+      // All cuids start with "c", so if it's not then we're good to go
+      if (!cursor.startsWith("c")) {
+        const [page, id] = cursor.split("-")
+        return ({ id, page: parseInt(page) } as unknown as Cursor)
+      } else {
+        return ({ id: cursor, page: 0 } as unknown as Cursor)
+      }
+    },
+
+    encodeCursor: (cursor: Cursor) => {
+      const cAny = cursor as unknown as { id: string, page: number }
+      const cID = "id" in cursor ? cAny.id as string : ""
+      const cPage = "page" in cursor ? cAny.page as number : 12
+      return `${cPage}-${cID}`
+    },
+
+    findManyParamsWithCursor: (args, cursor) => {
+      // Fetch one additional record to determine if there is a next page
+      const take = args.first ? args.first + 1 : -1 * ((args.last || 0) + 1)
+
+      // Convert `before` into prisma `cursor` & `skip`
+      const skip = cursor ? 1 : undefined
+
+      // We need to delete the 'page' field in the cursor, because that's
+      // not a field for prisma, but our book-keeping for the skip
+      if (cursor && "page" in cursor) delete (cursor as unknown as { page?: number }).page
+
+      console.log({ take, skip, cursor })
+      return { take, skip, cursor }
+    },
+  }
+
+  const connection = await findManyCursorConnection(findMany, aggregate, args, options)
+
+  // If we don't have the initial cursor to anchor to, we'll need to grab the first
+  let initialCursor = args.after || args.before
+  if (!initialCursor) {
+    const direction = args.first ? "asc" : "desc"
+    const firstItem = await findMany({ take: 1, orderBy: { id: direction } })
+    if (firstItem[0]) initialCursor = (firstItem[0] as unknown as { id: string }).id
+  }
+
+  connection.pageCursors = createPageCursors(connection.totalCount, args, initialCursor)
+
+  return connection
 }

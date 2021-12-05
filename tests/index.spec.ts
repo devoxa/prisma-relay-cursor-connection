@@ -1,5 +1,5 @@
-import { Prisma, PrismaClient, Profile, User, Todo } from '@prisma/client'
-import { ConnectionArguments, findManyCursorConnection } from '../src'
+import { Prisma, PrismaClient, Profile, Todo, User } from '@prisma/client'
+import { ConnectionArguments, findManyCursorConnection, findManyCursorConnectionWithPageCursors } from '../src'
 import { PROFILE_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
 
 function encodeCursor<Cursor>(prismaCursor: Cursor) {
@@ -427,6 +427,58 @@ describe('prisma-relay-cursor-connection', () => {
 
       // Test that the extraEdgeField return type work via TS
       result.edges[0]?.extraEdgeField
+    })
+  })
+
+
+  describe('page based cursors', () => {
+    beforeAll(async () => {
+      await client.todo.deleteMany({})
+
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TODO_FIXTURES.length; i++) {
+        const cidVersion = { ...TODO_FIXTURES[i], id: `cid_${i}` }
+        await client.todo.create({ data: cidVersion })
+      }
+    })
+
+    it('returns the paginated todos with the base client (sanity check)', async () => {
+      const result = await client.todo.findMany({ cursor: { id: 'cid_05' }, take: 5, skip: 1 })
+      expect(result).toMatchSnapshot()
+    })
+
+    const VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
+      ['returns all todos', undefined],
+      ['returns the first 5 todos', { first: 5 }],
+      ['returns the first 5 todos after the 1st todo', { first: 5, after: 'cid_1' }],
+      ['returns the first 5 todos after the 5th todo', { first: 5, after: 'cid_5' }],
+      ['returns the first 5 todos after the 15th todo', { first: 5, after: 'cid_15' }],
+      ['returns the first 5 todos after the 16th todo', { first: 5, after: 'cid_16' }],
+      ['returns the first 5 todos after the 20th todo', { first: 5, after: 'cid_20' }],
+      ['returns the last 5 todos', { last: 5 }],
+      ['returns the last 5 todos before the 1st todo', { last: 5, before: 'cid_1' }],
+      ['returns the last 5 todos before the 5th todo', { last: 5, before: 'cid_5' }],
+      ['returns the last 5 todos before the 6th todo', { last: 5, before: 'cid_u6' }],
+      ['returns the last 5 todos before the 16th todo', { last: 5, before: 'cid_16' }],
+      // The above ensure the original behavior is still respected
+      ['returns the 2nd page after cid_16', { first: 5, after: '1-cid_16' }],
+      ['returns the 3rd page after cid_16', { first: 10, after: '2-cid_16' }],
+      ['returns the 2nd page before cid_16', { last: 5, before: '1-cid_16' }],
+    ]
+
+    test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
+      const result = await findManyCursorConnectionWithPageCursors<
+        Todo,
+        { id: string },
+        Todo & { extraNodeField: string },
+        { extraEdgeField: string; cursor: string; node: Todo & { extraNodeField: string } }
+      >(
+        (args) => client.todo.findMany(args),
+        () => client.todo.count(),
+        connectionArgs,
+      )
+
+      expect(result).toMatchSnapshot()
     })
   })
 

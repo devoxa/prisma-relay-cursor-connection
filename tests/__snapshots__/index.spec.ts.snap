@@ -1946,6 +1946,1196 @@ Array [
 ]
 `;
 
+exports[`prisma-relay-cursor-connection page based cursors returns all todos 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_0",
+      "node": Object {
+        "id": "cid_0",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    Object {
+      "cursor": "12-cid_1",
+      "node": Object {
+        "id": "cid_1",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    Object {
+      "cursor": "12-cid_2",
+      "node": Object {
+        "id": "cid_2",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_3",
+      "node": Object {
+        "id": "cid_3",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    Object {
+      "cursor": "12-cid_4",
+      "node": Object {
+        "id": "cid_4",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+    Object {
+      "cursor": "12-cid_5",
+      "node": Object {
+        "id": "cid_5",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+    },
+    Object {
+      "cursor": "12-cid_6",
+      "node": Object {
+        "id": "cid_6",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+    },
+    Object {
+      "cursor": "12-cid_7",
+      "node": Object {
+        "id": "cid_7",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_8",
+      "node": Object {
+        "id": "cid_8",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+    },
+    Object {
+      "cursor": "12-cid_9",
+      "node": Object {
+        "id": "cid_9",
+        "isCompleted": true,
+        "text": "deserunt rerum occaecati",
+      },
+    },
+    Object {
+      "cursor": "12-cid_10",
+      "node": Object {
+        "id": "cid_10",
+        "isCompleted": false,
+        "text": "unde et quasi",
+      },
+    },
+    Object {
+      "cursor": "12-cid_11",
+      "node": Object {
+        "id": "cid_11",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+    },
+    Object {
+      "cursor": "12-cid_12",
+      "node": Object {
+        "id": "cid_12",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+    },
+    Object {
+      "cursor": "12-cid_13",
+      "node": Object {
+        "id": "cid_13",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+    },
+    Object {
+      "cursor": "12-cid_14",
+      "node": Object {
+        "id": "cid_14",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+    },
+    Object {
+      "cursor": "12-cid_15",
+      "node": Object {
+        "id": "cid_15",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+    Object {
+      "cursor": "12-cid_16",
+      "node": Object {
+        "id": "cid_16",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    Object {
+      "cursor": "12-cid_17",
+      "node": Object {
+        "id": "cid_17",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    Object {
+      "cursor": "12-cid_18",
+      "node": Object {
+        "id": "cid_18",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "12-cid_19",
+      "node": Object {
+        "id": "cid_19",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_9",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_9",
+        "isCurrent": false,
+        "page": 2,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_19",
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "startCursor": "12-cid_0",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the 2nd page after cid_16 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_17",
+      "node": Object {
+        "id": "cid_17",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    Object {
+      "cursor": "12-cid_18",
+      "node": Object {
+        "id": "cid_18",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "12-cid_19",
+      "node": Object {
+        "id": "cid_19",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+    Object {
+      "cursor": "12-cid_2",
+      "node": Object {
+        "id": "cid_2",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_3",
+      "node": Object {
+        "id": "cid_3",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-1-cid_16",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-1-cid_16",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-1-cid_16",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-1-cid_16",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_3",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_17",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the 2nd page before cid_16 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_11",
+      "node": Object {
+        "id": "cid_11",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+    },
+    Object {
+      "cursor": "12-cid_12",
+      "node": Object {
+        "id": "cid_12",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+    },
+    Object {
+      "cursor": "12-cid_13",
+      "node": Object {
+        "id": "cid_13",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+    },
+    Object {
+      "cursor": "12-cid_14",
+      "node": Object {
+        "id": "cid_14",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+    },
+    Object {
+      "cursor": "12-cid_15",
+      "node": Object {
+        "id": "cid_15",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-1-cid_16",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-1-cid_16",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-1-cid_16",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-1-cid_16",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_15",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_11",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the 3rd page after cid_16 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_17",
+      "node": Object {
+        "id": "cid_17",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    Object {
+      "cursor": "12-cid_18",
+      "node": Object {
+        "id": "cid_18",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "12-cid_19",
+      "node": Object {
+        "id": "cid_19",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+    Object {
+      "cursor": "12-cid_2",
+      "node": Object {
+        "id": "cid_2",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_3",
+      "node": Object {
+        "id": "cid_3",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    Object {
+      "cursor": "12-cid_4",
+      "node": Object {
+        "id": "cid_4",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+    Object {
+      "cursor": "12-cid_5",
+      "node": Object {
+        "id": "cid_5",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+    },
+    Object {
+      "cursor": "12-cid_6",
+      "node": Object {
+        "id": "cid_6",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+    },
+    Object {
+      "cursor": "12-cid_7",
+      "node": Object {
+        "id": "cid_7",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_8",
+      "node": Object {
+        "id": "cid_8",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-2-cid_16",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-2-cid_16",
+        "isCurrent": false,
+        "page": 2,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_8",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_17",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_0",
+      "node": Object {
+        "id": "cid_0",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    Object {
+      "cursor": "12-cid_1",
+      "node": Object {
+        "id": "cid_1",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    Object {
+      "cursor": "12-cid_10",
+      "node": Object {
+        "id": "cid_10",
+        "isCompleted": false,
+        "text": "unde et quasi",
+      },
+    },
+    Object {
+      "cursor": "12-cid_11",
+      "node": Object {
+        "id": "cid_11",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+    },
+    Object {
+      "cursor": "12-cid_12",
+      "node": Object {
+        "id": "cid_12",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_0",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_0",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_0",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_0",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_12",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "12-cid_0",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 1st todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_10",
+      "node": Object {
+        "id": "cid_10",
+        "isCompleted": false,
+        "text": "unde et quasi",
+      },
+    },
+    Object {
+      "cursor": "12-cid_11",
+      "node": Object {
+        "id": "cid_11",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+    },
+    Object {
+      "cursor": "12-cid_12",
+      "node": Object {
+        "id": "cid_12",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+    },
+    Object {
+      "cursor": "12-cid_13",
+      "node": Object {
+        "id": "cid_13",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+    },
+    Object {
+      "cursor": "12-cid_14",
+      "node": Object {
+        "id": "cid_14",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_1",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_1",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_1",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_1",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_14",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_10",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 5th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_6",
+      "node": Object {
+        "id": "cid_6",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+    },
+    Object {
+      "cursor": "12-cid_7",
+      "node": Object {
+        "id": "cid_7",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_8",
+      "node": Object {
+        "id": "cid_8",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+    },
+    Object {
+      "cursor": "12-cid_9",
+      "node": Object {
+        "id": "cid_9",
+        "isCompleted": true,
+        "text": "deserunt rerum occaecati",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_5",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_5",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_5",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_5",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_9",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_6",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 15th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_16",
+      "node": Object {
+        "id": "cid_16",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    Object {
+      "cursor": "12-cid_17",
+      "node": Object {
+        "id": "cid_17",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    Object {
+      "cursor": "12-cid_18",
+      "node": Object {
+        "id": "cid_18",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "12-cid_19",
+      "node": Object {
+        "id": "cid_19",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+    Object {
+      "cursor": "12-cid_2",
+      "node": Object {
+        "id": "cid_2",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_15",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_15",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_15",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_15",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_2",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_16",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 16th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_17",
+      "node": Object {
+        "id": "cid_17",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    Object {
+      "cursor": "12-cid_18",
+      "node": Object {
+        "id": "cid_18",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "12-cid_19",
+      "node": Object {
+        "id": "cid_19",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+    Object {
+      "cursor": "12-cid_2",
+      "node": Object {
+        "id": "cid_2",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_3",
+      "node": Object {
+        "id": "cid_3",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_16",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_16",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_16",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_16",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_3",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_17",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 20th todo 1`] = `
+Object {
+  "edges": Array [],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_20",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_20",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_20",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_20",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_5",
+      "node": Object {
+        "id": "cid_5",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+    },
+    Object {
+      "cursor": "12-cid_6",
+      "node": Object {
+        "id": "cid_6",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+    },
+    Object {
+      "cursor": "12-cid_7",
+      "node": Object {
+        "id": "cid_7",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_8",
+      "node": Object {
+        "id": "cid_8",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+    },
+    Object {
+      "cursor": "12-cid_9",
+      "node": Object {
+        "id": "cid_9",
+        "isCompleted": true,
+        "text": "deserunt rerum occaecati",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_9",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_9",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_9",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_9",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_9",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_5",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 1st todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_0",
+      "node": Object {
+        "id": "cid_0",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_1",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_1",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_1",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_1",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_0",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "12-cid_0",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 5th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_18",
+      "node": Object {
+        "id": "cid_18",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    Object {
+      "cursor": "12-cid_19",
+      "node": Object {
+        "id": "cid_19",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+    Object {
+      "cursor": "12-cid_2",
+      "node": Object {
+        "id": "cid_2",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    Object {
+      "cursor": "12-cid_3",
+      "node": Object {
+        "id": "cid_3",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    Object {
+      "cursor": "12-cid_4",
+      "node": Object {
+        "id": "cid_4",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_5",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_5",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_5",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_5",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_4",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_18",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 6th todo 1`] = `
+Object {
+  "edges": Array [],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_u6",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_u6",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_u6",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_u6",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": undefined,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 16th todo 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "12-cid_11",
+      "node": Object {
+        "id": "cid_11",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+    },
+    Object {
+      "cursor": "12-cid_12",
+      "node": Object {
+        "id": "cid_12",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+    },
+    Object {
+      "cursor": "12-cid_13",
+      "node": Object {
+        "id": "cid_13",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+    },
+    Object {
+      "cursor": "12-cid_14",
+      "node": Object {
+        "id": "cid_14",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+    },
+    Object {
+      "cursor": "12-cid_15",
+      "node": Object {
+        "id": "cid_15",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+  ],
+  "pageCursors": Object {
+    "around": Array [
+      Object {
+        "cursor": "1-cid_16",
+        "isCurrent": true,
+        "page": 1,
+      },
+      Object {
+        "cursor": "2-cid_16",
+        "isCurrent": false,
+        "page": 2,
+      },
+      Object {
+        "cursor": "3-cid_16",
+        "isCurrent": false,
+        "page": 3,
+      },
+      Object {
+        "cursor": "4-cid_16",
+        "isCurrent": false,
+        "page": 4,
+      },
+    ],
+  },
+  "pageInfo": Object {
+    "endCursor": "12-cid_15",
+    "hasNextPage": true,
+    "hasPreviousPage": true,
+    "startCursor": "12-cid_11",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the paginated todos with the base client (sanity check) 1`] = `Array []`;
+
 exports[`prisma-relay-cursor-connection string id returns all todos 1`] = `
 Object {
   "edges": Array [
