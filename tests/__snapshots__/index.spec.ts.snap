@@ -1960,161 +1960,161 @@ exports[`prisma-relay-cursor-connection page based cursors returns all todos 1`]
   "result": {
     "edges": [
       {
-        "cursor": "cid_0",
+        "cursor": "cid_01",
         "node": {
-          "id": "cid_0",
+          "id": "cid_01",
           "isCompleted": false,
           "text": "veritatis molestias qui",
         },
       },
       {
-        "cursor": "cid_1",
+        "cursor": "cid_02",
         "node": {
-          "id": "cid_1",
+          "id": "cid_02",
           "isCompleted": false,
           "text": "occaecati a dolor",
         },
       },
       {
-        "cursor": "cid_2",
+        "cursor": "cid_03",
         "node": {
-          "id": "cid_2",
+          "id": "cid_03",
           "isCompleted": false,
           "text": "ut enim quia",
         },
       },
       {
-        "cursor": "cid_3",
+        "cursor": "cid_04",
         "node": {
-          "id": "cid_3",
+          "id": "cid_04",
           "isCompleted": true,
           "text": "ipsam ipsam corrupti",
         },
       },
       {
-        "cursor": "cid_4",
+        "cursor": "cid_05",
         "node": {
-          "id": "cid_4",
+          "id": "cid_05",
           "isCompleted": true,
           "text": "voluptatem sint ipsam",
         },
       },
       {
-        "cursor": "cid_5",
+        "cursor": "cid_06",
         "node": {
-          "id": "cid_5",
+          "id": "cid_06",
           "isCompleted": true,
           "text": "ut sunt consequuntur",
         },
       },
       {
-        "cursor": "cid_6",
+        "cursor": "cid_07",
         "node": {
-          "id": "cid_6",
+          "id": "cid_07",
           "isCompleted": false,
           "text": "accusamus aut labore",
         },
       },
       {
-        "cursor": "cid_7",
+        "cursor": "cid_08",
         "node": {
-          "id": "cid_7",
+          "id": "cid_08",
           "isCompleted": true,
           "text": "et quo quia",
         },
       },
       {
-        "cursor": "cid_8",
+        "cursor": "cid_09",
         "node": {
-          "id": "cid_8",
+          "id": "cid_09",
           "isCompleted": true,
           "text": "accusantium a excepturi",
-        },
-      },
-      {
-        "cursor": "cid_9",
-        "node": {
-          "id": "cid_9",
-          "isCompleted": true,
-          "text": "deserunt rerum occaecati",
         },
       },
       {
         "cursor": "cid_10",
         "node": {
           "id": "cid_10",
+          "isCompleted": true,
+          "text": "deserunt rerum occaecati",
+        },
+      },
+      {
+        "cursor": "cid_11",
+        "node": {
+          "id": "cid_11",
           "isCompleted": false,
           "text": "unde et quasi",
         },
       },
       {
-        "cursor": "cid_011",
+        "cursor": "cid_12",
         "node": {
-          "id": "cid_011",
+          "id": "cid_12",
           "isCompleted": false,
           "text": "et autem sapiente",
         },
       },
       {
-        "cursor": "cid_012",
+        "cursor": "cid_13",
         "node": {
-          "id": "cid_012",
+          "id": "cid_13",
           "isCompleted": false,
           "text": "deleniti fuga et",
         },
       },
       {
-        "cursor": "cid_013",
+        "cursor": "cid_14",
         "node": {
-          "id": "cid_013",
+          "id": "cid_14",
           "isCompleted": true,
           "text": "ea molestiae similique",
         },
       },
       {
-        "cursor": "cid_014",
+        "cursor": "cid_15",
         "node": {
-          "id": "cid_014",
+          "id": "cid_15",
           "isCompleted": false,
           "text": "doloribus ea aut",
         },
       },
       {
-        "cursor": "cid_015",
+        "cursor": "cid_16",
         "node": {
-          "id": "cid_015",
+          "id": "cid_16",
           "isCompleted": true,
           "text": "ut molestias veniam",
         },
       },
       {
-        "cursor": "cid_016",
+        "cursor": "cid_17",
         "node": {
-          "id": "cid_016",
+          "id": "cid_17",
           "isCompleted": true,
           "text": "a placeat aperiam",
         },
       },
       {
-        "cursor": "cid_017",
+        "cursor": "cid_18",
         "node": {
-          "id": "cid_017",
+          "id": "cid_18",
           "isCompleted": true,
           "text": "quos rerum aut",
         },
       },
       {
-        "cursor": "cid_018",
+        "cursor": "cid_19",
         "node": {
-          "id": "cid_018",
+          "id": "cid_19",
           "isCompleted": false,
           "text": "ullam a voluptatem",
         },
       },
       {
-        "cursor": "cid_019",
+        "cursor": "cid_20",
         "node": {
-          "id": "cid_019",
+          "id": "cid_20",
           "isCompleted": true,
           "text": "dolorum deserunt quis",
         },
@@ -2123,22 +2123,22 @@ exports[`prisma-relay-cursor-connection page based cursors returns all todos 1`]
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-cid_0",
+          "cursor": "1-cid_01",
           "isCurrent": true,
           "page": 1,
         },
         {
-          "cursor": "2-cid_0",
+          "cursor": "2-cid_01",
           "isCurrent": false,
           "page": 2,
         },
       ],
     },
     "pageInfo": {
-      "endCursor": "cid_019",
+      "endCursor": "cid_20",
       "hasNextPage": false,
       "hasPreviousPage": false,
-      "startCursor": "cid_0",
+      "startCursor": "cid_01",
     },
     "totalCount": 20,
   },
@@ -2147,46 +2147,69 @@ exports[`prisma-relay-cursor-connection page based cursors returns all todos 1`]
 
 exports[`prisma-relay-cursor-connection page based cursors returns the 1st page after cid_11 1`] = `
 {
+  "cursor": "1-cid_01",
   "manyArgs": [
     {
       "cursor": {
-        "id": "cid_11",
+        "id": "cid_01",
       },
-      "skip": 1,
-      "take": 6,
+      "skip": 0,
+      "take": 3,
     },
   ],
   "result": {
-    "edges": [],
+    "edges": [
+      {
+        "cursor": "cid_01",
+        "node": {
+          "id": "cid_01",
+          "isCompleted": false,
+          "text": "veritatis molestias qui",
+        },
+      },
+      {
+        "cursor": "cid_02",
+        "node": {
+          "id": "cid_02",
+          "isCompleted": false,
+          "text": "occaecati a dolor",
+        },
+      },
+    ],
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-1-cid_11",
+          "cursor": "1-cid_01",
           "isCurrent": true,
           "page": 1,
         },
         {
-          "cursor": "2-1-cid_11",
+          "cursor": "2-cid_01",
           "isCurrent": false,
           "page": 2,
         },
         {
-          "cursor": "3-1-cid_11",
+          "cursor": "3-cid_01",
           "isCurrent": false,
           "page": 3,
         },
         {
-          "cursor": "4-1-cid_11",
+          "cursor": "4-cid_01",
           "isCurrent": false,
           "page": 4,
         },
       ],
+      "last": {
+        "cursor": "10-cid_01",
+        "isCurrent": false,
+        "page": 10,
+      },
     },
     "pageInfo": {
-      "endCursor": undefined,
-      "hasNextPage": false,
+      "endCursor": "cid_02",
+      "hasNextPage": true,
       "hasPreviousPage": true,
-      "startCursor": undefined,
+      "startCursor": "cid_01",
     },
     "totalCount": 20,
   },
@@ -2195,94 +2218,74 @@ exports[`prisma-relay-cursor-connection page based cursors returns the 1st page 
 
 exports[`prisma-relay-cursor-connection page based cursors returns the 2nd page after cid_11 1`] = `
 {
+  "cursor": "2-cid_01",
   "manyArgs": [
     {
       "cursor": {
-        "id": "cid_11",
+        "id": "cid_01",
       },
-      "skip": 1,
-      "take": 6,
+      "skip": 2,
+      "take": 3,
     },
   ],
   "result": {
-    "edges": [],
+    "edges": [
+      {
+        "cursor": "cid_03",
+        "node": {
+          "id": "cid_03",
+          "isCompleted": false,
+          "text": "ut enim quia",
+        },
+      },
+      {
+        "cursor": "cid_04",
+        "node": {
+          "id": "cid_04",
+          "isCompleted": true,
+          "text": "ipsam ipsam corrupti",
+        },
+      },
+    ],
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-2-cid_11",
-          "isCurrent": true,
+          "cursor": "1-cid_01",
+          "isCurrent": false,
           "page": 1,
         },
         {
-          "cursor": "2-2-cid_11",
-          "isCurrent": false,
+          "cursor": "2-cid_01",
+          "isCurrent": true,
           "page": 2,
         },
         {
-          "cursor": "3-2-cid_11",
+          "cursor": "3-cid_01",
           "isCurrent": false,
           "page": 3,
         },
         {
-          "cursor": "4-2-cid_11",
+          "cursor": "4-cid_01",
           "isCurrent": false,
           "page": 4,
         },
       ],
-    },
-    "pageInfo": {
-      "endCursor": undefined,
-      "hasNextPage": false,
-      "hasPreviousPage": true,
-      "startCursor": undefined,
-    },
-    "totalCount": 20,
-  },
-}
-`;
-
-exports[`prisma-relay-cursor-connection page based cursors returns the 2nd page before cid_11 1`] = `
-{
-  "manyArgs": [
-    {
-      "cursor": {
-        "id": "cid_11",
+      "last": {
+        "cursor": "10-cid_01",
+        "isCurrent": false,
+        "page": 10,
       },
-      "skip": 1,
-      "take": -6,
-    },
-  ],
-  "result": {
-    "edges": [],
-    "pageCursors": {
-      "around": [
-        {
-          "cursor": "1-2-cid_11",
-          "isCurrent": true,
-          "page": 1,
-        },
-        {
-          "cursor": "2-2-cid_11",
-          "isCurrent": false,
-          "page": 2,
-        },
-        {
-          "cursor": "3-2-cid_11",
-          "isCurrent": false,
-          "page": 3,
-        },
-        {
-          "cursor": "4-2-cid_11",
-          "isCurrent": false,
-          "page": 4,
-        },
-      ],
+      "previous": {
+        "cursor": "1-cid_01",
+        "isCurrent": false,
+        "page": 1,
+      },
     },
     "pageInfo": {
-      "endCursor": undefined,
+      "endCursor": "cid_04",
       "hasNextPage": true,
-      "hasPreviousPage": false,
-      "startCursor": undefined,
+      "hasPreviousPage": true,
+      "startCursor": "cid_03",
     },
     "totalCount": 20,
   },
@@ -2291,94 +2294,74 @@ exports[`prisma-relay-cursor-connection page based cursors returns the 2nd page 
 
 exports[`prisma-relay-cursor-connection page based cursors returns the 3rd page after cid_11 1`] = `
 {
+  "cursor": "4-cid_01",
   "manyArgs": [
     {
       "cursor": {
-        "id": "cid_11",
+        "id": "cid_01",
       },
-      "skip": 1,
-      "take": 6,
+      "skip": 6,
+      "take": 3,
     },
   ],
   "result": {
-    "edges": [],
+    "edges": [
+      {
+        "cursor": "cid_07",
+        "node": {
+          "id": "cid_07",
+          "isCompleted": false,
+          "text": "accusamus aut labore",
+        },
+      },
+      {
+        "cursor": "cid_08",
+        "node": {
+          "id": "cid_08",
+          "isCompleted": true,
+          "text": "et quo quia",
+        },
+      },
+    ],
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-3-cid_11",
-          "isCurrent": true,
-          "page": 1,
-        },
-        {
-          "cursor": "2-3-cid_11",
-          "isCurrent": false,
-          "page": 2,
-        },
-        {
-          "cursor": "3-3-cid_11",
+          "cursor": "3-cid_01",
           "isCurrent": false,
           "page": 3,
         },
         {
-          "cursor": "4-3-cid_11",
-          "isCurrent": false,
-          "page": 4,
-        },
-      ],
-    },
-    "pageInfo": {
-      "endCursor": undefined,
-      "hasNextPage": false,
-      "hasPreviousPage": true,
-      "startCursor": undefined,
-    },
-    "totalCount": 20,
-  },
-}
-`;
-
-exports[`prisma-relay-cursor-connection page based cursors returns the 3rd page before cid_11 1`] = `
-{
-  "manyArgs": [
-    {
-      "cursor": {
-        "id": "cid_11",
-      },
-      "skip": 1,
-      "take": -6,
-    },
-  ],
-  "result": {
-    "edges": [],
-    "pageCursors": {
-      "around": [
-        {
-          "cursor": "1-3-cid_11",
+          "cursor": "4-cid_01",
           "isCurrent": true,
-          "page": 1,
-        },
-        {
-          "cursor": "2-3-cid_11",
-          "isCurrent": false,
-          "page": 2,
-        },
-        {
-          "cursor": "3-3-cid_11",
-          "isCurrent": false,
-          "page": 3,
-        },
-        {
-          "cursor": "4-3-cid_11",
-          "isCurrent": false,
           "page": 4,
         },
+        {
+          "cursor": "5-cid_01",
+          "isCurrent": false,
+          "page": 5,
+        },
       ],
+      "first": {
+        "cursor": "1-cid_01",
+        "isCurrent": false,
+        "page": 1,
+      },
+      "last": {
+        "cursor": "10-cid_01",
+        "isCurrent": false,
+        "page": 10,
+      },
+      "previous": {
+        "cursor": "3-cid_01",
+        "isCurrent": false,
+        "page": 3,
+      },
     },
     "pageInfo": {
-      "endCursor": undefined,
+      "endCursor": "cid_08",
       "hasNextPage": true,
-      "hasPreviousPage": false,
-      "startCursor": undefined,
+      "hasPreviousPage": true,
+      "startCursor": "cid_07",
     },
     "totalCount": 20,
   },
@@ -2403,75 +2386,75 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
   "result": {
     "edges": [
       {
-        "cursor": "cid_0",
+        "cursor": "cid_01",
         "node": {
-          "id": "cid_0",
+          "id": "cid_01",
           "isCompleted": false,
           "text": "veritatis molestias qui",
         },
       },
       {
-        "cursor": "cid_011",
+        "cursor": "cid_02",
         "node": {
-          "id": "cid_011",
+          "id": "cid_02",
           "isCompleted": false,
-          "text": "et autem sapiente",
+          "text": "occaecati a dolor",
         },
       },
       {
-        "cursor": "cid_012",
+        "cursor": "cid_03",
         "node": {
-          "id": "cid_012",
+          "id": "cid_03",
           "isCompleted": false,
-          "text": "deleniti fuga et",
+          "text": "ut enim quia",
         },
       },
       {
-        "cursor": "cid_013",
+        "cursor": "cid_04",
         "node": {
-          "id": "cid_013",
+          "id": "cid_04",
           "isCompleted": true,
-          "text": "ea molestiae similique",
+          "text": "ipsam ipsam corrupti",
         },
       },
       {
-        "cursor": "cid_014",
+        "cursor": "cid_05",
         "node": {
-          "id": "cid_014",
-          "isCompleted": false,
-          "text": "doloribus ea aut",
+          "id": "cid_05",
+          "isCompleted": true,
+          "text": "voluptatem sint ipsam",
         },
       },
     ],
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-cid_9",
+          "cursor": "1-cid_20",
           "isCurrent": true,
           "page": 1,
         },
         {
-          "cursor": "2-cid_9",
+          "cursor": "2-cid_20",
           "isCurrent": false,
           "page": 2,
         },
         {
-          "cursor": "3-cid_9",
+          "cursor": "3-cid_20",
           "isCurrent": false,
           "page": 3,
         },
         {
-          "cursor": "4-cid_9",
+          "cursor": "4-cid_20",
           "isCurrent": false,
           "page": 4,
         },
       ],
     },
     "pageInfo": {
-      "endCursor": "cid_014",
+      "endCursor": "cid_05",
       "hasNextPage": true,
       "hasPreviousPage": false,
-      "startCursor": "cid_0",
+      "startCursor": "cid_01",
     },
     "totalCount": 20,
   },
@@ -2810,75 +2793,75 @@ exports[`prisma-relay-cursor-connection page based cursors returns the last 5 to
   "result": {
     "edges": [
       {
-        "cursor": "cid_5",
+        "cursor": "cid_16",
         "node": {
-          "id": "cid_5",
+          "id": "cid_16",
           "isCompleted": true,
-          "text": "ut sunt consequuntur",
+          "text": "ut molestias veniam",
         },
       },
       {
-        "cursor": "cid_6",
+        "cursor": "cid_17",
         "node": {
-          "id": "cid_6",
+          "id": "cid_17",
+          "isCompleted": true,
+          "text": "a placeat aperiam",
+        },
+      },
+      {
+        "cursor": "cid_18",
+        "node": {
+          "id": "cid_18",
+          "isCompleted": true,
+          "text": "quos rerum aut",
+        },
+      },
+      {
+        "cursor": "cid_19",
+        "node": {
+          "id": "cid_19",
           "isCompleted": false,
-          "text": "accusamus aut labore",
+          "text": "ullam a voluptatem",
         },
       },
       {
-        "cursor": "cid_7",
+        "cursor": "cid_20",
         "node": {
-          "id": "cid_7",
+          "id": "cid_20",
           "isCompleted": true,
-          "text": "et quo quia",
-        },
-      },
-      {
-        "cursor": "cid_8",
-        "node": {
-          "id": "cid_8",
-          "isCompleted": true,
-          "text": "accusantium a excepturi",
-        },
-      },
-      {
-        "cursor": "cid_9",
-        "node": {
-          "id": "cid_9",
-          "isCompleted": true,
-          "text": "deserunt rerum occaecati",
+          "text": "dolorum deserunt quis",
         },
       },
     ],
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-cid_0",
+          "cursor": "1-cid_01",
           "isCurrent": true,
           "page": 1,
         },
         {
-          "cursor": "2-cid_0",
+          "cursor": "2-cid_01",
           "isCurrent": false,
           "page": 2,
         },
         {
-          "cursor": "3-cid_0",
+          "cursor": "3-cid_01",
           "isCurrent": false,
           "page": 3,
         },
         {
-          "cursor": "4-cid_0",
+          "cursor": "4-cid_01",
           "isCurrent": false,
           "page": 4,
         },
       ],
     },
     "pageInfo": {
-      "endCursor": "cid_9",
+      "endCursor": "cid_20",
       "hasNextPage": false,
       "hasPreviousPage": true,
-      "startCursor": "cid_5",
+      "startCursor": "cid_16",
     },
     "totalCount": 20,
   },
@@ -3159,7 +3142,35 @@ exports[`prisma-relay-cursor-connection page based cursors returns the last 5 to
 }
 `;
 
-exports[`prisma-relay-cursor-connection page based cursors returns the paginated todos with the base client (sanity check) 1`] = `[]`;
+exports[`prisma-relay-cursor-connection page based cursors returns the paginated todos with the base client (sanity check) 1`] = `
+[
+  {
+    "id": "cid_06",
+    "isCompleted": true,
+    "text": "ut sunt consequuntur",
+  },
+  {
+    "id": "cid_07",
+    "isCompleted": false,
+    "text": "accusamus aut labore",
+  },
+  {
+    "id": "cid_08",
+    "isCompleted": true,
+    "text": "et quo quia",
+  },
+  {
+    "id": "cid_09",
+    "isCompleted": true,
+    "text": "accusantium a excepturi",
+  },
+  {
+    "id": "cid_10",
+    "isCompleted": true,
+    "text": "deserunt rerum occaecati",
+  },
+]
+`;
 
 exports[`prisma-relay-cursor-connection string id returns all todos 1`] = `
 {

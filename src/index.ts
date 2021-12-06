@@ -215,7 +215,7 @@ export async function findManyCursorConnectionWithPageCursors<
         const [page, id] = cursor.split("-")
         return ({ id, page: parseInt(page) } as unknown as Cursor)
       } else {
-        return ({ id: cursor, page: 0 } as unknown as Cursor)
+        return ({ id: cursor, page: undefined } as unknown as Cursor)
       }
     },
 
@@ -230,21 +230,31 @@ export async function findManyCursorConnectionWithPageCursors<
       const take = args.first ? args.first + 1 : -1 * ((args.last || 0) + 1)
 
       // Convert `before` into prisma `cursor` & `skip`
-      const skip = cursor ? 1 : undefined
+      let skip = cursor ? 1 : undefined
 
-      // We need to delete the 'page' field in the cursor, because that's
-      // not a field for prisma, but our book-keeping for the skip
-      if (cursor && "page" in cursor) delete (cursor as unknown as { page?: number }).page
+      // We need push the skip value along based on the amount
+      // pages we've referenced
+      if (skip && cursor && "page" in cursor) {
+        const ordinal = args.first || args.last || 10
+        // The +1 is because you must have seen a full page, so 'page 1' is really page 2
+        skip = (ordinal * ((cursor as unknown as { page: number }).page - 1))
 
-      console.log({ take, skip, cursor })
+        console.log({ skip, cursor, take })
+        // We need to delete the 'page' field in the cursor, because that's
+        // not a field for prisma, but our book-keeping
+        delete (cursor as unknown as { page?: number }).page
+      }
+
       return { take, skip, cursor }
     },
   }
 
   const connection = await findManyCursorConnection(findMany, aggregate, args, options)
+  console.log({ connection })
+
+  let initialCursor = args.after || args.before
 
   // If we don't have the initial cursor to anchor to, we'll need to grab the first
-  let initialCursor = args.after || args.before
   if (!initialCursor) {
     const direction = args.first ? "desc" : "asc"
     const firstItem = await findMany({ take: 1, orderBy: { id: direction } })
@@ -252,6 +262,5 @@ export async function findManyCursorConnectionWithPageCursors<
   }
 
   connection.pageCursors = createPageCursors(connection.totalCount, args, initialCursor)
-
   return connection
 }

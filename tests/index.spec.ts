@@ -436,8 +436,9 @@ describe('prisma-relay-cursor-connection', () => {
       await client.todo.deleteMany({})
 
       // Build up the fixtures sequentially so they are in a consistent order
+      // and switch their ids to begin with c to match a cuid
       for (let i = 0; i !== TODO_FIXTURES.length; i++) {
-        const id = i > 10 ? `0${i}` : i
+        const id = i < 9 ? `0${i + 1}` : i + 1
         const cidVersion = { ...TODO_FIXTURES[i], id: `cid_${id}` }
         await client.todo.create({ data: cidVersion })
       }
@@ -451,22 +452,23 @@ describe('prisma-relay-cursor-connection', () => {
     const VALID_CASES: Array<[string, ConnectionArguments | undefined]> = [
       ['returns all todos', undefined],
       ['returns the first 5 todos', { first: 5 }],
-      ['returns the first 5 todos after the 1st todo', { first: 5, after: 'cid_1' }],
-      ['returns the first 5 todos after the 5th todo', { first: 5, after: 'cid_5' }],
+      ['returns the first 5 todos after the 1st todo', { first: 5, after: 'cid_01' }],
+      ['returns the first 5 todos after the 5th todo', { first: 5, after: 'cid_05' }],
       ['returns the first 5 todos after the 15th todo', { first: 5, after: 'cid_15' }],
       ['returns the first 5 todos after the 16th todo', { first: 5, after: 'cid_16' }],
       ['returns the first 5 todos after the 20th todo', { first: 5, after: 'cid_20' }],
       ['returns the last 5 todos', { last: 5 }],
-      ['returns the last 5 todos before the 1st todo', { last: 5, before: 'cid_1' }],
-      ['returns the last 5 todos before the 5th todo', { last: 5, before: 'cid_5' }],
-      ['returns the last 5 todos before the 6th todo', { last: 5, before: 'cid_u6' }],
+      ['returns the last 5 todos before the 1st todo', { last: 5, before: 'cid_01' }],
+      ['returns the last 5 todos before the 5th todo', { last: 5, before: 'cid_05' }],
+      ['returns the last 5 todos before the 6th todo', { last: 5, before: 'cid_06' }],
       ['returns the last 5 todos before the 16th todo', { last: 5, before: 'cid_16' }],
-      // The above ensure the original behavior is still respected
-      ['returns the 1st page after cid_11', { first: 5, after: '1-cid_11' }],
-      ['returns the 2nd page after cid_11', { first: 5, after: '2-cid_11' }],
-      ['returns the 3rd page after cid_11', { first: 5, after: '3-cid_11' }],
-      ['returns the 2nd page before cid_11', { last: 5, before: '2-cid_11' }],
-      ['returns the 3rd page before cid_11', { last: 5, before: '3-cid_11' }],
+      // The above ensure the original behavior is still respected, these tests below 
+      // validate the new logic for findManyCursorConnectionWithPageCursors
+      ['returns the 1st page after cid_11', { first: 2, after: '1-cid_01' }],
+      ['returns the 2nd page after cid_11', { first: 2, after: '2-cid_01' }],
+      ['returns the 3rd page after cid_11', { first: 2, after: '4-cid_01' }],
+      // ['returns the 2nd page before cid_11', { last: 5, before: '2-cid_11' }],
+      // ['returns the 3rd page before cid_11', { last: 5, before: '3-cid_11' }],
     ]
 
     test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
@@ -484,8 +486,8 @@ describe('prisma-relay-cursor-connection', () => {
         () => client.todo.count(),
         connectionArgs,
       )
-
-      expect({ result, manyArgs }).toMatchSnapshot()
+      const cursor = connectionArgs?.before || connectionArgs?.after
+      expect({ cursor, result, manyArgs }).toMatchSnapshot()
     })
   })
 

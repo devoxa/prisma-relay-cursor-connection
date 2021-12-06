@@ -7,7 +7,14 @@ const PAGE_NUMBER_CAP = 100
 
 export function createPageCursors(totalCount: number, args: ConnectionArguments, initialCursor: string | undefined | null, max = 5) {
     const size = args.first || args.last || 10
-    const currentPage = 1
+
+    let currentPage = 1
+    if (initialCursor && initialCursor.includes("-")) {
+        // Did it come in with a page number? If so we need to strip it out so that the 
+        // create pageCursors and prefix it with their page
+        currentPage = parseInt(initialCursor.split("-")[0])
+        initialCursor = initialCursor.split("-")[1]
+    }
 
     // If max is even, bump it up by 1, and log out a warning.
     if (max % 2 === 0) {
