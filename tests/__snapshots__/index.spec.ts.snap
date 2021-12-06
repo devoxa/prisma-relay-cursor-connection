@@ -1,202 +1,202 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`prisma-relay-cursor-connection custom edge fields returns all todos 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_01",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
     },
-    Object {
+    {
       "cursor": "id_02",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
-    Object {
+    {
       "cursor": "id_05",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
     },
-    Object {
+    {
       "cursor": "id_06",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
     },
-    Object {
+    {
       "cursor": "id_07",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_07",
         "isCompleted": false,
         "text": "accusamus aut labore",
       },
     },
-    Object {
+    {
       "cursor": "id_08",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_08",
         "isCompleted": true,
         "text": "et quo quia",
       },
     },
-    Object {
+    {
       "cursor": "id_09",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_09",
         "isCompleted": true,
         "text": "accusantium a excepturi",
       },
     },
-    Object {
+    {
       "cursor": "id_10",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_10",
         "isCompleted": true,
         "text": "deserunt rerum occaecati",
       },
     },
-    Object {
+    {
       "cursor": "id_11",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_11",
         "isCompleted": false,
         "text": "unde et quasi",
       },
     },
-    Object {
+    {
       "cursor": "id_12",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_12",
         "isCompleted": false,
         "text": "et autem sapiente",
       },
     },
-    Object {
+    {
       "cursor": "id_13",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_13",
         "isCompleted": false,
         "text": "deleniti fuga et",
       },
     },
-    Object {
+    {
       "cursor": "id_14",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_14",
         "isCompleted": true,
         "text": "ea molestiae similique",
       },
     },
-    Object {
+    {
       "cursor": "id_15",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_15",
         "isCompleted": false,
         "text": "doloribus ea aut",
       },
     },
-    Object {
+    {
       "cursor": "id_16",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
     },
-    Object {
+    {
       "cursor": "id_17",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
     },
-    Object {
+    {
       "cursor": "id_18",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
     },
-    Object {
+    {
       "cursor": "id_19",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
     },
-    Object {
+    {
       "cursor": "id_20",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_20",
         "isCompleted": true,
@@ -204,7 +204,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
     "hasPreviousPage": false,
@@ -215,52 +215,52 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 todos 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_01",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
     },
-    Object {
+    {
       "cursor": "id_02",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
-    Object {
+    {
       "cursor": "id_05",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_05",
         "isCompleted": true,
@@ -268,7 +268,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_05",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -279,52 +279,52 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 todos after the 1st todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_02",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
-    Object {
+    {
       "cursor": "id_05",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
     },
-    Object {
+    {
       "cursor": "id_06",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_06",
         "isCompleted": true,
@@ -332,7 +332,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_06",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -343,52 +343,52 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 todos after the 5th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_06",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
     },
-    Object {
+    {
       "cursor": "id_07",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_07",
         "isCompleted": false,
         "text": "accusamus aut labore",
       },
     },
-    Object {
+    {
       "cursor": "id_08",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_08",
         "isCompleted": true,
         "text": "et quo quia",
       },
     },
-    Object {
+    {
       "cursor": "id_09",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_09",
         "isCompleted": true,
         "text": "accusantium a excepturi",
       },
     },
-    Object {
+    {
       "cursor": "id_10",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_10",
         "isCompleted": true,
@@ -396,7 +396,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_10",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -407,52 +407,52 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 todos after the 15th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_16",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
     },
-    Object {
+    {
       "cursor": "id_17",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
     },
-    Object {
+    {
       "cursor": "id_18",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
     },
-    Object {
+    {
       "cursor": "id_19",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
     },
-    Object {
+    {
       "cursor": "id_20",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_20",
         "isCompleted": true,
@@ -460,7 +460,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -471,42 +471,42 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 todos after the 16th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_17",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
     },
-    Object {
+    {
       "cursor": "id_18",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
     },
-    Object {
+    {
       "cursor": "id_19",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
     },
-    Object {
+    {
       "cursor": "id_20",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_20",
         "isCompleted": true,
@@ -514,7 +514,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -525,9 +525,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 todos after the 20th todo 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -538,52 +538,52 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 todos 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_16",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
     },
-    Object {
+    {
       "cursor": "id_17",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
     },
-    Object {
+    {
       "cursor": "id_18",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
     },
-    Object {
+    {
       "cursor": "id_19",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
     },
-    Object {
+    {
       "cursor": "id_20",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_20",
         "isCompleted": true,
@@ -591,7 +591,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -602,9 +602,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 todos before the 1st todo 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -615,42 +615,42 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 todos before the 5th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_01",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
     },
-    Object {
+    {
       "cursor": "id_02",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
@@ -658,7 +658,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_04",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -669,52 +669,52 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 todos before the 6th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_01",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
     },
-    Object {
+    {
       "cursor": "id_02",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
-    Object {
+    {
       "cursor": "id_05",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_05",
         "isCompleted": true,
@@ -722,7 +722,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_05",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -733,52 +733,52 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 todos before the 16th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_11",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_11",
         "isCompleted": false,
         "text": "unde et quasi",
       },
     },
-    Object {
+    {
       "cursor": "id_12",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_12",
         "isCompleted": false,
         "text": "et autem sapiente",
       },
     },
-    Object {
+    {
       "cursor": "id_13",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_13",
         "isCompleted": false,
         "text": "deleniti fuga et",
       },
     },
-    Object {
+    {
       "cursor": "id_14",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_14",
         "isCompleted": true,
         "text": "ea molestiae similique",
       },
     },
-    Object {
+    {
       "cursor": "id_15",
       "extraEdgeField": "Bar",
-      "node": Object {
+      "node": {
         "extraNodeField": "Foo",
         "id": "id_15",
         "isCompleted": false,
@@ -786,7 +786,7 @@ Object {
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_15",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -797,28 +797,28 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection custom edge fields returns the paginated todos with the base client (sanity check) 1`] = `
-Array [
-  Object {
+[
+  {
     "id": "id_06",
     "isCompleted": true,
     "text": "ut sunt consequuntur",
   },
-  Object {
+  {
     "id": "id_07",
     "isCompleted": false,
     "text": "accusamus aut labore",
   },
-  Object {
+  {
     "id": "id_08",
     "isCompleted": true,
     "text": "et quo quia",
   },
-  Object {
+  {
     "id": "id_09",
     "isCompleted": true,
     "text": "accusantium a excepturi",
   },
-  Object {
+  {
     "id": "id_10",
     "isCompleted": true,
     "text": "deserunt rerum occaecati",
@@ -847,45 +847,45 @@ exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arg
 exports[`prisma-relay-cursor-connection invalid arguments errors for invalid arguments (negative last) 1`] = `[Error: "last" has to be positive]`;
 
 exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo1",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo10",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTEiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo11",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTIiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo12",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo13",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -896,45 +896,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 1st profile 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo10",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTEiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo11",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTIiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo12",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo13",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTQiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo14",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTQiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -945,38 +945,38 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 5th profile 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo6",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo7",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vOCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo8",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vOSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo9",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vOSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -987,45 +987,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 15th profile 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTYiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo16",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTciLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo17",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTgiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo18",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTkiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo19",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo2",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1036,45 +1036,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 16th profile 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTciLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo17",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTgiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo18",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTkiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo19",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo2",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMjAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo20",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMjAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1085,45 +1085,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the first 5 profiles after the 20th profile 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo3",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo4",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo5",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo6",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo7",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1134,9 +1134,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 1st profile 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -1147,45 +1147,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 5th profile 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTkiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo19",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo2",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMjAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo20",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo3",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo4",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1196,45 +1196,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 6th profile 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo2",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMjAiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo20",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo3",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNCIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo4",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
-      "node": Object {
+      "node": {
         "firstname": "foo5",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1245,45 +1245,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 16th profile 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTEiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo11",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTIiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo12",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo13",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTQiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo14",
         "lastname": "bar1",
       },
     },
-    Object {
+    {
       "cursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTUiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
-      "node": Object {
+      "node": {
         "firstname": "foo15",
         "lastname": "bar1",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTUiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1294,20 +1294,20 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection multi field id returns the paginated profiles with the base client (sanity check) 1`] = `
-Array [
-  Object {
+[
+  {
     "firstname": "foo6",
     "lastname": "bar1",
   },
-  Object {
+  {
     "firstname": "foo7",
     "lastname": "bar1",
   },
-  Object {
+  {
     "firstname": "foo8",
     "lastname": "bar1",
   },
-  Object {
+  {
     "firstname": "foo9",
     "lastname": "bar1",
   },
@@ -1315,150 +1315,150 @@ Array [
 `;
 
 exports[`prisma-relay-cursor-connection number id returns all users 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6MX0=",
-      "node": Object {
+      "node": {
         "email": "user1@email.com",
         "id": 1,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6Mn0=",
-      "node": Object {
+      "node": {
         "email": "user2@email.com",
         "id": 2,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6M30=",
-      "node": Object {
+      "node": {
         "email": "user3@email.com",
         "id": 3,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NH0=",
-      "node": Object {
+      "node": {
         "email": "user4@email.com",
         "id": 4,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NX0=",
-      "node": Object {
+      "node": {
         "email": "user5@email.com",
         "id": 5,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6Nn0=",
-      "node": Object {
+      "node": {
         "email": "user6@email.com",
         "id": 6,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6N30=",
-      "node": Object {
+      "node": {
         "email": "user7@email.com",
         "id": 7,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6OH0=",
-      "node": Object {
+      "node": {
         "email": "user8@email.com",
         "id": 8,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6OX0=",
-      "node": Object {
+      "node": {
         "email": "user9@email.com",
         "id": 9,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTB9",
-      "node": Object {
+      "node": {
         "email": "user10@email.com",
         "id": 10,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTF9",
-      "node": Object {
+      "node": {
         "email": "user11@email.com",
         "id": 11,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTJ9",
-      "node": Object {
+      "node": {
         "email": "user12@email.com",
         "id": 12,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTN9",
-      "node": Object {
+      "node": {
         "email": "user13@email.com",
         "id": 13,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTR9",
-      "node": Object {
+      "node": {
         "email": "user14@email.com",
         "id": 14,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTV9",
-      "node": Object {
+      "node": {
         "email": "user15@email.com",
         "id": 15,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTZ9",
-      "node": Object {
+      "node": {
         "email": "user16@email.com",
         "id": 16,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTd9",
-      "node": Object {
+      "node": {
         "email": "user17@email.com",
         "id": 17,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTh9",
-      "node": Object {
+      "node": {
         "email": "user18@email.com",
         "id": 18,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTl9",
-      "node": Object {
+      "node": {
         "email": "user19@email.com",
         "id": 19,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MjB9",
-      "node": Object {
+      "node": {
         "email": "user20@email.com",
         "id": 20,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6MjB9",
     "hasNextPage": false,
     "hasPreviousPage": false,
@@ -1469,45 +1469,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the first 5 users 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6MX0=",
-      "node": Object {
+      "node": {
         "email": "user1@email.com",
         "id": 1,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6Mn0=",
-      "node": Object {
+      "node": {
         "email": "user2@email.com",
         "id": 2,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6M30=",
-      "node": Object {
+      "node": {
         "email": "user3@email.com",
         "id": 3,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NH0=",
-      "node": Object {
+      "node": {
         "email": "user4@email.com",
         "id": 4,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NX0=",
-      "node": Object {
+      "node": {
         "email": "user5@email.com",
         "id": 5,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6NX0=",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -1518,45 +1518,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 1st user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6Mn0=",
-      "node": Object {
+      "node": {
         "email": "user2@email.com",
         "id": 2,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6M30=",
-      "node": Object {
+      "node": {
         "email": "user3@email.com",
         "id": 3,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NH0=",
-      "node": Object {
+      "node": {
         "email": "user4@email.com",
         "id": 4,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NX0=",
-      "node": Object {
+      "node": {
         "email": "user5@email.com",
         "id": 5,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6Nn0=",
-      "node": Object {
+      "node": {
         "email": "user6@email.com",
         "id": 6,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6Nn0=",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1567,45 +1567,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 5th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6Nn0=",
-      "node": Object {
+      "node": {
         "email": "user6@email.com",
         "id": 6,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6N30=",
-      "node": Object {
+      "node": {
         "email": "user7@email.com",
         "id": 7,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6OH0=",
-      "node": Object {
+      "node": {
         "email": "user8@email.com",
         "id": 8,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6OX0=",
-      "node": Object {
+      "node": {
         "email": "user9@email.com",
         "id": 9,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTB9",
-      "node": Object {
+      "node": {
         "email": "user10@email.com",
         "id": 10,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6MTB9",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1616,45 +1616,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 15th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6MTZ9",
-      "node": Object {
+      "node": {
         "email": "user16@email.com",
         "id": 16,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTd9",
-      "node": Object {
+      "node": {
         "email": "user17@email.com",
         "id": 17,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTh9",
-      "node": Object {
+      "node": {
         "email": "user18@email.com",
         "id": 18,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTl9",
-      "node": Object {
+      "node": {
         "email": "user19@email.com",
         "id": 19,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MjB9",
-      "node": Object {
+      "node": {
         "email": "user20@email.com",
         "id": 20,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6MjB9",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -1665,38 +1665,38 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 16th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6MTd9",
-      "node": Object {
+      "node": {
         "email": "user17@email.com",
         "id": 17,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTh9",
-      "node": Object {
+      "node": {
         "email": "user18@email.com",
         "id": 18,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTl9",
-      "node": Object {
+      "node": {
         "email": "user19@email.com",
         "id": 19,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MjB9",
-      "node": Object {
+      "node": {
         "email": "user20@email.com",
         "id": 20,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6MjB9",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -1707,9 +1707,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 20th user 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -1720,45 +1720,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the last 5 users 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6MTZ9",
-      "node": Object {
+      "node": {
         "email": "user16@email.com",
         "id": 16,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTd9",
-      "node": Object {
+      "node": {
         "email": "user17@email.com",
         "id": 17,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTh9",
-      "node": Object {
+      "node": {
         "email": "user18@email.com",
         "id": 18,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTl9",
-      "node": Object {
+      "node": {
         "email": "user19@email.com",
         "id": 19,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MjB9",
-      "node": Object {
+      "node": {
         "email": "user20@email.com",
         "id": 20,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6MjB9",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -1769,9 +1769,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 1st user 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -1782,38 +1782,38 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 5th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6MX0=",
-      "node": Object {
+      "node": {
         "email": "user1@email.com",
         "id": 1,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6Mn0=",
-      "node": Object {
+      "node": {
         "email": "user2@email.com",
         "id": 2,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6M30=",
-      "node": Object {
+      "node": {
         "email": "user3@email.com",
         "id": 3,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NH0=",
-      "node": Object {
+      "node": {
         "email": "user4@email.com",
         "id": 4,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6NH0=",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -1824,45 +1824,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 6th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6MX0=",
-      "node": Object {
+      "node": {
         "email": "user1@email.com",
         "id": 1,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6Mn0=",
-      "node": Object {
+      "node": {
         "email": "user2@email.com",
         "id": 2,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6M30=",
-      "node": Object {
+      "node": {
         "email": "user3@email.com",
         "id": 3,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NH0=",
-      "node": Object {
+      "node": {
         "email": "user4@email.com",
         "id": 4,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6NX0=",
-      "node": Object {
+      "node": {
         "email": "user5@email.com",
         "id": 5,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6NX0=",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -1873,45 +1873,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 16th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJpZCI6MTF9",
-      "node": Object {
+      "node": {
         "email": "user11@email.com",
         "id": 11,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTJ9",
-      "node": Object {
+      "node": {
         "email": "user12@email.com",
         "id": 12,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTN9",
-      "node": Object {
+      "node": {
         "email": "user13@email.com",
         "id": 13,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTR9",
-      "node": Object {
+      "node": {
         "email": "user14@email.com",
         "id": 14,
       },
     },
-    Object {
+    {
       "cursor": "eyJpZCI6MTV9",
-      "node": Object {
+      "node": {
         "email": "user15@email.com",
         "id": 15,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJpZCI6MTV9",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -1922,24 +1922,24 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection number id returns the paginated users with the base client (sanity check) 1`] = `
-Array [
-  Object {
+[
+  {
     "email": "user6@email.com",
     "id": 6,
   },
-  Object {
+  {
     "email": "user7@email.com",
     "id": 7,
   },
-  Object {
+  {
     "email": "user8@email.com",
     "id": 8,
   },
-  Object {
+  {
     "email": "user9@email.com",
     "id": 9,
   },
-  Object {
+  {
     "email": "user10@email.com",
     "id": 10,
   },
@@ -3162,170 +3162,170 @@ Object {
 exports[`prisma-relay-cursor-connection page based cursors returns the paginated todos with the base client (sanity check) 1`] = `Array []`;
 
 exports[`prisma-relay-cursor-connection string id returns all todos 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_01",
-      "node": Object {
+      "node": {
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
     },
-    Object {
+    {
       "cursor": "id_02",
-      "node": Object {
+      "node": {
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
-      "node": Object {
+      "node": {
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
-      "node": Object {
+      "node": {
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
-    Object {
+    {
       "cursor": "id_05",
-      "node": Object {
+      "node": {
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
     },
-    Object {
+    {
       "cursor": "id_06",
-      "node": Object {
+      "node": {
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
     },
-    Object {
+    {
       "cursor": "id_07",
-      "node": Object {
+      "node": {
         "id": "id_07",
         "isCompleted": false,
         "text": "accusamus aut labore",
       },
     },
-    Object {
+    {
       "cursor": "id_08",
-      "node": Object {
+      "node": {
         "id": "id_08",
         "isCompleted": true,
         "text": "et quo quia",
       },
     },
-    Object {
+    {
       "cursor": "id_09",
-      "node": Object {
+      "node": {
         "id": "id_09",
         "isCompleted": true,
         "text": "accusantium a excepturi",
       },
     },
-    Object {
+    {
       "cursor": "id_10",
-      "node": Object {
+      "node": {
         "id": "id_10",
         "isCompleted": true,
         "text": "deserunt rerum occaecati",
       },
     },
-    Object {
+    {
       "cursor": "id_11",
-      "node": Object {
+      "node": {
         "id": "id_11",
         "isCompleted": false,
         "text": "unde et quasi",
       },
     },
-    Object {
+    {
       "cursor": "id_12",
-      "node": Object {
+      "node": {
         "id": "id_12",
         "isCompleted": false,
         "text": "et autem sapiente",
       },
     },
-    Object {
+    {
       "cursor": "id_13",
-      "node": Object {
+      "node": {
         "id": "id_13",
         "isCompleted": false,
         "text": "deleniti fuga et",
       },
     },
-    Object {
+    {
       "cursor": "id_14",
-      "node": Object {
+      "node": {
         "id": "id_14",
         "isCompleted": true,
         "text": "ea molestiae similique",
       },
     },
-    Object {
+    {
       "cursor": "id_15",
-      "node": Object {
+      "node": {
         "id": "id_15",
         "isCompleted": false,
         "text": "doloribus ea aut",
       },
     },
-    Object {
+    {
       "cursor": "id_16",
-      "node": Object {
+      "node": {
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
     },
-    Object {
+    {
       "cursor": "id_17",
-      "node": Object {
+      "node": {
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
     },
-    Object {
+    {
       "cursor": "id_18",
-      "node": Object {
+      "node": {
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
     },
-    Object {
+    {
       "cursor": "id_19",
-      "node": Object {
+      "node": {
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
     },
-    Object {
+    {
       "cursor": "id_20",
-      "node": Object {
+      "node": {
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
     "hasPreviousPage": false,
@@ -3336,45 +3336,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the first 5 completed todos 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_04",
-      "node": Object {
+      "node": {
         "id": "id_04",
         "isCompleted": true,
       },
     },
-    Object {
+    {
       "cursor": "id_05",
-      "node": Object {
+      "node": {
         "id": "id_05",
         "isCompleted": true,
       },
     },
-    Object {
+    {
       "cursor": "id_06",
-      "node": Object {
+      "node": {
         "id": "id_06",
         "isCompleted": true,
       },
     },
-    Object {
+    {
       "cursor": "id_08",
-      "node": Object {
+      "node": {
         "id": "id_08",
         "isCompleted": true,
       },
     },
-    Object {
+    {
       "cursor": "id_09",
-      "node": Object {
+      "node": {
         "id": "id_09",
         "isCompleted": true,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_09",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -3385,50 +3385,50 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the first 5 todos 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_01",
-      "node": Object {
+      "node": {
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
     },
-    Object {
+    {
       "cursor": "id_02",
-      "node": Object {
+      "node": {
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
-      "node": Object {
+      "node": {
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
-      "node": Object {
+      "node": {
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
-    Object {
+    {
       "cursor": "id_05",
-      "node": Object {
+      "node": {
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_05",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -3439,50 +3439,50 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 1st todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_02",
-      "node": Object {
+      "node": {
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
-      "node": Object {
+      "node": {
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
-      "node": Object {
+      "node": {
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
-    Object {
+    {
       "cursor": "id_05",
-      "node": Object {
+      "node": {
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
     },
-    Object {
+    {
       "cursor": "id_06",
-      "node": Object {
+      "node": {
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_06",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -3493,50 +3493,50 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 5th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_06",
-      "node": Object {
+      "node": {
         "id": "id_06",
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
     },
-    Object {
+    {
       "cursor": "id_07",
-      "node": Object {
+      "node": {
         "id": "id_07",
         "isCompleted": false,
         "text": "accusamus aut labore",
       },
     },
-    Object {
+    {
       "cursor": "id_08",
-      "node": Object {
+      "node": {
         "id": "id_08",
         "isCompleted": true,
         "text": "et quo quia",
       },
     },
-    Object {
+    {
       "cursor": "id_09",
-      "node": Object {
+      "node": {
         "id": "id_09",
         "isCompleted": true,
         "text": "accusantium a excepturi",
       },
     },
-    Object {
+    {
       "cursor": "id_10",
-      "node": Object {
+      "node": {
         "id": "id_10",
         "isCompleted": true,
         "text": "deserunt rerum occaecati",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_10",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -3547,50 +3547,50 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 15th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_16",
-      "node": Object {
+      "node": {
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
     },
-    Object {
+    {
       "cursor": "id_17",
-      "node": Object {
+      "node": {
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
     },
-    Object {
+    {
       "cursor": "id_18",
-      "node": Object {
+      "node": {
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
     },
-    Object {
+    {
       "cursor": "id_19",
-      "node": Object {
+      "node": {
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
     },
-    Object {
+    {
       "cursor": "id_20",
-      "node": Object {
+      "node": {
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -3601,42 +3601,42 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 16th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_17",
-      "node": Object {
+      "node": {
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
     },
-    Object {
+    {
       "cursor": "id_18",
-      "node": Object {
+      "node": {
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
     },
-    Object {
+    {
       "cursor": "id_19",
-      "node": Object {
+      "node": {
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
     },
-    Object {
+    {
       "cursor": "id_20",
-      "node": Object {
+      "node": {
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -3647,9 +3647,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 20th todo 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -3660,50 +3660,50 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the last 5 todos 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_16",
-      "node": Object {
+      "node": {
         "id": "id_16",
         "isCompleted": true,
         "text": "ut molestias veniam",
       },
     },
-    Object {
+    {
       "cursor": "id_17",
-      "node": Object {
+      "node": {
         "id": "id_17",
         "isCompleted": true,
         "text": "a placeat aperiam",
       },
     },
-    Object {
+    {
       "cursor": "id_18",
-      "node": Object {
+      "node": {
         "id": "id_18",
         "isCompleted": true,
         "text": "quos rerum aut",
       },
     },
-    Object {
+    {
       "cursor": "id_19",
-      "node": Object {
+      "node": {
         "id": "id_19",
         "isCompleted": false,
         "text": "ullam a voluptatem",
       },
     },
-    Object {
+    {
       "cursor": "id_20",
-      "node": Object {
+      "node": {
         "id": "id_20",
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -3714,9 +3714,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 1st todo 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -3727,42 +3727,42 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 5th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_01",
-      "node": Object {
+      "node": {
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
     },
-    Object {
+    {
       "cursor": "id_02",
-      "node": Object {
+      "node": {
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
-      "node": Object {
+      "node": {
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
-      "node": Object {
+      "node": {
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_04",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -3773,50 +3773,50 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 6th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_01",
-      "node": Object {
+      "node": {
         "id": "id_01",
         "isCompleted": false,
         "text": "veritatis molestias qui",
       },
     },
-    Object {
+    {
       "cursor": "id_02",
-      "node": Object {
+      "node": {
         "id": "id_02",
         "isCompleted": false,
         "text": "occaecati a dolor",
       },
     },
-    Object {
+    {
       "cursor": "id_03",
-      "node": Object {
+      "node": {
         "id": "id_03",
         "isCompleted": false,
         "text": "ut enim quia",
       },
     },
-    Object {
+    {
       "cursor": "id_04",
-      "node": Object {
+      "node": {
         "id": "id_04",
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
     },
-    Object {
+    {
       "cursor": "id_05",
-      "node": Object {
+      "node": {
         "id": "id_05",
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_05",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -3827,50 +3827,50 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 16th todo 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "id_11",
-      "node": Object {
+      "node": {
         "id": "id_11",
         "isCompleted": false,
         "text": "unde et quasi",
       },
     },
-    Object {
+    {
       "cursor": "id_12",
-      "node": Object {
+      "node": {
         "id": "id_12",
         "isCompleted": false,
         "text": "et autem sapiente",
       },
     },
-    Object {
+    {
       "cursor": "id_13",
-      "node": Object {
+      "node": {
         "id": "id_13",
         "isCompleted": false,
         "text": "deleniti fuga et",
       },
     },
-    Object {
+    {
       "cursor": "id_14",
-      "node": Object {
+      "node": {
         "id": "id_14",
         "isCompleted": true,
         "text": "ea molestiae similique",
       },
     },
-    Object {
+    {
       "cursor": "id_15",
-      "node": Object {
+      "node": {
         "id": "id_15",
         "isCompleted": false,
         "text": "doloribus ea aut",
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "id_15",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -3881,28 +3881,28 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection string id returns the paginated todos with the base client (sanity check) 1`] = `
-Array [
-  Object {
+[
+  {
     "id": "id_06",
     "isCompleted": true,
     "text": "ut sunt consequuntur",
   },
-  Object {
+  {
     "id": "id_07",
     "isCompleted": false,
     "text": "accusamus aut labore",
   },
-  Object {
+  {
     "id": "id_08",
     "isCompleted": true,
     "text": "et quo quia",
   },
-  Object {
+  {
     "id": "id_09",
     "isCompleted": true,
     "text": "accusantium a excepturi",
   },
-  Object {
+  {
     "id": "id_10",
     "isCompleted": true,
     "text": "deserunt rerum occaecati",
@@ -3911,45 +3911,45 @@ Array [
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 1st user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user2@email.com",
         "id": 2,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user3@email.com",
         "id": 3,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user4@email.com",
         "id": 4,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user5@email.com",
         "id": 5,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user6@email.com",
         "id": 6,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -3960,45 +3960,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 5th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user6@email.com",
         "id": 6,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI3QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user7@email.com",
         "id": 7,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI4QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user8@email.com",
         "id": 8,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI5QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user9@email.com",
         "id": 9,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxMEBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user10@email.com",
         "id": 10,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXIxMEBlbWFpbC5jb20ifQ==",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -4009,45 +4009,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 15th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxNkBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user16@email.com",
         "id": 16,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxN0BlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user17@email.com",
         "id": 17,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxOEBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user18@email.com",
         "id": 18,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxOUBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user19@email.com",
         "id": 19,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user20@email.com",
         "id": 20,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -4058,38 +4058,38 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 16th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxN0BlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user17@email.com",
         "id": 17,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxOEBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user18@email.com",
         "id": 18,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxOUBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user19@email.com",
         "id": 19,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user20@email.com",
         "id": 20,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -4100,9 +4100,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 20th user 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
     "hasPreviousPage": true,
@@ -4113,9 +4113,9 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 1st user 1`] = `
-Object {
-  "edges": Array [],
-  "pageInfo": Object {
+{
+  "edges": [],
+  "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -4126,38 +4126,38 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 5th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user1@email.com",
         "id": 1,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user2@email.com",
         "id": 2,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user3@email.com",
         "id": 3,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user4@email.com",
         "id": 4,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -4168,45 +4168,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 6th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxQGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user1@email.com",
         "id": 1,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIyQGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user2@email.com",
         "id": 2,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIzQGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user3@email.com",
         "id": 3,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI0QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user4@email.com",
         "id": 4,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
-      "node": Object {
+      "node": {
         "email": "user5@email.com",
         "id": 5,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
     "hasNextPage": true,
     "hasPreviousPage": false,
@@ -4217,45 +4217,45 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 16th user 1`] = `
-Object {
-  "edges": Array [
-    Object {
+{
+  "edges": [
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxMUBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user11@email.com",
         "id": 11,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxMkBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user12@email.com",
         "id": 12,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxM0BlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user13@email.com",
         "id": 13,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxNEBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user14@email.com",
         "id": 14,
       },
     },
-    Object {
+    {
       "cursor": "eyJlbWFpbCI6InVzZXIxNUBlbWFpbC5jb20ifQ==",
-      "node": Object {
+      "node": {
         "email": "user15@email.com",
         "id": 15,
       },
     },
   ],
-  "pageInfo": Object {
+  "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXIxNUBlbWFpbC5jb20ifQ==",
     "hasNextPage": true,
     "hasPreviousPage": true,
@@ -4266,24 +4266,24 @@ Object {
 `;
 
 exports[`prisma-relay-cursor-connection unique field returns the paginated users with the base client (sanity check) 1`] = `
-Array [
-  Object {
+[
+  {
     "email": "user6@email.com",
     "id": 6,
   },
-  Object {
+  {
     "email": "user7@email.com",
     "id": 7,
   },
-  Object {
+  {
     "email": "user8@email.com",
     "id": 8,
   },
-  Object {
+  {
     "email": "user9@email.com",
     "id": 9,
   },
-  Object {
+  {
     "email": "user10@email.com",
     "id": 10,
   },
