@@ -220,10 +220,9 @@ export async function findManyCursorConnectionWithPageCursors<
     },
 
     encodeCursor: (cursor: Cursor) => {
-      const cAny = cursor as unknown as { id: string, page: number }
+      const cAny = cursor as unknown as { id: string, page?: number }
       const cID = "id" in cursor ? cAny.id as string : ""
-      const cPage = "page" in cursor ? cAny.page as number : 12
-      return `${cPage}-${cID}`
+      return "page" in cursor ? `${cAny.page}-${cID}` : cID
     },
 
     findManyParamsWithCursor: (args, cursor) => {
@@ -247,7 +246,7 @@ export async function findManyCursorConnectionWithPageCursors<
   // If we don't have the initial cursor to anchor to, we'll need to grab the first
   let initialCursor = args.after || args.before
   if (!initialCursor) {
-    const direction = args.first ? "asc" : "desc"
+    const direction = args.first ? "desc" : "asc"
     const firstItem = await findMany({ take: 1, orderBy: { id: direction } })
     if (firstItem[0]) initialCursor = (firstItem[0] as unknown as { id: string }).id
   }

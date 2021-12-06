@@ -1,5 +1,5 @@
 import { Prisma, PrismaClient, Profile, Todo, User } from '@prisma/client'
-import { ConnectionArguments, findManyCursorConnection, findManyCursorConnectionWithPageCursors } from '../src'
+import { ConnectionArguments, findManyCursorConnection, findManyCursorConnectionWithPageCursors, PrismaFindManyArguments } from '../src'
 import { PROFILE_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
 
 function encodeCursor<Cursor>(prismaCursor: Cursor) {
@@ -437,7 +437,8 @@ describe('prisma-relay-cursor-connection', () => {
 
       // Build up the fixtures sequentially so they are in a consistent order
       for (let i = 0; i !== TODO_FIXTURES.length; i++) {
-        const cidVersion = { ...TODO_FIXTURES[i], id: `cid_${i}` }
+        const id = i > 10 ? `0${i}` : i
+        const cidVersion = { ...TODO_FIXTURES[i], id: `cid_${id}` }
         await client.todo.create({ data: cidVersion })
       }
     })
@@ -461,24 +462,30 @@ describe('prisma-relay-cursor-connection', () => {
       ['returns the last 5 todos before the 6th todo', { last: 5, before: 'cid_u6' }],
       ['returns the last 5 todos before the 16th todo', { last: 5, before: 'cid_16' }],
       // The above ensure the original behavior is still respected
-      ['returns the 2nd page after cid_16', { first: 5, after: '1-cid_16' }],
-      ['returns the 3rd page after cid_16', { first: 10, after: '2-cid_16' }],
-      ['returns the 2nd page before cid_16', { last: 5, before: '1-cid_16' }],
+      ['returns the 1st page after cid_11', { first: 5, after: '1-cid_11' }],
+      ['returns the 2nd page after cid_11', { first: 5, after: '2-cid_11' }],
+      ['returns the 3rd page after cid_11', { first: 5, after: '3-cid_11' }],
+      ['returns the 2nd page before cid_11', { last: 5, before: '2-cid_11' }],
+      ['returns the 3rd page before cid_11', { last: 5, before: '3-cid_11' }],
     ]
 
     test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
+      const manyArgs: PrismaFindManyArguments<{ id: string; }>[] = []
       const result = await findManyCursorConnectionWithPageCursors<
         Todo,
         { id: string },
         Todo & { extraNodeField: string },
         { extraEdgeField: string; cursor: string; node: Todo & { extraNodeField: string } }
       >(
-        (args) => client.todo.findMany(args),
+        (args) => {
+          manyArgs.push(args)
+          return client.todo.findMany(args)
+        },
         () => client.todo.count(),
         connectionArgs,
       )
 
-      expect(result).toMatchSnapshot()
+      expect({ result, manyArgs }).toMatchSnapshot()
     })
   })
 
