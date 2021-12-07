@@ -1948,6 +1948,7 @@ exports[`prisma-relay-cursor-connection number id returns the paginated users wi
 
 exports[`prisma-relay-cursor-connection page based cursors returns all todos 1`] = `
 {
+  "cursor": undefined,
   "manyArgs": [
     {},
     {
@@ -2292,6 +2293,82 @@ exports[`prisma-relay-cursor-connection page based cursors returns the 2nd page 
 }
 `;
 
+exports[`prisma-relay-cursor-connection page based cursors returns the 2nd page before cid_11 1`] = `
+{
+  "cursor": "2-cid_11",
+  "manyArgs": [
+    {
+      "cursor": {
+        "id": "cid_11",
+      },
+      "skip": 2,
+      "take": -3,
+    },
+  ],
+  "result": {
+    "edges": [
+      {
+        "cursor": "cid_08",
+        "node": {
+          "id": "cid_08",
+          "isCompleted": true,
+          "text": "et quo quia",
+        },
+      },
+      {
+        "cursor": "cid_09",
+        "node": {
+          "id": "cid_09",
+          "isCompleted": true,
+          "text": "accusantium a excepturi",
+        },
+      },
+    ],
+    "pageCursors": {
+      "around": [
+        {
+          "cursor": "1-cid_11",
+          "isCurrent": false,
+          "page": 1,
+        },
+        {
+          "cursor": "2-cid_11",
+          "isCurrent": true,
+          "page": 2,
+        },
+        {
+          "cursor": "3-cid_11",
+          "isCurrent": false,
+          "page": 3,
+        },
+        {
+          "cursor": "4-cid_11",
+          "isCurrent": false,
+          "page": 4,
+        },
+      ],
+      "last": {
+        "cursor": "10-cid_11",
+        "isCurrent": false,
+        "page": 10,
+      },
+      "previous": {
+        "cursor": "1-cid_11",
+        "isCurrent": false,
+        "page": 1,
+      },
+    },
+    "pageInfo": {
+      "endCursor": "cid_09",
+      "hasNextPage": true,
+      "hasPreviousPage": true,
+      "startCursor": "cid_08",
+    },
+    "totalCount": 20,
+  },
+}
+`;
+
 exports[`prisma-relay-cursor-connection page based cursors returns the 3rd page after cid_11 1`] = `
 {
   "cursor": "4-cid_01",
@@ -2368,8 +2445,85 @@ exports[`prisma-relay-cursor-connection page based cursors returns the 3rd page 
 }
 `;
 
+exports[`prisma-relay-cursor-connection page based cursors returns the 3rd page before cid_11 1`] = `
+{
+  "cursor": "3-cid_11",
+  "manyArgs": [
+    {
+      "cursor": {
+        "id": "cid_11",
+      },
+      "skip": 4,
+      "take": -3,
+    },
+  ],
+  "result": {
+    "edges": [
+      {
+        "cursor": "cid_06",
+        "node": {
+          "id": "cid_06",
+          "isCompleted": true,
+          "text": "ut sunt consequuntur",
+        },
+      },
+      {
+        "cursor": "cid_07",
+        "node": {
+          "id": "cid_07",
+          "isCompleted": false,
+          "text": "accusamus aut labore",
+        },
+      },
+    ],
+    "pageCursors": {
+      "around": [
+        {
+          "cursor": "1-cid_11",
+          "isCurrent": false,
+          "page": 1,
+        },
+        {
+          "cursor": "2-cid_11",
+          "isCurrent": false,
+          "page": 2,
+        },
+        {
+          "cursor": "3-cid_11",
+          "isCurrent": true,
+          "page": 3,
+        },
+        {
+          "cursor": "4-cid_11",
+          "isCurrent": false,
+          "page": 4,
+        },
+      ],
+      "last": {
+        "cursor": "10-cid_11",
+        "isCurrent": false,
+        "page": 10,
+      },
+      "previous": {
+        "cursor": "2-cid_11",
+        "isCurrent": false,
+        "page": 2,
+      },
+    },
+    "pageInfo": {
+      "endCursor": "cid_07",
+      "hasNextPage": true,
+      "hasPreviousPage": true,
+      "startCursor": "cid_06",
+    },
+    "totalCount": 20,
+  },
+}
+`;
+
 exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos 1`] = `
 {
+  "cursor": undefined,
   "manyArgs": [
     {
       "cursor": undefined,
@@ -2463,10 +2617,12 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
 
 exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 1st todo 1`] = `
 {
+  "cursor": "cid_01",
   "manyArgs": [
     {
       "cursor": {
-        "id": "cid_1",
+        "id": "cid_01",
+        "page": undefined,
       },
       "skip": 1,
       "take": 6,
@@ -2475,41 +2631,41 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
   "result": {
     "edges": [
       {
-        "cursor": "cid_10",
+        "cursor": "cid_02",
         "node": {
-          "id": "cid_10",
+          "id": "cid_02",
           "isCompleted": false,
-          "text": "unde et quasi",
+          "text": "occaecati a dolor",
         },
       },
       {
-        "cursor": "cid_2",
+        "cursor": "cid_03",
         "node": {
-          "id": "cid_2",
+          "id": "cid_03",
           "isCompleted": false,
           "text": "ut enim quia",
         },
       },
       {
-        "cursor": "cid_3",
+        "cursor": "cid_04",
         "node": {
-          "id": "cid_3",
+          "id": "cid_04",
           "isCompleted": true,
           "text": "ipsam ipsam corrupti",
         },
       },
       {
-        "cursor": "cid_4",
+        "cursor": "cid_05",
         "node": {
-          "id": "cid_4",
+          "id": "cid_05",
           "isCompleted": true,
           "text": "voluptatem sint ipsam",
         },
       },
       {
-        "cursor": "cid_5",
+        "cursor": "cid_06",
         "node": {
-          "id": "cid_5",
+          "id": "cid_06",
           "isCompleted": true,
           "text": "ut sunt consequuntur",
         },
@@ -2518,32 +2674,32 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-cid_1",
+          "cursor": "1-cid_01",
           "isCurrent": true,
           "page": 1,
         },
         {
-          "cursor": "2-cid_1",
+          "cursor": "2-cid_01",
           "isCurrent": false,
           "page": 2,
         },
         {
-          "cursor": "3-cid_1",
+          "cursor": "3-cid_01",
           "isCurrent": false,
           "page": 3,
         },
         {
-          "cursor": "4-cid_1",
+          "cursor": "4-cid_01",
           "isCurrent": false,
           "page": 4,
         },
       ],
     },
     "pageInfo": {
-      "endCursor": "cid_5",
+      "endCursor": "cid_06",
       "hasNextPage": true,
       "hasPreviousPage": true,
-      "startCursor": "cid_10",
+      "startCursor": "cid_02",
     },
     "totalCount": 20,
   },
@@ -2552,10 +2708,12 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
 
 exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 5th todo 1`] = `
 {
+  "cursor": "cid_05",
   "manyArgs": [
     {
       "cursor": {
-        "id": "cid_5",
+        "id": "cid_05",
+        "page": undefined,
       },
       "skip": 1,
       "take": 6,
@@ -2564,33 +2722,41 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
   "result": {
     "edges": [
       {
-        "cursor": "cid_6",
+        "cursor": "cid_06",
         "node": {
-          "id": "cid_6",
+          "id": "cid_06",
+          "isCompleted": true,
+          "text": "ut sunt consequuntur",
+        },
+      },
+      {
+        "cursor": "cid_07",
+        "node": {
+          "id": "cid_07",
           "isCompleted": false,
           "text": "accusamus aut labore",
         },
       },
       {
-        "cursor": "cid_7",
+        "cursor": "cid_08",
         "node": {
-          "id": "cid_7",
+          "id": "cid_08",
           "isCompleted": true,
           "text": "et quo quia",
         },
       },
       {
-        "cursor": "cid_8",
+        "cursor": "cid_09",
         "node": {
-          "id": "cid_8",
+          "id": "cid_09",
           "isCompleted": true,
           "text": "accusantium a excepturi",
         },
       },
       {
-        "cursor": "cid_9",
+        "cursor": "cid_10",
         "node": {
-          "id": "cid_9",
+          "id": "cid_10",
           "isCompleted": true,
           "text": "deserunt rerum occaecati",
         },
@@ -2599,32 +2765,32 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-cid_5",
+          "cursor": "1-cid_05",
           "isCurrent": true,
           "page": 1,
         },
         {
-          "cursor": "2-cid_5",
+          "cursor": "2-cid_05",
           "isCurrent": false,
           "page": 2,
         },
         {
-          "cursor": "3-cid_5",
+          "cursor": "3-cid_05",
           "isCurrent": false,
           "page": 3,
         },
         {
-          "cursor": "4-cid_5",
+          "cursor": "4-cid_05",
           "isCurrent": false,
           "page": 4,
         },
       ],
     },
     "pageInfo": {
-      "endCursor": "cid_9",
-      "hasNextPage": false,
+      "endCursor": "cid_10",
+      "hasNextPage": true,
       "hasPreviousPage": true,
-      "startCursor": "cid_6",
+      "startCursor": "cid_06",
     },
     "totalCount": 20,
   },
@@ -2633,17 +2799,60 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
 
 exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 15th todo 1`] = `
 {
+  "cursor": "cid_15",
   "manyArgs": [
     {
       "cursor": {
         "id": "cid_15",
+        "page": undefined,
       },
       "skip": 1,
       "take": 6,
     },
   ],
   "result": {
-    "edges": [],
+    "edges": [
+      {
+        "cursor": "cid_16",
+        "node": {
+          "id": "cid_16",
+          "isCompleted": true,
+          "text": "ut molestias veniam",
+        },
+      },
+      {
+        "cursor": "cid_17",
+        "node": {
+          "id": "cid_17",
+          "isCompleted": true,
+          "text": "a placeat aperiam",
+        },
+      },
+      {
+        "cursor": "cid_18",
+        "node": {
+          "id": "cid_18",
+          "isCompleted": true,
+          "text": "quos rerum aut",
+        },
+      },
+      {
+        "cursor": "cid_19",
+        "node": {
+          "id": "cid_19",
+          "isCompleted": false,
+          "text": "ullam a voluptatem",
+        },
+      },
+      {
+        "cursor": "cid_20",
+        "node": {
+          "id": "cid_20",
+          "isCompleted": true,
+          "text": "dolorum deserunt quis",
+        },
+      },
+    ],
     "pageCursors": {
       "around": [
         {
@@ -2669,10 +2878,10 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
       ],
     },
     "pageInfo": {
-      "endCursor": undefined,
+      "endCursor": "cid_20",
       "hasNextPage": false,
       "hasPreviousPage": true,
-      "startCursor": undefined,
+      "startCursor": "cid_16",
     },
     "totalCount": 20,
   },
@@ -2681,17 +2890,52 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
 
 exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 16th todo 1`] = `
 {
+  "cursor": "cid_16",
   "manyArgs": [
     {
       "cursor": {
         "id": "cid_16",
+        "page": undefined,
       },
       "skip": 1,
       "take": 6,
     },
   ],
   "result": {
-    "edges": [],
+    "edges": [
+      {
+        "cursor": "cid_17",
+        "node": {
+          "id": "cid_17",
+          "isCompleted": true,
+          "text": "a placeat aperiam",
+        },
+      },
+      {
+        "cursor": "cid_18",
+        "node": {
+          "id": "cid_18",
+          "isCompleted": true,
+          "text": "quos rerum aut",
+        },
+      },
+      {
+        "cursor": "cid_19",
+        "node": {
+          "id": "cid_19",
+          "isCompleted": false,
+          "text": "ullam a voluptatem",
+        },
+      },
+      {
+        "cursor": "cid_20",
+        "node": {
+          "id": "cid_20",
+          "isCompleted": true,
+          "text": "dolorum deserunt quis",
+        },
+      },
+    ],
     "pageCursors": {
       "around": [
         {
@@ -2717,10 +2961,10 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
       ],
     },
     "pageInfo": {
-      "endCursor": undefined,
+      "endCursor": "cid_20",
       "hasNextPage": false,
       "hasPreviousPage": true,
-      "startCursor": undefined,
+      "startCursor": "cid_17",
     },
     "totalCount": 20,
   },
@@ -2729,10 +2973,12 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
 
 exports[`prisma-relay-cursor-connection page based cursors returns the first 5 todos after the 20th todo 1`] = `
 {
+  "cursor": "cid_20",
   "manyArgs": [
     {
       "cursor": {
         "id": "cid_20",
+        "page": undefined,
       },
       "skip": 1,
       "take": 6,
@@ -2777,6 +3023,7 @@ exports[`prisma-relay-cursor-connection page based cursors returns the first 5 t
 
 exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos 1`] = `
 {
+  "cursor": undefined,
   "manyArgs": [
     {
       "cursor": undefined,
@@ -2870,188 +3117,12 @@ exports[`prisma-relay-cursor-connection page based cursors returns the last 5 to
 
 exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 1st todo 1`] = `
 {
+  "cursor": "cid_01",
   "manyArgs": [
     {
       "cursor": {
-        "id": "cid_1",
-      },
-      "skip": 1,
-      "take": -6,
-    },
-  ],
-  "result": {
-    "edges": [
-      {
-        "cursor": "cid_015",
-        "node": {
-          "id": "cid_015",
-          "isCompleted": true,
-          "text": "ut molestias veniam",
-        },
-      },
-      {
-        "cursor": "cid_016",
-        "node": {
-          "id": "cid_016",
-          "isCompleted": true,
-          "text": "a placeat aperiam",
-        },
-      },
-      {
-        "cursor": "cid_017",
-        "node": {
-          "id": "cid_017",
-          "isCompleted": true,
-          "text": "quos rerum aut",
-        },
-      },
-      {
-        "cursor": "cid_018",
-        "node": {
-          "id": "cid_018",
-          "isCompleted": false,
-          "text": "ullam a voluptatem",
-        },
-      },
-      {
-        "cursor": "cid_019",
-        "node": {
-          "id": "cid_019",
-          "isCompleted": true,
-          "text": "dolorum deserunt quis",
-        },
-      },
-    ],
-    "pageCursors": {
-      "around": [
-        {
-          "cursor": "1-cid_1",
-          "isCurrent": true,
-          "page": 1,
-        },
-        {
-          "cursor": "2-cid_1",
-          "isCurrent": false,
-          "page": 2,
-        },
-        {
-          "cursor": "3-cid_1",
-          "isCurrent": false,
-          "page": 3,
-        },
-        {
-          "cursor": "4-cid_1",
-          "isCurrent": false,
-          "page": 4,
-        },
-      ],
-    },
-    "pageInfo": {
-      "endCursor": "cid_019",
-      "hasNextPage": true,
-      "hasPreviousPage": true,
-      "startCursor": "cid_015",
-    },
-    "totalCount": 20,
-  },
-}
-`;
-
-exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 5th todo 1`] = `
-{
-  "manyArgs": [
-    {
-      "cursor": {
-        "id": "cid_5",
-      },
-      "skip": 1,
-      "take": -6,
-    },
-  ],
-  "result": {
-    "edges": [
-      {
-        "cursor": "cid_1",
-        "node": {
-          "id": "cid_1",
-          "isCompleted": false,
-          "text": "occaecati a dolor",
-        },
-      },
-      {
-        "cursor": "cid_10",
-        "node": {
-          "id": "cid_10",
-          "isCompleted": false,
-          "text": "unde et quasi",
-        },
-      },
-      {
-        "cursor": "cid_2",
-        "node": {
-          "id": "cid_2",
-          "isCompleted": false,
-          "text": "ut enim quia",
-        },
-      },
-      {
-        "cursor": "cid_3",
-        "node": {
-          "id": "cid_3",
-          "isCompleted": true,
-          "text": "ipsam ipsam corrupti",
-        },
-      },
-      {
-        "cursor": "cid_4",
-        "node": {
-          "id": "cid_4",
-          "isCompleted": true,
-          "text": "voluptatem sint ipsam",
-        },
-      },
-    ],
-    "pageCursors": {
-      "around": [
-        {
-          "cursor": "1-cid_5",
-          "isCurrent": true,
-          "page": 1,
-        },
-        {
-          "cursor": "2-cid_5",
-          "isCurrent": false,
-          "page": 2,
-        },
-        {
-          "cursor": "3-cid_5",
-          "isCurrent": false,
-          "page": 3,
-        },
-        {
-          "cursor": "4-cid_5",
-          "isCurrent": false,
-          "page": 4,
-        },
-      ],
-    },
-    "pageInfo": {
-      "endCursor": "cid_4",
-      "hasNextPage": true,
-      "hasPreviousPage": true,
-      "startCursor": "cid_1",
-    },
-    "totalCount": 20,
-  },
-}
-`;
-
-exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 6th todo 1`] = `
-{
-  "manyArgs": [
-    {
-      "cursor": {
-        "id": "cid_u6",
+        "id": "cid_01",
+        "page": undefined,
       },
       "skip": 1,
       "take": -6,
@@ -3062,22 +3133,22 @@ exports[`prisma-relay-cursor-connection page based cursors returns the last 5 to
     "pageCursors": {
       "around": [
         {
-          "cursor": "1-cid_u6",
+          "cursor": "1-cid_01",
           "isCurrent": true,
           "page": 1,
         },
         {
-          "cursor": "2-cid_u6",
+          "cursor": "2-cid_01",
           "isCurrent": false,
           "page": 2,
         },
         {
-          "cursor": "3-cid_u6",
+          "cursor": "3-cid_01",
           "isCurrent": false,
           "page": 3,
         },
         {
-          "cursor": "4-cid_u6",
+          "cursor": "4-cid_01",
           "isCurrent": false,
           "page": 4,
         },
@@ -3094,19 +3165,236 @@ exports[`prisma-relay-cursor-connection page based cursors returns the last 5 to
 }
 `;
 
-exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 16th todo 1`] = `
+exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 5th todo 1`] = `
 {
+  "cursor": "cid_05",
   "manyArgs": [
     {
       "cursor": {
-        "id": "cid_16",
+        "id": "cid_05",
+        "page": undefined,
       },
       "skip": 1,
       "take": -6,
     },
   ],
   "result": {
-    "edges": [],
+    "edges": [
+      {
+        "cursor": "cid_01",
+        "node": {
+          "id": "cid_01",
+          "isCompleted": false,
+          "text": "veritatis molestias qui",
+        },
+      },
+      {
+        "cursor": "cid_02",
+        "node": {
+          "id": "cid_02",
+          "isCompleted": false,
+          "text": "occaecati a dolor",
+        },
+      },
+      {
+        "cursor": "cid_03",
+        "node": {
+          "id": "cid_03",
+          "isCompleted": false,
+          "text": "ut enim quia",
+        },
+      },
+      {
+        "cursor": "cid_04",
+        "node": {
+          "id": "cid_04",
+          "isCompleted": true,
+          "text": "ipsam ipsam corrupti",
+        },
+      },
+    ],
+    "pageCursors": {
+      "around": [
+        {
+          "cursor": "1-cid_05",
+          "isCurrent": true,
+          "page": 1,
+        },
+        {
+          "cursor": "2-cid_05",
+          "isCurrent": false,
+          "page": 2,
+        },
+        {
+          "cursor": "3-cid_05",
+          "isCurrent": false,
+          "page": 3,
+        },
+        {
+          "cursor": "4-cid_05",
+          "isCurrent": false,
+          "page": 4,
+        },
+      ],
+    },
+    "pageInfo": {
+      "endCursor": "cid_04",
+      "hasNextPage": true,
+      "hasPreviousPage": false,
+      "startCursor": "cid_01",
+    },
+    "totalCount": 20,
+  },
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 6th todo 1`] = `
+{
+  "cursor": "cid_06",
+  "manyArgs": [
+    {
+      "cursor": {
+        "id": "cid_06",
+        "page": undefined,
+      },
+      "skip": 1,
+      "take": -6,
+    },
+  ],
+  "result": {
+    "edges": [
+      {
+        "cursor": "cid_01",
+        "node": {
+          "id": "cid_01",
+          "isCompleted": false,
+          "text": "veritatis molestias qui",
+        },
+      },
+      {
+        "cursor": "cid_02",
+        "node": {
+          "id": "cid_02",
+          "isCompleted": false,
+          "text": "occaecati a dolor",
+        },
+      },
+      {
+        "cursor": "cid_03",
+        "node": {
+          "id": "cid_03",
+          "isCompleted": false,
+          "text": "ut enim quia",
+        },
+      },
+      {
+        "cursor": "cid_04",
+        "node": {
+          "id": "cid_04",
+          "isCompleted": true,
+          "text": "ipsam ipsam corrupti",
+        },
+      },
+      {
+        "cursor": "cid_05",
+        "node": {
+          "id": "cid_05",
+          "isCompleted": true,
+          "text": "voluptatem sint ipsam",
+        },
+      },
+    ],
+    "pageCursors": {
+      "around": [
+        {
+          "cursor": "1-cid_06",
+          "isCurrent": true,
+          "page": 1,
+        },
+        {
+          "cursor": "2-cid_06",
+          "isCurrent": false,
+          "page": 2,
+        },
+        {
+          "cursor": "3-cid_06",
+          "isCurrent": false,
+          "page": 3,
+        },
+        {
+          "cursor": "4-cid_06",
+          "isCurrent": false,
+          "page": 4,
+        },
+      ],
+    },
+    "pageInfo": {
+      "endCursor": "cid_05",
+      "hasNextPage": true,
+      "hasPreviousPage": false,
+      "startCursor": "cid_01",
+    },
+    "totalCount": 20,
+  },
+}
+`;
+
+exports[`prisma-relay-cursor-connection page based cursors returns the last 5 todos before the 16th todo 1`] = `
+{
+  "cursor": "cid_16",
+  "manyArgs": [
+    {
+      "cursor": {
+        "id": "cid_16",
+        "page": undefined,
+      },
+      "skip": 1,
+      "take": -6,
+    },
+  ],
+  "result": {
+    "edges": [
+      {
+        "cursor": "cid_11",
+        "node": {
+          "id": "cid_11",
+          "isCompleted": false,
+          "text": "unde et quasi",
+        },
+      },
+      {
+        "cursor": "cid_12",
+        "node": {
+          "id": "cid_12",
+          "isCompleted": false,
+          "text": "et autem sapiente",
+        },
+      },
+      {
+        "cursor": "cid_13",
+        "node": {
+          "id": "cid_13",
+          "isCompleted": false,
+          "text": "deleniti fuga et",
+        },
+      },
+      {
+        "cursor": "cid_14",
+        "node": {
+          "id": "cid_14",
+          "isCompleted": true,
+          "text": "ea molestiae similique",
+        },
+      },
+      {
+        "cursor": "cid_15",
+        "node": {
+          "id": "cid_15",
+          "isCompleted": false,
+          "text": "doloribus ea aut",
+        },
+      },
+    ],
     "pageCursors": {
       "around": [
         {
@@ -3132,10 +3420,10 @@ exports[`prisma-relay-cursor-connection page based cursors returns the last 5 to
       ],
     },
     "pageInfo": {
-      "endCursor": undefined,
+      "endCursor": "cid_15",
       "hasNextPage": true,
-      "hasPreviousPage": false,
-      "startCursor": undefined,
+      "hasPreviousPage": true,
+      "startCursor": "cid_11",
     },
     "totalCount": 20,
   },

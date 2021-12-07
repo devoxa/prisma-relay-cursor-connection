@@ -467,8 +467,8 @@ describe('prisma-relay-cursor-connection', () => {
       ['returns the 1st page after cid_11', { first: 2, after: '1-cid_01' }],
       ['returns the 2nd page after cid_11', { first: 2, after: '2-cid_01' }],
       ['returns the 3rd page after cid_11', { first: 2, after: '4-cid_01' }],
-      // ['returns the 2nd page before cid_11', { last: 5, before: '2-cid_11' }],
-      // ['returns the 3rd page before cid_11', { last: 5, before: '3-cid_11' }],
+      ['returns the 2nd page before cid_11', { last: 2, before: '2-cid_11' }],
+      ['returns the 3rd page before cid_11', { last: 2, before: '3-cid_11' }],
     ]
 
     test.each(VALID_CASES)('%s', async (name, connectionArgs) => {

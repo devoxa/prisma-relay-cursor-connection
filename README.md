@@ -169,6 +169,8 @@ result.pageCursors
 // { around: [{ cursor: "ArXdF...", isCurrent: true, page: 1 }, { cursor: "ArXdF...", isCurrent: false, page: 2 }]}
 ```
 
+When working with page cursors, your prisma models _must_ have an `id String  @id @default(cuid())` . This shouldn't be too much of a constraint, as you will likely be using this for the [Object Identification pattern](https://relay.dev/graphql/objectidentification.htm).
+
 
 ## Contributing
 

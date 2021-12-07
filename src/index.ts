@@ -234,12 +234,12 @@ export async function findManyCursorConnectionWithPageCursors<
 
       // We need push the skip value along based on the amount
       // pages we've referenced
-      if (skip && cursor && "page" in cursor) {
+      if (skip && cursor && (cursor as unknown as { page: number }).page) {
+
         const ordinal = args.first || args.last || 10
         // The +1 is because you must have seen a full page, so 'page 1' is really page 2
         skip = (ordinal * ((cursor as unknown as { page: number }).page - 1))
 
-        console.log({ skip, cursor, take })
         // We need to delete the 'page' field in the cursor, because that's
         // not a field for prisma, but our book-keeping
         delete (cursor as unknown as { page?: number }).page
@@ -250,7 +250,6 @@ export async function findManyCursorConnectionWithPageCursors<
   }
 
   const connection = await findManyCursorConnection(findMany, aggregate, args, options)
-  console.log({ connection })
 
   let initialCursor = args.after || args.before
 
