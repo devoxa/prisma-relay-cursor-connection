@@ -1,7 +1,10 @@
 // Prisma Relay Cursor Connection Arguments
 export interface Options<Record, Cursor, Node, CustomEdge extends Edge<Node>> {
   getCursor?: (record: Record) => Cursor
-  findManyParamsWithCursor?: (args: ConnectionArguments, cursor: Cursor | undefined) => { cursor: Cursor | undefined, skip: number | undefined, take: number }
+  findManyParamsWithCursor?: (
+    args: ConnectionArguments,
+    cursor: Cursor | undefined
+  ) => { cursor: Cursor | undefined; skip: number | undefined; take: number }
   encodeCursor?: (cursor: Cursor) => string
   decodeCursor?: (cursorString: string) => Cursor
 
@@ -13,7 +16,7 @@ export interface PrismaFindManyArguments<Cursor> {
   cursor?: Cursor
   take?: number
   skip?: number
-  orderBy?: Record<string, "asc" | "desc" | undefined>
+  orderBy?: Record<string, 'asc' | 'desc' | undefined>
 }
 
 // Relay Arguments

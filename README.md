@@ -155,22 +155,28 @@ const result = await findManyCursorConnection<
 
 ### Pagination with Page Cursors
 
-Cursor based pagination is effective when working with an infinite list, but when you want to present a list of pagination buttons it can be hard to provide that user-interface without a lot of additional work. The folks at Artsy came up with a schema extension and technique for pagination with page links [via `pageCursors`](](https://artsy.github.io/blog/2020/01/21/graphql-relay-windowed-pagination/), this is implemented in `findManyCursorConnectionWithPageCursors`.
+Cursor based pagination is effective when working with an infinite list, but when you want to
+present a list of pagination buttons it can be hard to provide that user-interface without a lot of
+additional work. The folks at Artsy came up with a schema extension and technique for pagination
+with page links [via
+`pageCursors`](](https://artsy.github.io/blog/2020/01/21/graphql-relay-windowed-pagination/), this
+is implemented in `findManyCursorConnectionWithPageCursors`.
 
 ```ts
 import { findManyCursorConnectionWithPageCursors } from '@devoxa/prisma-relay-cursor-connection'
 
 const result = await findManyCursorConnectionWithPageCursors(
   (args) => client.todo.findMany(args),
-  () => client.todo.count(),
+  () => client.todo.count()
 )
 
 result.pageCursors
 // { around: [{ cursor: "ArXdF...", isCurrent: true, page: 1 }, { cursor: "ArXdF...", isCurrent: false, page: 2 }]}
 ```
 
-When working with page cursors, your prisma models _must_ have an `id String  @id @default(cuid())` . This shouldn't be too much of a constraint, as you will likely be using this for the [Object Identification pattern](https://relay.dev/graphql/objectidentification.htm).
-
+When working with page cursors, your prisma models _must_ have an `id String @id @default(cuid())` .
+This shouldn't be too much of a constraint, as you will likely be using this for the
+[Object Identification pattern](https://relay.dev/graphql/objectidentification.htm).
 
 ## Contributing
 

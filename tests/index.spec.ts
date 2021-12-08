@@ -1,5 +1,10 @@
 import { Prisma, PrismaClient, Profile, Todo, User } from '@prisma/client'
-import { ConnectionArguments, findManyCursorConnection, findManyCursorConnectionWithPageCursors, PrismaFindManyArguments } from '../src'
+import {
+  ConnectionArguments,
+  findManyCursorConnection,
+  findManyCursorConnectionWithPageCursors,
+  PrismaFindManyArguments,
+} from '../src'
 import { PROFILE_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
 
 function encodeCursor<Cursor>(prismaCursor: Cursor) {
@@ -430,7 +435,6 @@ describe('prisma-relay-cursor-connection', () => {
     })
   })
 
-
   describe('page based cursors', () => {
     beforeAll(async () => {
       await client.todo.deleteMany({})
@@ -462,7 +466,7 @@ describe('prisma-relay-cursor-connection', () => {
       ['returns the last 5 todos before the 5th todo', { last: 5, before: 'cid_05' }],
       ['returns the last 5 todos before the 6th todo', { last: 5, before: 'cid_06' }],
       ['returns the last 5 todos before the 16th todo', { last: 5, before: 'cid_16' }],
-      // The above ensure the original behavior is still respected, these tests below 
+      // The above ensure the original behavior is still respected, these tests below
       // validate the new logic for findManyCursorConnectionWithPageCursors
       ['returns the 1st page after cid_11', { first: 2, after: '1-cid_01' }],
       ['returns the 2nd page after cid_11', { first: 2, after: '2-cid_01' }],
@@ -472,7 +476,7 @@ describe('prisma-relay-cursor-connection', () => {
     ]
 
     test.each(VALID_CASES)('%s', async (name, connectionArgs) => {
-      const manyArgs: PrismaFindManyArguments<{ id: string; }>[] = []
+      const manyArgs: PrismaFindManyArguments<{ id: string }>[] = []
       const result = await findManyCursorConnectionWithPageCursors<
         Todo,
         { id: string },
@@ -484,7 +488,7 @@ describe('prisma-relay-cursor-connection', () => {
           return client.todo.findMany(args)
         },
         () => client.todo.count(),
-        connectionArgs,
+        connectionArgs
       )
       const cursor = connectionArgs?.before || connectionArgs?.after
       expect({ cursor, result, manyArgs }).toMatchSnapshot()

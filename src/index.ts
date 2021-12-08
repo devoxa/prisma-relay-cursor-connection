@@ -3,7 +3,7 @@ import {
   ConnectionArguments,
   Edge,
   Options,
-  PrismaFindManyArguments
+  PrismaFindManyArguments,
 } from './interfaces'
 import { createPageCursors } from './pageCursorsHelpers'
 
@@ -53,7 +53,6 @@ export async function findManyCursorConnection<
     // Remove the extra record (last element) from the results
     if (hasNextPage) records.pop()
   } else if (isBackwardPagination(args)) {
-
     // Convert `before` into prisma `cursor` & `skip`
     const initialCursor = decodeCursor(args.before, options)
 
@@ -90,10 +89,10 @@ export async function findManyCursorConnection<
   return {
     edges: records.map(
       (record) =>
-      ({
-        ...options.recordToEdge(record),
-        cursor: encodeCursor(record, options),
-      } as CustomEdge)
+        ({
+          ...options.recordToEdge(record),
+          cursor: encodeCursor(record, options),
+        } as CustomEdge)
     ),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
@@ -194,35 +193,36 @@ function encodeCursor<Record, Cursor, Node, CustomEdge extends Edge<Node>>(
   return options.encodeCursor(options.getCursor(record))
 }
 
-
 export async function findManyCursorConnectionWithPageCursors<
   Record = { id: string },
-  Cursor = { id: string, page: number },
+  Cursor = { id: string; page: number },
   Node = Record,
   CustomEdge extends Edge<Node> = Edge<Node>
 >(
   findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Record[]>,
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
-  pOptions?: Omit<Options<Record, Cursor, Node, CustomEdge>, "decodeCursor" | "encodeCursor" | "findManyParamsWithCursor">
+  pOptions?: Omit<
+    Options<Record, Cursor, Node, CustomEdge>,
+    'decodeCursor' | 'encodeCursor' | 'findManyParamsWithCursor'
+  >
 ): Promise<Connection<Node, CustomEdge>> {
-
   const options: Options<Record, Cursor, Node, CustomEdge> = {
     ...pOptions,
     decodeCursor: (cursor: string) => {
       // All cuids start with "c", so if it's not then we're good to go
-      if (!cursor.startsWith("c")) {
-        const [page, id] = cursor.split("-")
-        return ({ id, page: parseInt(page) } as unknown as Cursor)
+      if (!cursor.startsWith('c')) {
+        const [page, id] = cursor.split('-')
+        return { id, page: parseInt(page) } as unknown as Cursor
       } else {
-        return ({ id: cursor, page: undefined } as unknown as Cursor)
+        return { id: cursor, page: undefined } as unknown as Cursor
       }
     },
 
     encodeCursor: (cursor: Cursor) => {
-      const cAny = cursor as unknown as { id: string, page?: number }
-      const cID = "id" in cursor ? cAny.id as string : ""
-      return "page" in cursor ? `${cAny.page}-${cID}` : cID
+      const cAny = cursor as unknown as { id: string; page?: number }
+      const cID = 'id' in cursor ? (cAny.id as string) : ''
+      return 'page' in cursor ? `${cAny.page}-${cID}` : cID
     },
 
     findManyParamsWithCursor: (args, cursor) => {
@@ -235,10 +235,9 @@ export async function findManyCursorConnectionWithPageCursors<
       // We need push the skip value along based on the amount
       // pages we've referenced
       if (skip && cursor && (cursor as unknown as { page: number }).page) {
-
         const ordinal = args.first || args.last || 10
         // The +1 is because you must have seen a full page, so 'page 1' is really page 2
-        skip = (ordinal * ((cursor as unknown as { page: number }).page - 1))
+        skip = ordinal * ((cursor as unknown as { page: number }).page - 1)
 
         // We need to delete the 'page' field in the cursor, because that's
         // not a field for prisma, but our book-keeping
@@ -255,7 +254,7 @@ export async function findManyCursorConnectionWithPageCursors<
 
   // If we don't have the initial cursor to anchor to, we'll need to grab the first
   if (!initialCursor) {
-    const direction = args.first ? "desc" : "asc"
+    const direction = args.first ? 'desc' : 'asc'
     const firstItem = await findMany({ take: 1, orderBy: { id: direction } })
     if (firstItem[0]) initialCursor = (firstItem[0] as unknown as { id: string }).id
   }
