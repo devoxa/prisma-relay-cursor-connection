@@ -1,7 +1,7 @@
 // Prisma Relay Cursor Connection Arguments
 export interface Options<Record, Cursor, Node, CustomEdge extends Edge<Node>> {
   getCursor?: (record: Record) => Cursor
-  findManyParamsWithCursor?: (
+  findManyArgumentsWithCursor?: (
     args: ConnectionArguments,
     cursor: Cursor | undefined
   ) => { cursor: Cursor | undefined; skip: number | undefined; take: number }

@@ -38,7 +38,7 @@ export async function findManyCursorConnection<
     const inputCursor = decodeCursor(args.after, options)
 
     // Extract the arguments for the findMany
-    const { cursor, take, skip } = options.findManyParamsWithCursor(args, inputCursor)
+    const { cursor, take, skip } = options.findManyArgumentsWithCursor(args, inputCursor)
 
     // Execute the underlying query operations
     records = await findMany({ cursor, take, skip })
@@ -57,7 +57,7 @@ export async function findManyCursorConnection<
     const initialCursor = decodeCursor(args.before, options)
 
     // Extract the arguments for the findMany
-    const { cursor, take, skip } = options.findManyParamsWithCursor(args, initialCursor)
+    const { cursor, take, skip } = options.findManyArgumentsWithCursor(args, initialCursor)
 
     // Execute the underlying query operations
     records = await findMany({ cursor, take, skip })
@@ -153,7 +153,7 @@ function mergeDefaultOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>
     encodeCursor: (cursor: Cursor) => (cursor as unknown as { id: string }).id,
     decodeCursor: (cursorString: string) => ({ id: cursorString } as unknown as Cursor),
     recordToEdge: (record: Record) => ({ node: record } as unknown as Omit<CustomEdge, 'cursor'>),
-    findManyParamsWithCursor: (args, cursor) => {
+    findManyArgumentsWithCursor: (args, cursor) => {
       // Fetch one additional record to determine if there is a next page
       const take = args.first ? args.first + 1 : -1 * ((args.last || 0) + 1)
 
@@ -225,7 +225,7 @@ export async function findManyCursorConnectionWithPageCursors<
       return 'page' in cursor ? `${cAny.page}-${cID}` : cID
     },
 
-    findManyParamsWithCursor: (args, cursor) => {
+    findManyArgumentsWithCursor: (args, cursor) => {
       // Fetch one additional record to determine if there is a next page
       const take = args.first ? args.first + 1 : -1 * ((args.last || 0) + 1)
 
