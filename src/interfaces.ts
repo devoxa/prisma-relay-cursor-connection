@@ -1,4 +1,4 @@
-import { GraphQLResolveInfo } from 'graphql';
+import { GraphQLResolveInfo } from 'graphql'
 
 // Prisma Relay Cursor Connection Arguments
 export interface Options<Record, Cursor, Node, CustomEdge extends Edge<Node>> {
@@ -7,7 +7,7 @@ export interface Options<Record, Cursor, Node, CustomEdge extends Edge<Node>> {
   decodeCursor?: (cursorString: string) => Cursor
 
   recordToEdge?: (record: Record) => Omit<CustomEdge, 'cursor'>
-  info?: GraphQLResolveInfo;
+  resolveInfo?: GraphQLResolveInfo | null
 }
 
 // Prisma Arguments
