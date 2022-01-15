@@ -1946,6 +1946,278 @@ exports[`prisma-relay-cursor-connection number id returns the paginated users wi
 ]
 `;
 
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns all todos (no fields) 1`] = `
+{
+  "edges": [],
+  "pageInfo": {
+    "endCursor": undefined,
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": -1,
+}
+`;
+
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns all todos (totalCount field) 1`] = `
+{
+  "edges": [],
+  "pageInfo": {
+    "endCursor": undefined,
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "startCursor": undefined,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns the first 5 todos (no fields) 1`] = `
+{
+  "edges": [
+    {
+      "cursor": "id_01",
+      "node": {
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    {
+      "cursor": "id_02",
+      "node": {
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    {
+      "cursor": "id_03",
+      "node": {
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    {
+      "cursor": "id_04",
+      "node": {
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    {
+      "cursor": "id_05",
+      "node": {
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+  ],
+  "pageInfo": {
+    "endCursor": "id_05",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": -1,
+}
+`;
+
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns the first 5 todos (totalCount field) 1`] = `
+{
+  "edges": [
+    {
+      "cursor": "id_01",
+      "node": {
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    {
+      "cursor": "id_02",
+      "node": {
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    {
+      "cursor": "id_03",
+      "node": {
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    {
+      "cursor": "id_04",
+      "node": {
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    {
+      "cursor": "id_05",
+      "node": {
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+  ],
+  "pageInfo": {
+    "endCursor": "id_05",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns the last 5 todos (no fields) 1`] = `
+{
+  "edges": [
+    {
+      "cursor": "id_16",
+      "node": {
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+    {
+      "cursor": "id_17",
+      "node": {
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    {
+      "cursor": "id_18",
+      "node": {
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    {
+      "cursor": "id_19",
+      "node": {
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    {
+      "cursor": "id_20",
+      "node": {
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+  ],
+  "pageInfo": {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "id_16",
+  },
+  "totalCount": -1,
+}
+`;
+
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns the last 5 todos (totalCount field) 1`] = `
+{
+  "edges": [
+    {
+      "cursor": "id_16",
+      "node": {
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+    {
+      "cursor": "id_17",
+      "node": {
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    {
+      "cursor": "id_18",
+      "node": {
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    {
+      "cursor": "id_19",
+      "node": {
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    {
+      "cursor": "id_20",
+      "node": {
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+  ],
+  "pageInfo": {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": true,
+    "startCursor": "id_16",
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns the paginated todos with the base client (sanity check) 1`] = `
+[
+  {
+    "id": "id_06",
+    "isCompleted": true,
+    "text": "ut sunt consequuntur",
+  },
+  {
+    "id": "id_07",
+    "isCompleted": false,
+    "text": "accusamus aut labore",
+  },
+  {
+    "id": "id_08",
+    "isCompleted": true,
+    "text": "et quo quia",
+  },
+  {
+    "id": "id_09",
+    "isCompleted": true,
+    "text": "accusantium a excepturi",
+  },
+  {
+    "id": "id_10",
+    "isCompleted": true,
+    "text": "deserunt rerum occaecati",
+  },
+]
+`;
+
 exports[`prisma-relay-cursor-connection string id returns all todos 1`] = `
 {
   "edges": [

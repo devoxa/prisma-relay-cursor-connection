@@ -77,7 +77,6 @@ export async function findManyCursorConnection<
     if (hasPreviousPage) records.shift()
   } else {
     // Execute the underlying query operations
-    // If the edges were not in the request fields, do not load any nodes
     records = hasRequestedField('edges') ? await findMany({}) : []
     totalCount = hasRequestedField('totalCount') ? await aggregate() : -1
 

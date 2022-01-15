@@ -1,4 +1,7 @@
-import { Prisma, PrismaClient, Profile, User, Todo } from '@prisma/client'
+import { Prisma, PrismaClient, Profile, Todo, User } from '@prisma/client'
+import { GraphQLResolveInfo } from 'graphql'
+import graphqlFields from 'graphql-fields'
+import { mocked } from 'jest-mock'
 import { ConnectionArguments, findManyCursorConnection } from '../src'
 import { PROFILE_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
 
@@ -9,6 +12,10 @@ function encodeCursor<Cursor>(prismaCursor: Cursor) {
 function decodeCursor(cursor: string) {
   return JSON.parse(Buffer.from(cursor, 'base64').toString('ascii'))
 }
+
+jest.mock('graphql-fields')
+
+const mockGraphqlFields = mocked(graphqlFields, true)
 
 describe('prisma-relay-cursor-connection', () => {
   jest.setTimeout(10000)
@@ -427,6 +434,49 @@ describe('prisma-relay-cursor-connection', () => {
 
       // Test that the extraEdgeField return type work via TS
       result.edges[0]?.extraEdgeField
+    })
+  })
+
+  describe('requested fields via resolveInfo', () => {
+    beforeAll(async () => {
+      await client.todo.deleteMany({})
+
+      // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TODO_FIXTURES.length; i++) {
+        await client.todo.create({ data: TODO_FIXTURES[i] })
+      }
+    })
+
+    it('returns all todos with the base client (sanity check)', async () => {
+      const result = await client.todo.findMany({})
+      expect(result).toEqual(TODO_FIXTURES)
+    })
+
+    it('returns the paginated todos with the base client (sanity check)', async () => {
+      const result = await client.todo.findMany({ cursor: { id: 'id_05' }, take: 5, skip: 1 })
+      expect(result).toMatchSnapshot()
+    })
+
+    const VALID_CASES: Array<[string, ConnectionArguments | undefined, Record<string, unknown>]> = [
+      ['returns all todos (no fields)', undefined, {}],
+      ['returns all todos (totalCount field)', undefined, { totalCount: 1 }],
+      ['returns the first 5 todos (no fields)', { first: 5 }, {}],
+      ['returns the first 5 todos (totalCount field)', { first: 5 }, { totalCount: 1 }],
+      ['returns the last 5 todos (no fields)', { last: 5 }, {}],
+      ['returns the last 5 todos (totalCount field)', { last: 5 }, { totalCount: 1 }],
+    ]
+
+    test.each(VALID_CASES)('%s', async (name, connectionArgs, mockFields) => {
+      mockGraphqlFields.mockReturnValue(mockFields)
+
+      const result = await findManyCursorConnection(
+        (args) => client.todo.findMany(args),
+        () => client.todo.count(),
+        connectionArgs,
+        { resolveInfo: { some: 'fake', data: 'here' } as unknown as GraphQLResolveInfo }
+      )
+
+      expect(result).toMatchSnapshot()
     })
   })
 
