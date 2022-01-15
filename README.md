@@ -203,6 +203,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/nicksrandall"><img src="https://avatars.githubusercontent.com/u/1800460?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Nick Randall</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=nicksrandall" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/igo"><img src="https://avatars.githubusercontent.com/u/55597?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Igor Urminček</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=igo" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/TheAschr"><img src="https://avatars.githubusercontent.com/u/10580515?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Alex Schrimpf</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=TheAschr" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/marinarierav"><img src="https://avatars.githubusercontent.com/u/47626039?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Marina Riera</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=marinarierav" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
