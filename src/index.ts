@@ -28,6 +28,7 @@ export async function findManyCursorConnection<
 
   const options = mergeDefaultOptions(pOptions)
   const requestedFields = options.resolveInfo && Object.keys(graphqlFields(options.resolveInfo))
+  const hasRequestedField = (key: string) => !requestedFields || requestedFields.includes(key)
 
   let records: Array<Record>
   let totalCount: number
@@ -44,7 +45,7 @@ export async function findManyCursorConnection<
 
     // Execute the underlying query operations
     records = await findMany({ cursor, take, skip })
-    totalCount = !requestedFields || requestedFields.includes('totalCount') ? await aggregate() : -1
+    totalCount = hasRequestedField('totalCount') ? await aggregate() : -1
 
     // See if we are "after" another record, indicating a previous page
     hasPreviousPage = !!args.after
@@ -64,7 +65,7 @@ export async function findManyCursorConnection<
 
     // Execute the underlying query operations
     records = await findMany({ cursor, take, skip })
-    totalCount = !requestedFields || requestedFields.includes('totalCount') ? await aggregate() : -1
+    totalCount = hasRequestedField('totalCount') ? await aggregate() : -1
 
     // See if we are "before" another record, indicating a next page
     hasNextPage = !!args.before
@@ -77,10 +78,8 @@ export async function findManyCursorConnection<
   } else {
     // Execute the underlying query operations
     // If the edges were not in the request fields, do not load any nodes
-    records = await findMany({
-      take: !requestedFields || requestedFields.includes('edges') ? undefined : 0,
-    })
-    totalCount = !requestedFields || requestedFields.includes('totalCount') ? await aggregate() : -1
+    records = hasRequestedField('edges') ? await findMany({}) : []
+    totalCount = hasRequestedField('totalCount') ? await aggregate() : -1
 
     // Since we are getting all records, there are no pages
     hasNextPage = false
@@ -159,8 +158,8 @@ function mergeDefaultOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>
     encodeCursor: (cursor: Cursor) => (cursor as unknown as { id: string }).id,
     decodeCursor: (cursorString: string) => ({ id: cursorString } as unknown as Cursor),
     recordToEdge: (record: Record) => ({ node: record } as unknown as Omit<CustomEdge, 'cursor'>),
+    resolveInfo: null,
     ...pOptions,
-    resolveInfo: pOptions?.resolveInfo ?? null,
   }
 }
 

@@ -7,6 +7,7 @@ export interface Options<Record, Cursor, Node, CustomEdge extends Edge<Node>> {
   decodeCursor?: (cursorString: string) => Cursor
 
   recordToEdge?: (record: Record) => Omit<CustomEdge, 'cursor'>
+
   resolveInfo?: GraphQLResolveInfo | null
 }
 
