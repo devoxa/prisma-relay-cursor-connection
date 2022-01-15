@@ -153,6 +153,29 @@ const result = await findManyCursorConnection<
 )
 ```
 
+### Resolve information
+
+You can pass GraphQL resolve information into the options to automatically remove extra Prisma
+queries for fields that are not present in your GraphQL query. This is mainly useful if you are not
+using `totalCount` for your pagination logic or you only want to query `totalCount` without any
+edges.
+
+```ts
+import { findManyCursorConnection } from '@devoxa/prisma-relay-cursor-connection'
+import { GraphQLResolveInfo } from 'graphql'
+
+const resolveInfo: GraphQLResolveInfo = {
+  // ...
+}
+
+const result = await findManyCursorConnection(
+  (args) => client.todo.findMany(args),
+  () => client.todo.count(),
+  { first: 5, after: '5c11e0fa-fd6b-44ee-9016-0809ee2f2b9a' },
+  { resolveInfo }
+)
+```
+
 ## Contributing
 
 ```bash
