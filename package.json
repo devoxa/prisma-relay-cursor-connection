@@ -30,7 +30,7 @@
     "@devoxa/eslint-config": "3.0.1",
     "@devoxa/prettier-config": "1.0.2",
     "@prisma/client": "3.8.1",
-    "@types/graphql-fields": "^1.3.3",
+    "@types/graphql-fields": "1.3.4",
     "@types/jest": "27.4.0",
     "@types/node": "16.11.19",
     "eslint": "8.6.0",
