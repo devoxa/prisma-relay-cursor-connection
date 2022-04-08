@@ -98,6 +98,7 @@ export async function findManyCursorConnection<
           cursor: encodeCursor(record, options),
         } as CustomEdge)
     ),
+    nodes: records as unknown[] as Node[],
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
