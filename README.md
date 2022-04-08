@@ -206,6 +206,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/TheAschr"><img src="https://avatars.githubusercontent.com/u/10580515?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Alex Schrimpf</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=TheAschr" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/marinarierav"><img src="https://avatars.githubusercontent.com/u/47626039?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Marina Riera</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=marinarierav" title="Code">💻</a></td>
+    <td align="center"><a href="https://kervin.tech/"><img src="https://avatars.githubusercontent.com/u/15281277?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Kervin Vasquez</b></sub></a><br /><a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=kervin5" title="Code">💻</a> <a href="https://github.com/devoxa/prisma-relay-cursor-connection/commits?author=kervin5" title="Tests">⚠️</a></td>
   </tr>
 </table>
 

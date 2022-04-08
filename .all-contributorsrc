@@ -91,6 +91,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kervin5",
+      "name": "Kervin Vasquez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15281277?v=4",
+      "profile": "https://kervin.tech/",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "files": [
