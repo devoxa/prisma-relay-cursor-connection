@@ -204,6 +204,108 @@ exports[`prisma-relay-cursor-connection custom edge fields returns all todos 1`]
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+    {
+      "id": "id_06",
+      "isCompleted": true,
+      "text": "ut sunt consequuntur",
+    },
+    {
+      "id": "id_07",
+      "isCompleted": false,
+      "text": "accusamus aut labore",
+    },
+    {
+      "id": "id_08",
+      "isCompleted": true,
+      "text": "et quo quia",
+    },
+    {
+      "id": "id_09",
+      "isCompleted": true,
+      "text": "accusantium a excepturi",
+    },
+    {
+      "id": "id_10",
+      "isCompleted": true,
+      "text": "deserunt rerum occaecati",
+    },
+    {
+      "id": "id_11",
+      "isCompleted": false,
+      "text": "unde et quasi",
+    },
+    {
+      "id": "id_12",
+      "isCompleted": false,
+      "text": "et autem sapiente",
+    },
+    {
+      "id": "id_13",
+      "isCompleted": false,
+      "text": "deleniti fuga et",
+    },
+    {
+      "id": "id_14",
+      "isCompleted": true,
+      "text": "ea molestiae similique",
+    },
+    {
+      "id": "id_15",
+      "isCompleted": false,
+      "text": "doloribus ea aut",
+    },
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -266,6 +368,33 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
     },
   ],
   "pageInfo": {
@@ -332,6 +461,33 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+    {
+      "id": "id_06",
+      "isCompleted": true,
+      "text": "ut sunt consequuntur",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_06",
     "hasNextPage": true,
@@ -394,6 +550,33 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
         "isCompleted": true,
         "text": "deserunt rerum occaecati",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_06",
+      "isCompleted": true,
+      "text": "ut sunt consequuntur",
+    },
+    {
+      "id": "id_07",
+      "isCompleted": false,
+      "text": "accusamus aut labore",
+    },
+    {
+      "id": "id_08",
+      "isCompleted": true,
+      "text": "et quo quia",
+    },
+    {
+      "id": "id_09",
+      "isCompleted": true,
+      "text": "accusantium a excepturi",
+    },
+    {
+      "id": "id_10",
+      "isCompleted": true,
+      "text": "deserunt rerum occaecati",
     },
   ],
   "pageInfo": {
@@ -460,6 +643,33 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -514,6 +724,28 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -527,6 +759,7 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
 exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 todos after the 20th todo 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
@@ -591,6 +824,33 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -604,6 +864,7 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
 exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 todos before the 1st todo 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
@@ -656,6 +917,28 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
     },
   ],
   "pageInfo": {
@@ -722,6 +1005,33 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_05",
     "hasNextPage": true,
@@ -784,6 +1094,33 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
         "isCompleted": false,
         "text": "doloribus ea aut",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_11",
+      "isCompleted": false,
+      "text": "unde et quasi",
+    },
+    {
+      "id": "id_12",
+      "isCompleted": false,
+      "text": "et autem sapiente",
+    },
+    {
+      "id": "id_13",
+      "isCompleted": false,
+      "text": "deleniti fuga et",
+    },
+    {
+      "id": "id_14",
+      "isCompleted": true,
+      "text": "ea molestiae similique",
+    },
+    {
+      "id": "id_15",
+      "isCompleted": false,
+      "text": "doloribus ea aut",
     },
   ],
   "pageInfo": {
@@ -885,6 +1222,28 @@ exports[`prisma-relay-cursor-connection multi field id returns the first 5 profi
       },
     },
   ],
+  "nodes": [
+    {
+      "firstname": "foo1",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo10",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo11",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo12",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo13",
+      "lastname": "bar1",
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTMiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
     "hasNextPage": true,
@@ -934,6 +1293,28 @@ exports[`prisma-relay-cursor-connection multi field id returns the first 5 profi
       },
     },
   ],
+  "nodes": [
+    {
+      "firstname": "foo10",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo11",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo12",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo13",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo14",
+      "lastname": "bar1",
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMTQiLCJsYXN0bmFtZSI6ImJhcjEifX0=",
     "hasNextPage": true,
@@ -974,6 +1355,24 @@ exports[`prisma-relay-cursor-connection multi field id returns the first 5 profi
         "firstname": "foo9",
         "lastname": "bar1",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "firstname": "foo6",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo7",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo8",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo9",
+      "lastname": "bar1",
     },
   ],
   "pageInfo": {
@@ -1025,6 +1424,28 @@ exports[`prisma-relay-cursor-connection multi field id returns the first 5 profi
       },
     },
   ],
+  "nodes": [
+    {
+      "firstname": "foo16",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo17",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo18",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo19",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo2",
+      "lastname": "bar1",
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vMiIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
     "hasNextPage": true,
@@ -1072,6 +1493,28 @@ exports[`prisma-relay-cursor-connection multi field id returns the first 5 profi
         "firstname": "foo20",
         "lastname": "bar1",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "firstname": "foo17",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo18",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo19",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo2",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo20",
+      "lastname": "bar1",
     },
   ],
   "pageInfo": {
@@ -1123,6 +1566,28 @@ exports[`prisma-relay-cursor-connection multi field id returns the first 5 profi
       },
     },
   ],
+  "nodes": [
+    {
+      "firstname": "foo3",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo4",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo5",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo6",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo7",
+      "lastname": "bar1",
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNyIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
     "hasNextPage": true,
@@ -1136,6 +1601,7 @@ exports[`prisma-relay-cursor-connection multi field id returns the first 5 profi
 exports[`prisma-relay-cursor-connection multi field id returns the last 5 profiles before the 1st profile 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
@@ -1183,6 +1649,28 @@ exports[`prisma-relay-cursor-connection multi field id returns the last 5 profil
         "firstname": "foo4",
         "lastname": "bar1",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "firstname": "foo19",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo2",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo20",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo3",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo4",
+      "lastname": "bar1",
     },
   ],
   "pageInfo": {
@@ -1234,6 +1722,28 @@ exports[`prisma-relay-cursor-connection multi field id returns the last 5 profil
       },
     },
   ],
+  "nodes": [
+    {
+      "firstname": "foo2",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo20",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo3",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo4",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo5",
+      "lastname": "bar1",
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJmaXJzdG5hbWVfbGFzdG5hbWUiOnsiZmlyc3RuYW1lIjoiZm9vNSIsImxhc3RuYW1lIjoiYmFyMSJ9fQ==",
     "hasNextPage": true,
@@ -1281,6 +1791,28 @@ exports[`prisma-relay-cursor-connection multi field id returns the last 5 profil
         "firstname": "foo15",
         "lastname": "bar1",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "firstname": "foo11",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo12",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo13",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo14",
+      "lastname": "bar1",
+    },
+    {
+      "firstname": "foo15",
+      "lastname": "bar1",
     },
   ],
   "pageInfo": {
@@ -1458,6 +1990,88 @@ exports[`prisma-relay-cursor-connection number id returns all users 1`] = `
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user1@email.com",
+      "id": 1,
+    },
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
+    },
+    {
+      "email": "user5@email.com",
+      "id": 5,
+    },
+    {
+      "email": "user6@email.com",
+      "id": 6,
+    },
+    {
+      "email": "user7@email.com",
+      "id": 7,
+    },
+    {
+      "email": "user8@email.com",
+      "id": 8,
+    },
+    {
+      "email": "user9@email.com",
+      "id": 9,
+    },
+    {
+      "email": "user10@email.com",
+      "id": 10,
+    },
+    {
+      "email": "user11@email.com",
+      "id": 11,
+    },
+    {
+      "email": "user12@email.com",
+      "id": 12,
+    },
+    {
+      "email": "user13@email.com",
+      "id": 13,
+    },
+    {
+      "email": "user14@email.com",
+      "id": 14,
+    },
+    {
+      "email": "user15@email.com",
+      "id": 15,
+    },
+    {
+      "email": "user16@email.com",
+      "id": 16,
+    },
+    {
+      "email": "user17@email.com",
+      "id": 17,
+    },
+    {
+      "email": "user18@email.com",
+      "id": 18,
+    },
+    {
+      "email": "user19@email.com",
+      "id": 19,
+    },
+    {
+      "email": "user20@email.com",
+      "id": 20,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJpZCI6MjB9",
     "hasNextPage": false,
@@ -1505,6 +2119,28 @@ exports[`prisma-relay-cursor-connection number id returns the first 5 users 1`] 
         "email": "user5@email.com",
         "id": 5,
       },
+    },
+  ],
+  "nodes": [
+    {
+      "email": "user1@email.com",
+      "id": 1,
+    },
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
+    },
+    {
+      "email": "user5@email.com",
+      "id": 5,
     },
   ],
   "pageInfo": {
@@ -1556,6 +2192,28 @@ exports[`prisma-relay-cursor-connection number id returns the first 5 users afte
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
+    },
+    {
+      "email": "user5@email.com",
+      "id": 5,
+    },
+    {
+      "email": "user6@email.com",
+      "id": 6,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJpZCI6Nn0=",
     "hasNextPage": true,
@@ -1603,6 +2261,28 @@ exports[`prisma-relay-cursor-connection number id returns the first 5 users afte
         "email": "user10@email.com",
         "id": 10,
       },
+    },
+  ],
+  "nodes": [
+    {
+      "email": "user6@email.com",
+      "id": 6,
+    },
+    {
+      "email": "user7@email.com",
+      "id": 7,
+    },
+    {
+      "email": "user8@email.com",
+      "id": 8,
+    },
+    {
+      "email": "user9@email.com",
+      "id": 9,
+    },
+    {
+      "email": "user10@email.com",
+      "id": 10,
     },
   ],
   "pageInfo": {
@@ -1654,6 +2334,28 @@ exports[`prisma-relay-cursor-connection number id returns the first 5 users afte
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user16@email.com",
+      "id": 16,
+    },
+    {
+      "email": "user17@email.com",
+      "id": 17,
+    },
+    {
+      "email": "user18@email.com",
+      "id": 18,
+    },
+    {
+      "email": "user19@email.com",
+      "id": 19,
+    },
+    {
+      "email": "user20@email.com",
+      "id": 20,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJpZCI6MjB9",
     "hasNextPage": false,
@@ -1696,6 +2398,24 @@ exports[`prisma-relay-cursor-connection number id returns the first 5 users afte
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user17@email.com",
+      "id": 17,
+    },
+    {
+      "email": "user18@email.com",
+      "id": 18,
+    },
+    {
+      "email": "user19@email.com",
+      "id": 19,
+    },
+    {
+      "email": "user20@email.com",
+      "id": 20,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJpZCI6MjB9",
     "hasNextPage": false,
@@ -1709,6 +2429,7 @@ exports[`prisma-relay-cursor-connection number id returns the first 5 users afte
 exports[`prisma-relay-cursor-connection number id returns the first 5 users after the 20th user 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
@@ -1758,6 +2479,28 @@ exports[`prisma-relay-cursor-connection number id returns the last 5 users 1`] =
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user16@email.com",
+      "id": 16,
+    },
+    {
+      "email": "user17@email.com",
+      "id": 17,
+    },
+    {
+      "email": "user18@email.com",
+      "id": 18,
+    },
+    {
+      "email": "user19@email.com",
+      "id": 19,
+    },
+    {
+      "email": "user20@email.com",
+      "id": 20,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJpZCI6MjB9",
     "hasNextPage": false,
@@ -1771,6 +2514,7 @@ exports[`prisma-relay-cursor-connection number id returns the last 5 users 1`] =
 exports[`prisma-relay-cursor-connection number id returns the last 5 users before the 1st user 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
@@ -1811,6 +2555,24 @@ exports[`prisma-relay-cursor-connection number id returns the last 5 users befor
         "email": "user4@email.com",
         "id": 4,
       },
+    },
+  ],
+  "nodes": [
+    {
+      "email": "user1@email.com",
+      "id": 1,
+    },
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
     },
   ],
   "pageInfo": {
@@ -1862,6 +2624,28 @@ exports[`prisma-relay-cursor-connection number id returns the last 5 users befor
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user1@email.com",
+      "id": 1,
+    },
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
+    },
+    {
+      "email": "user5@email.com",
+      "id": 5,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJpZCI6NX0=",
     "hasNextPage": true,
@@ -1911,6 +2695,28 @@ exports[`prisma-relay-cursor-connection number id returns the last 5 users befor
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user11@email.com",
+      "id": 11,
+    },
+    {
+      "email": "user12@email.com",
+      "id": 12,
+    },
+    {
+      "email": "user13@email.com",
+      "id": 13,
+    },
+    {
+      "email": "user14@email.com",
+      "id": 14,
+    },
+    {
+      "email": "user15@email.com",
+      "id": 15,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJpZCI6MTV9",
     "hasNextPage": true,
@@ -1949,6 +2755,7 @@ exports[`prisma-relay-cursor-connection number id returns the paginated users wi
 exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns all todos (no fields) 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
@@ -1962,6 +2769,7 @@ exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns
 exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns all todos (totalCount field) 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
@@ -2014,6 +2822,33 @@ exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns
         "isCompleted": true,
         "text": "voluptatem sint ipsam",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
     },
   ],
   "pageInfo": {
@@ -2070,6 +2905,33 @@ exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_05",
     "hasNextPage": true,
@@ -2124,6 +2986,33 @@ exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -2176,6 +3065,33 @@ exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns
         "isCompleted": true,
         "text": "dolorum deserunt quis",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
     },
   ],
   "pageInfo": {
@@ -2382,6 +3298,108 @@ exports[`prisma-relay-cursor-connection string id returns all todos 1`] = `
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+    {
+      "id": "id_06",
+      "isCompleted": true,
+      "text": "ut sunt consequuntur",
+    },
+    {
+      "id": "id_07",
+      "isCompleted": false,
+      "text": "accusamus aut labore",
+    },
+    {
+      "id": "id_08",
+      "isCompleted": true,
+      "text": "et quo quia",
+    },
+    {
+      "id": "id_09",
+      "isCompleted": true,
+      "text": "accusantium a excepturi",
+    },
+    {
+      "id": "id_10",
+      "isCompleted": true,
+      "text": "deserunt rerum occaecati",
+    },
+    {
+      "id": "id_11",
+      "isCompleted": false,
+      "text": "unde et quasi",
+    },
+    {
+      "id": "id_12",
+      "isCompleted": false,
+      "text": "et autem sapiente",
+    },
+    {
+      "id": "id_13",
+      "isCompleted": false,
+      "text": "deleniti fuga et",
+    },
+    {
+      "id": "id_14",
+      "isCompleted": true,
+      "text": "ea molestiae similique",
+    },
+    {
+      "id": "id_15",
+      "isCompleted": false,
+      "text": "doloribus ea aut",
+    },
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -2429,6 +3447,28 @@ exports[`prisma-relay-cursor-connection string id returns the first 5 completed 
         "id": "id_09",
         "isCompleted": true,
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_04",
+      "isCompleted": true,
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+    },
+    {
+      "id": "id_06",
+      "isCompleted": true,
+    },
+    {
+      "id": "id_08",
+      "isCompleted": true,
+    },
+    {
+      "id": "id_09",
+      "isCompleted": true,
     },
   ],
   "pageInfo": {
@@ -2485,6 +3525,33 @@ exports[`prisma-relay-cursor-connection string id returns the first 5 todos 1`] 
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_05",
     "hasNextPage": true,
@@ -2537,6 +3604,33 @@ exports[`prisma-relay-cursor-connection string id returns the first 5 todos afte
         "isCompleted": true,
         "text": "ut sunt consequuntur",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+    {
+      "id": "id_06",
+      "isCompleted": true,
+      "text": "ut sunt consequuntur",
     },
   ],
   "pageInfo": {
@@ -2593,6 +3687,33 @@ exports[`prisma-relay-cursor-connection string id returns the first 5 todos afte
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_06",
+      "isCompleted": true,
+      "text": "ut sunt consequuntur",
+    },
+    {
+      "id": "id_07",
+      "isCompleted": false,
+      "text": "accusamus aut labore",
+    },
+    {
+      "id": "id_08",
+      "isCompleted": true,
+      "text": "et quo quia",
+    },
+    {
+      "id": "id_09",
+      "isCompleted": true,
+      "text": "accusantium a excepturi",
+    },
+    {
+      "id": "id_10",
+      "isCompleted": true,
+      "text": "deserunt rerum occaecati",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_10",
     "hasNextPage": true,
@@ -2647,6 +3768,33 @@ exports[`prisma-relay-cursor-connection string id returns the first 5 todos afte
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -2693,6 +3841,28 @@ exports[`prisma-relay-cursor-connection string id returns the first 5 todos afte
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -2706,6 +3876,7 @@ exports[`prisma-relay-cursor-connection string id returns the first 5 todos afte
 exports[`prisma-relay-cursor-connection string id returns the first 5 todos after the 20th todo 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
@@ -2760,6 +3931,33 @@ exports[`prisma-relay-cursor-connection string id returns the last 5 todos 1`] =
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_20",
     "hasNextPage": false,
@@ -2773,6 +3971,7 @@ exports[`prisma-relay-cursor-connection string id returns the last 5 todos 1`] =
 exports[`prisma-relay-cursor-connection string id returns the last 5 todos before the 1st todo 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
@@ -2817,6 +4016,28 @@ exports[`prisma-relay-cursor-connection string id returns the last 5 todos befor
         "isCompleted": true,
         "text": "ipsam ipsam corrupti",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
     },
   ],
   "pageInfo": {
@@ -2873,6 +4094,33 @@ exports[`prisma-relay-cursor-connection string id returns the last 5 todos befor
       },
     },
   ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+  ],
   "pageInfo": {
     "endCursor": "id_05",
     "hasNextPage": true,
@@ -2925,6 +4173,33 @@ exports[`prisma-relay-cursor-connection string id returns the last 5 todos befor
         "isCompleted": false,
         "text": "doloribus ea aut",
       },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_11",
+      "isCompleted": false,
+      "text": "unde et quasi",
+    },
+    {
+      "id": "id_12",
+      "isCompleted": false,
+      "text": "et autem sapiente",
+    },
+    {
+      "id": "id_13",
+      "isCompleted": false,
+      "text": "deleniti fuga et",
+    },
+    {
+      "id": "id_14",
+      "isCompleted": true,
+      "text": "ea molestiae similique",
+    },
+    {
+      "id": "id_15",
+      "isCompleted": false,
+      "text": "doloribus ea aut",
     },
   ],
   "pageInfo": {
@@ -3006,6 +4281,28 @@ exports[`prisma-relay-cursor-connection unique field returns the first 5 users a
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
+    },
+    {
+      "email": "user5@email.com",
+      "id": 5,
+    },
+    {
+      "email": "user6@email.com",
+      "id": 6,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXI2QGVtYWlsLmNvbSJ9",
     "hasNextPage": true,
@@ -3053,6 +4350,28 @@ exports[`prisma-relay-cursor-connection unique field returns the first 5 users a
         "email": "user10@email.com",
         "id": 10,
       },
+    },
+  ],
+  "nodes": [
+    {
+      "email": "user6@email.com",
+      "id": 6,
+    },
+    {
+      "email": "user7@email.com",
+      "id": 7,
+    },
+    {
+      "email": "user8@email.com",
+      "id": 8,
+    },
+    {
+      "email": "user9@email.com",
+      "id": 9,
+    },
+    {
+      "email": "user10@email.com",
+      "id": 10,
     },
   ],
   "pageInfo": {
@@ -3104,6 +4423,28 @@ exports[`prisma-relay-cursor-connection unique field returns the first 5 users a
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user16@email.com",
+      "id": 16,
+    },
+    {
+      "email": "user17@email.com",
+      "id": 17,
+    },
+    {
+      "email": "user18@email.com",
+      "id": 18,
+    },
+    {
+      "email": "user19@email.com",
+      "id": 19,
+    },
+    {
+      "email": "user20@email.com",
+      "id": 20,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
     "hasNextPage": false,
@@ -3146,6 +4487,24 @@ exports[`prisma-relay-cursor-connection unique field returns the first 5 users a
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user17@email.com",
+      "id": 17,
+    },
+    {
+      "email": "user18@email.com",
+      "id": 18,
+    },
+    {
+      "email": "user19@email.com",
+      "id": 19,
+    },
+    {
+      "email": "user20@email.com",
+      "id": 20,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXIyMEBlbWFpbC5jb20ifQ==",
     "hasNextPage": false,
@@ -3159,6 +4518,7 @@ exports[`prisma-relay-cursor-connection unique field returns the first 5 users a
 exports[`prisma-relay-cursor-connection unique field returns the first 5 users after the 20th user 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": false,
@@ -3172,6 +4532,7 @@ exports[`prisma-relay-cursor-connection unique field returns the first 5 users a
 exports[`prisma-relay-cursor-connection unique field returns the last 5 users before the 1st user 1`] = `
 {
   "edges": [],
+  "nodes": [],
   "pageInfo": {
     "endCursor": undefined,
     "hasNextPage": true,
@@ -3212,6 +4573,24 @@ exports[`prisma-relay-cursor-connection unique field returns the last 5 users be
         "email": "user4@email.com",
         "id": 4,
       },
+    },
+  ],
+  "nodes": [
+    {
+      "email": "user1@email.com",
+      "id": 1,
+    },
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
     },
   ],
   "pageInfo": {
@@ -3263,6 +4642,28 @@ exports[`prisma-relay-cursor-connection unique field returns the last 5 users be
       },
     },
   ],
+  "nodes": [
+    {
+      "email": "user1@email.com",
+      "id": 1,
+    },
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
+    },
+    {
+      "email": "user5@email.com",
+      "id": 5,
+    },
+  ],
   "pageInfo": {
     "endCursor": "eyJlbWFpbCI6InVzZXI1QGVtYWlsLmNvbSJ9",
     "hasNextPage": true,
@@ -3310,6 +4711,28 @@ exports[`prisma-relay-cursor-connection unique field returns the last 5 users be
         "email": "user15@email.com",
         "id": 15,
       },
+    },
+  ],
+  "nodes": [
+    {
+      "email": "user11@email.com",
+      "id": 11,
+    },
+    {
+      "email": "user12@email.com",
+      "id": 12,
+    },
+    {
+      "email": "user13@email.com",
+      "id": 13,
+    },
+    {
+      "email": "user14@email.com",
+      "id": 14,
+    },
+    {
+      "email": "user15@email.com",
+      "id": 15,
     },
   ],
   "pageInfo": {

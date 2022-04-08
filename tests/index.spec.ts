@@ -96,6 +96,15 @@ describe('prisma-relay-cursor-connection', () => {
 
       // @ts-expect-error Not selected field
       result.edges[0].node.text
+
+      // Test that the return types work via TS
+      result.nodes[0].isCompleted
+
+      // @ts-expect-error Typo in selected field
+      result.nodes[0].isCompletedd
+
+      // @ts-expect-error Not selected field
+      result.nodes[0].text
     })
   })
 
@@ -434,6 +443,9 @@ describe('prisma-relay-cursor-connection', () => {
 
       // Test that the extraEdgeField return type work via TS
       result.edges[0]?.extraEdgeField
+
+      // Test that the node.extraNodeField return types work via TS
+      result.nodes[0]?.extraNodeField
     })
   })
 
