@@ -471,6 +471,8 @@ describe('prisma-relay-cursor-connection', () => {
 
     const VALID_CASES: Array<[string, ConnectionArguments | undefined, Record<string, unknown>]> = [
       ['returns all todos (no fields)', undefined, {}],
+      ['returns all todos (edges field)', undefined, { edges: { node: { id: 1 } } }],
+      ['returns all todos (nodes field)', undefined, { nodes: { id: 1 } }],
       ['returns all todos (totalCount field)', undefined, { totalCount: 1 }],
       ['returns the first 5 todos (no fields)', { first: 5 }, {}],
       ['returns the first 5 todos (totalCount field)', { first: 5 }, { totalCount: 1 }],

@@ -2815,6 +2815,282 @@ exports[`prisma-relay-cursor-connection number id returns the paginated users wi
 ]
 `;
 
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns all todos (edges field) 1`] = `
+{
+  "edges": [
+    {
+      "cursor": "id_01",
+      "node": {
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    {
+      "cursor": "id_02",
+      "node": {
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    {
+      "cursor": "id_03",
+      "node": {
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    {
+      "cursor": "id_04",
+      "node": {
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    {
+      "cursor": "id_05",
+      "node": {
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+    {
+      "cursor": "id_06",
+      "node": {
+        "id": "id_06",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+    },
+    {
+      "cursor": "id_07",
+      "node": {
+        "id": "id_07",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+    },
+    {
+      "cursor": "id_08",
+      "node": {
+        "id": "id_08",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+    },
+    {
+      "cursor": "id_09",
+      "node": {
+        "id": "id_09",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+    },
+    {
+      "cursor": "id_10",
+      "node": {
+        "id": "id_10",
+        "isCompleted": true,
+        "text": "deserunt rerum occaecati",
+      },
+    },
+    {
+      "cursor": "id_11",
+      "node": {
+        "id": "id_11",
+        "isCompleted": false,
+        "text": "unde et quasi",
+      },
+    },
+    {
+      "cursor": "id_12",
+      "node": {
+        "id": "id_12",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+    },
+    {
+      "cursor": "id_13",
+      "node": {
+        "id": "id_13",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+    },
+    {
+      "cursor": "id_14",
+      "node": {
+        "id": "id_14",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+    },
+    {
+      "cursor": "id_15",
+      "node": {
+        "id": "id_15",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+    },
+    {
+      "cursor": "id_16",
+      "node": {
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+    {
+      "cursor": "id_17",
+      "node": {
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    {
+      "cursor": "id_18",
+      "node": {
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    {
+      "cursor": "id_19",
+      "node": {
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    {
+      "cursor": "id_20",
+      "node": {
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+    {
+      "id": "id_06",
+      "isCompleted": true,
+      "text": "ut sunt consequuntur",
+    },
+    {
+      "id": "id_07",
+      "isCompleted": false,
+      "text": "accusamus aut labore",
+    },
+    {
+      "id": "id_08",
+      "isCompleted": true,
+      "text": "et quo quia",
+    },
+    {
+      "id": "id_09",
+      "isCompleted": true,
+      "text": "accusantium a excepturi",
+    },
+    {
+      "id": "id_10",
+      "isCompleted": true,
+      "text": "deserunt rerum occaecati",
+    },
+    {
+      "id": "id_11",
+      "isCompleted": false,
+      "text": "unde et quasi",
+    },
+    {
+      "id": "id_12",
+      "isCompleted": false,
+      "text": "et autem sapiente",
+    },
+    {
+      "id": "id_13",
+      "isCompleted": false,
+      "text": "deleniti fuga et",
+    },
+    {
+      "id": "id_14",
+      "isCompleted": true,
+      "text": "ea molestiae similique",
+    },
+    {
+      "id": "id_15",
+      "isCompleted": false,
+      "text": "doloribus ea aut",
+    },
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
+  "pageInfo": {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": -1,
+}
+`;
+
 exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns all todos (no fields) 1`] = `
 {
   "edges": [],
@@ -2824,6 +3100,282 @@ exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns
     "hasNextPage": false,
     "hasPreviousPage": false,
     "startCursor": undefined,
+  },
+  "totalCount": -1,
+}
+`;
+
+exports[`prisma-relay-cursor-connection requested fields via resolveInfo returns all todos (nodes field) 1`] = `
+{
+  "edges": [
+    {
+      "cursor": "id_01",
+      "node": {
+        "id": "id_01",
+        "isCompleted": false,
+        "text": "veritatis molestias qui",
+      },
+    },
+    {
+      "cursor": "id_02",
+      "node": {
+        "id": "id_02",
+        "isCompleted": false,
+        "text": "occaecati a dolor",
+      },
+    },
+    {
+      "cursor": "id_03",
+      "node": {
+        "id": "id_03",
+        "isCompleted": false,
+        "text": "ut enim quia",
+      },
+    },
+    {
+      "cursor": "id_04",
+      "node": {
+        "id": "id_04",
+        "isCompleted": true,
+        "text": "ipsam ipsam corrupti",
+      },
+    },
+    {
+      "cursor": "id_05",
+      "node": {
+        "id": "id_05",
+        "isCompleted": true,
+        "text": "voluptatem sint ipsam",
+      },
+    },
+    {
+      "cursor": "id_06",
+      "node": {
+        "id": "id_06",
+        "isCompleted": true,
+        "text": "ut sunt consequuntur",
+      },
+    },
+    {
+      "cursor": "id_07",
+      "node": {
+        "id": "id_07",
+        "isCompleted": false,
+        "text": "accusamus aut labore",
+      },
+    },
+    {
+      "cursor": "id_08",
+      "node": {
+        "id": "id_08",
+        "isCompleted": true,
+        "text": "et quo quia",
+      },
+    },
+    {
+      "cursor": "id_09",
+      "node": {
+        "id": "id_09",
+        "isCompleted": true,
+        "text": "accusantium a excepturi",
+      },
+    },
+    {
+      "cursor": "id_10",
+      "node": {
+        "id": "id_10",
+        "isCompleted": true,
+        "text": "deserunt rerum occaecati",
+      },
+    },
+    {
+      "cursor": "id_11",
+      "node": {
+        "id": "id_11",
+        "isCompleted": false,
+        "text": "unde et quasi",
+      },
+    },
+    {
+      "cursor": "id_12",
+      "node": {
+        "id": "id_12",
+        "isCompleted": false,
+        "text": "et autem sapiente",
+      },
+    },
+    {
+      "cursor": "id_13",
+      "node": {
+        "id": "id_13",
+        "isCompleted": false,
+        "text": "deleniti fuga et",
+      },
+    },
+    {
+      "cursor": "id_14",
+      "node": {
+        "id": "id_14",
+        "isCompleted": true,
+        "text": "ea molestiae similique",
+      },
+    },
+    {
+      "cursor": "id_15",
+      "node": {
+        "id": "id_15",
+        "isCompleted": false,
+        "text": "doloribus ea aut",
+      },
+    },
+    {
+      "cursor": "id_16",
+      "node": {
+        "id": "id_16",
+        "isCompleted": true,
+        "text": "ut molestias veniam",
+      },
+    },
+    {
+      "cursor": "id_17",
+      "node": {
+        "id": "id_17",
+        "isCompleted": true,
+        "text": "a placeat aperiam",
+      },
+    },
+    {
+      "cursor": "id_18",
+      "node": {
+        "id": "id_18",
+        "isCompleted": true,
+        "text": "quos rerum aut",
+      },
+    },
+    {
+      "cursor": "id_19",
+      "node": {
+        "id": "id_19",
+        "isCompleted": false,
+        "text": "ullam a voluptatem",
+      },
+    },
+    {
+      "cursor": "id_20",
+      "node": {
+        "id": "id_20",
+        "isCompleted": true,
+        "text": "dolorum deserunt quis",
+      },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_04",
+      "isCompleted": true,
+      "text": "ipsam ipsam corrupti",
+    },
+    {
+      "id": "id_05",
+      "isCompleted": true,
+      "text": "voluptatem sint ipsam",
+    },
+    {
+      "id": "id_06",
+      "isCompleted": true,
+      "text": "ut sunt consequuntur",
+    },
+    {
+      "id": "id_07",
+      "isCompleted": false,
+      "text": "accusamus aut labore",
+    },
+    {
+      "id": "id_08",
+      "isCompleted": true,
+      "text": "et quo quia",
+    },
+    {
+      "id": "id_09",
+      "isCompleted": true,
+      "text": "accusantium a excepturi",
+    },
+    {
+      "id": "id_10",
+      "isCompleted": true,
+      "text": "deserunt rerum occaecati",
+    },
+    {
+      "id": "id_11",
+      "isCompleted": false,
+      "text": "unde et quasi",
+    },
+    {
+      "id": "id_12",
+      "isCompleted": false,
+      "text": "et autem sapiente",
+    },
+    {
+      "id": "id_13",
+      "isCompleted": false,
+      "text": "deleniti fuga et",
+    },
+    {
+      "id": "id_14",
+      "isCompleted": true,
+      "text": "ea molestiae similique",
+    },
+    {
+      "id": "id_15",
+      "isCompleted": false,
+      "text": "doloribus ea aut",
+    },
+    {
+      "id": "id_16",
+      "isCompleted": true,
+      "text": "ut molestias veniam",
+    },
+    {
+      "id": "id_17",
+      "isCompleted": true,
+      "text": "a placeat aperiam",
+    },
+    {
+      "id": "id_18",
+      "isCompleted": true,
+      "text": "quos rerum aut",
+    },
+    {
+      "id": "id_19",
+      "isCompleted": false,
+      "text": "ullam a voluptatem",
+    },
+    {
+      "id": "id_20",
+      "isCompleted": true,
+      "text": "dolorum deserunt quis",
+    },
+  ],
+  "pageInfo": {
+    "endCursor": "id_20",
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
   },
   "totalCount": -1,
 }
