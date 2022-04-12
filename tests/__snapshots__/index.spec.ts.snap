@@ -206,101 +206,121 @@ exports[`prisma-relay-cursor-connection custom edge fields returns all todos 1`]
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_01",
       "isCompleted": false,
       "text": "veritatis molestias qui",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_02",
       "isCompleted": false,
       "text": "occaecati a dolor",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_03",
       "isCompleted": false,
       "text": "ut enim quia",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_04",
       "isCompleted": true,
       "text": "ipsam ipsam corrupti",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_05",
       "isCompleted": true,
       "text": "voluptatem sint ipsam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_06",
       "isCompleted": true,
       "text": "ut sunt consequuntur",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_07",
       "isCompleted": false,
       "text": "accusamus aut labore",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_08",
       "isCompleted": true,
       "text": "et quo quia",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_09",
       "isCompleted": true,
       "text": "accusantium a excepturi",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_10",
       "isCompleted": true,
       "text": "deserunt rerum occaecati",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_11",
       "isCompleted": false,
       "text": "unde et quasi",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_12",
       "isCompleted": false,
       "text": "et autem sapiente",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_13",
       "isCompleted": false,
       "text": "deleniti fuga et",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_14",
       "isCompleted": true,
       "text": "ea molestiae similique",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_15",
       "isCompleted": false,
       "text": "doloribus ea aut",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_16",
       "isCompleted": true,
       "text": "ut molestias veniam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_17",
       "isCompleted": true,
       "text": "a placeat aperiam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_18",
       "isCompleted": true,
       "text": "quos rerum aut",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_19",
       "isCompleted": false,
       "text": "ullam a voluptatem",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_20",
       "isCompleted": true,
       "text": "dolorum deserunt quis",
@@ -372,26 +392,31 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_01",
       "isCompleted": false,
       "text": "veritatis molestias qui",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_02",
       "isCompleted": false,
       "text": "occaecati a dolor",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_03",
       "isCompleted": false,
       "text": "ut enim quia",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_04",
       "isCompleted": true,
       "text": "ipsam ipsam corrupti",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_05",
       "isCompleted": true,
       "text": "voluptatem sint ipsam",
@@ -463,26 +488,31 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_02",
       "isCompleted": false,
       "text": "occaecati a dolor",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_03",
       "isCompleted": false,
       "text": "ut enim quia",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_04",
       "isCompleted": true,
       "text": "ipsam ipsam corrupti",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_05",
       "isCompleted": true,
       "text": "voluptatem sint ipsam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_06",
       "isCompleted": true,
       "text": "ut sunt consequuntur",
@@ -554,26 +584,31 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_06",
       "isCompleted": true,
       "text": "ut sunt consequuntur",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_07",
       "isCompleted": false,
       "text": "accusamus aut labore",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_08",
       "isCompleted": true,
       "text": "et quo quia",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_09",
       "isCompleted": true,
       "text": "accusantium a excepturi",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_10",
       "isCompleted": true,
       "text": "deserunt rerum occaecati",
@@ -645,26 +680,31 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_16",
       "isCompleted": true,
       "text": "ut molestias veniam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_17",
       "isCompleted": true,
       "text": "a placeat aperiam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_18",
       "isCompleted": true,
       "text": "quos rerum aut",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_19",
       "isCompleted": false,
       "text": "ullam a voluptatem",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_20",
       "isCompleted": true,
       "text": "dolorum deserunt quis",
@@ -726,21 +766,25 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the first 5 t
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_17",
       "isCompleted": true,
       "text": "a placeat aperiam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_18",
       "isCompleted": true,
       "text": "quos rerum aut",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_19",
       "isCompleted": false,
       "text": "ullam a voluptatem",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_20",
       "isCompleted": true,
       "text": "dolorum deserunt quis",
@@ -826,26 +870,31 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_16",
       "isCompleted": true,
       "text": "ut molestias veniam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_17",
       "isCompleted": true,
       "text": "a placeat aperiam",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_18",
       "isCompleted": true,
       "text": "quos rerum aut",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_19",
       "isCompleted": false,
       "text": "ullam a voluptatem",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_20",
       "isCompleted": true,
       "text": "dolorum deserunt quis",
@@ -921,21 +970,25 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_01",
       "isCompleted": false,
       "text": "veritatis molestias qui",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_02",
       "isCompleted": false,
       "text": "occaecati a dolor",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_03",
       "isCompleted": false,
       "text": "ut enim quia",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_04",
       "isCompleted": true,
       "text": "ipsam ipsam corrupti",
@@ -1007,26 +1060,31 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_01",
       "isCompleted": false,
       "text": "veritatis molestias qui",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_02",
       "isCompleted": false,
       "text": "occaecati a dolor",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_03",
       "isCompleted": false,
       "text": "ut enim quia",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_04",
       "isCompleted": true,
       "text": "ipsam ipsam corrupti",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_05",
       "isCompleted": true,
       "text": "voluptatem sint ipsam",
@@ -1098,26 +1156,31 @@ exports[`prisma-relay-cursor-connection custom edge fields returns the last 5 to
   ],
   "nodes": [
     {
+      "extraNodeField": "Foo",
       "id": "id_11",
       "isCompleted": false,
       "text": "unde et quasi",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_12",
       "isCompleted": false,
       "text": "et autem sapiente",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_13",
       "isCompleted": false,
       "text": "deleniti fuga et",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_14",
       "isCompleted": true,
       "text": "ea molestiae similique",
     },
     {
+      "extraNodeField": "Foo",
       "id": "id_15",
       "isCompleted": false,
       "text": "doloribus ea aut",

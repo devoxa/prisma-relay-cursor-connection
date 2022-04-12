@@ -90,15 +90,16 @@ export async function findManyCursorConnection<
   const endCursor =
     records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
 
+  const edges = records.map((record) => {
+    return {
+      ...options.recordToEdge(record),
+      cursor: encodeCursor(record, options),
+    } as CustomEdge
+  })
+
   return {
-    edges: records.map(
-      (record) =>
-        ({
-          ...options.recordToEdge(record),
-          cursor: encodeCursor(record, options),
-        } as CustomEdge)
-    ),
-    nodes: records as unknown[] as Node[],
+    edges,
+    nodes: edges.map((edge) => edge.node),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
