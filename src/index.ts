@@ -77,7 +77,7 @@ export async function findManyCursorConnection<
     if (hasPreviousPage) records.shift()
   } else {
     // Execute the underlying query operations
-    records = hasRequestedField('edges') ? await findMany({}) : []
+    records = hasRequestedField('edges') || hasRequestedField('nodes') ? await findMany({}) : []
     totalCount = hasRequestedField('totalCount') ? await aggregate() : -1
 
     // Since we are getting all records, there are no pages
@@ -90,15 +90,16 @@ export async function findManyCursorConnection<
   const endCursor =
     records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
 
+  const edges = records.map((record) => {
+    return {
+      ...options.recordToEdge(record),
+      cursor: encodeCursor(record, options),
+    } as CustomEdge
+  })
+
   return {
-    edges: records.map(
-      (record) =>
-        ({
-          ...options.recordToEdge(record),
-          cursor: encodeCursor(record, options),
-        } as CustomEdge)
-    ),
-    nodes: records as unknown[] as Node[],
+    edges,
+    nodes: edges.map((edge) => edge.node),
     pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor },
     totalCount: totalCount,
   }
