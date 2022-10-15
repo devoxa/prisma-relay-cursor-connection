@@ -15,7 +15,7 @@ function decodeCursor(cursor: string) {
 
 jest.mock('graphql-fields')
 
-const mockGraphqlFields = mocked(graphqlFields, true)
+const mockGraphqlFields = mocked(graphqlFields)
 
 describe('prisma-relay-cursor-connection', () => {
   jest.setTimeout(10000)
