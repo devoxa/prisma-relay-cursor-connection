@@ -27,7 +27,7 @@
     "@prisma/client": "^2.0.0 || ^3.0.0 || ^4.0.0"
   },
   "devDependencies": {
-    "@devoxa/eslint-config": "3.0.3",
+    "@devoxa/eslint-config": "3.0.4",
     "@devoxa/prettier-config": "1.0.2",
     "@prisma/client": "4.8.1",
     "@types/graphql-fields": "1.3.4",
