@@ -19,7 +19,7 @@
 
   <a href="https://github.com/devoxa/prisma-relay-cursor-connection/actions?query=branch%3Amaster+workflow%3A%22Continuous+Integration%22">
     <img
-      src="https://img.shields.io/github/workflow/status/devoxa/prisma-relay-cursor-connection/Continuous%20Integration?style=flat-square"
+      src="https://img.shields.io/github/actions/workflow/status/devoxa/prisma-relay-cursor-connection/push.yml?branch=master&style=flat-square"
       alt="Build Status"
     />
   </a>
