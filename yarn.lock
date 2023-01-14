@@ -564,10 +564,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@devoxa/eslint-config@3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@devoxa/eslint-config/-/eslint-config-3.0.4.tgz#56673d0de64e7e52423c6c998ce0bff128133283"
-  integrity sha512-yCRKdlggkAUdk6whGKbQY0MBVbA5DB2AseBCZYsaQ36A5oTMZoMF3uLrqgTbpCuSO+/8+eMl3tuFXkNID5LIiw==
+"@devoxa/eslint-config@3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@devoxa/eslint-config/-/eslint-config-3.0.5.tgz#9896b998f0ddb7b38104af806cfb4af9acb565b8"
+  integrity sha512-5pXCSQ45zK77gt/mrKI9Ru4wC7Ss/z0JbCNfR2L1Phtz6MhCZl8JNRUetRfs3BU4IlouNPaVEdQJQHIfZVTCoQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "5.48.1"
     "@typescript-eslint/parser" "5.48.1"
