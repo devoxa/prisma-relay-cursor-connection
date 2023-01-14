@@ -574,10 +574,12 @@
     eslint-config-prettier "8.6.0"
     eslint-plugin-react "7.32.0"
 
-"@devoxa/prettier-config@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@devoxa/prettier-config/-/prettier-config-1.0.2.tgz#0ccde044ec67d5702655f3eac5de2aae7d9005d6"
-  integrity sha512-dAGMCT9uZgcsxfAVVVPf7dQ8ftJUSAfih/Vupy8srSjm6vop4ItImUUch2zFekjKQ97CkxxcYizo21gVb1+U3w==
+"@devoxa/prettier-config@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@devoxa/prettier-config/-/prettier-config-2.0.1.tgz#902d9d73570033bf6c714946d49aa9a25af0ab33"
+  integrity sha512-OXjVzQcCiBMP7qZLre7OVZPg79CTjLeu3X1KUyHn4kHZ/YHGeYbS+GO6DSk8CkQE0Ncsj6j2Xg1unZd/LnB7VQ==
+  dependencies:
+    prettier-plugin-organize-imports "3.2.2"
 
 "@eslint/eslintrc@^1.4.1":
   version "1.4.1"
@@ -3430,6 +3432,11 @@ prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+
+prettier-plugin-organize-imports@3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-organize-imports/-/prettier-plugin-organize-imports-3.2.2.tgz#91993365e017daa5d0d28d8183179834224d8dd1"
+  integrity sha512-e97lE6odGSiHonHJMTYC0q0iLXQyw0u5z/PJpvP/3vRy6/Zi9kLBwFAbEGjDzIowpjQv8b+J04PDamoUSQbzGA==
 
 prettier@2.8.3:
   version "2.8.3"
