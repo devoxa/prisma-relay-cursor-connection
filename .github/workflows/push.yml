@@ -9,7 +9,7 @@ on:
 jobs:
   test-and-build:
     name: 'Test & build'
-    runs-on: ubuntu-latest
+    runs-on: buildjet-4vcpu-ubuntu-2204
     timeout-minutes: 30
 
     steps:
@@ -22,7 +22,7 @@ jobs:
           node-version: '18'
 
       - name: 'Cache dependencies'
-        uses: actions/cache@v3
+        uses: buildjet/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
