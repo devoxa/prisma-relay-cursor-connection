@@ -171,7 +171,7 @@ describe('prisma-relay-cursor-connection', () => {
     ]
 
     test.each(NUMBER_ID_VALID_CASES)('%s', async (name, connectionArgs) => {
-      const result = await findManyCursorConnection<User, Pick<Prisma.UserWhereUniqueInput, 'id'>>(
+      const result = await findManyCursorConnection<User, { id: number }>(
         (args) => client.user.findMany(args),
         () => client.user.count(),
         connectionArgs,
@@ -250,10 +250,7 @@ describe('prisma-relay-cursor-connection', () => {
     ]
 
     test.each(UNIQUE_FIELD_VALID_CASES)('%s', async (name, connectionArgs) => {
-      const result = await findManyCursorConnection<
-        User,
-        Pick<Prisma.UserWhereUniqueInput, 'email'>
-      >(
+      const result = await findManyCursorConnection<User, { email: string }>(
         (args) => client.user.findMany(args),
         () => client.user.count(),
         connectionArgs,
