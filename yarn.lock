@@ -525,10 +525,10 @@
     eslint-config-prettier "8.8.0"
     eslint-plugin-react "7.32.2"
 
-"@devoxa/prettier-config@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@devoxa/prettier-config/-/prettier-config-2.0.1.tgz#902d9d73570033bf6c714946d49aa9a25af0ab33"
-  integrity sha512-OXjVzQcCiBMP7qZLre7OVZPg79CTjLeu3X1KUyHn4kHZ/YHGeYbS+GO6DSk8CkQE0Ncsj6j2Xg1unZd/LnB7VQ==
+"@devoxa/prettier-config@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@devoxa/prettier-config/-/prettier-config-2.0.2.tgz#317384be852582404313ad3eafaab1facf1e128a"
+  integrity sha512-1mXmpgPlcIcKER1LnKV/wDav7awcuZM4REDOUpIJs91k1xbGgRKdh+YAGXjHo3HMJW7rwyeyAAu1kovzKG2hBw==
   dependencies:
     prettier-plugin-organize-imports "3.2.2"
 
