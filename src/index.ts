@@ -13,7 +13,7 @@ export async function findManyCursorConnection<
   Record = { id: string },
   Cursor = { id: string },
   Node = Record,
-  CustomEdge extends Edge<Node> = Edge<Node>
+  CustomEdge extends Edge<Node> = Edge<Node>,
 >(
   findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Record[]>,
   aggregate: () => Promise<number>,
@@ -155,10 +155,10 @@ function mergeDefaultOptions<Record, Cursor, Node, CustomEdge extends Edge<Node>
 ): MergedOptions<Record, Cursor, Node, CustomEdge> {
   return {
     getCursor: (record: Record) =>
-      ({ id: (record as unknown as { id: string }).id } as unknown as Cursor),
+      ({ id: (record as unknown as { id: string }).id }) as unknown as Cursor,
     encodeCursor: (cursor: Cursor) => (cursor as unknown as { id: string }).id,
-    decodeCursor: (cursorString: string) => ({ id: cursorString } as unknown as Cursor),
-    recordToEdge: (record: Record) => ({ node: record } as unknown as Omit<CustomEdge, 'cursor'>),
+    decodeCursor: (cursorString: string) => ({ id: cursorString }) as unknown as Cursor,
+    recordToEdge: (record: Record) => ({ node: record }) as unknown as Omit<CustomEdge, 'cursor'>,
     resolveInfo: null,
     ...pOptions,
   }
