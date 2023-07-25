@@ -49,7 +49,8 @@
 yarn add @devoxa/prisma-relay-cursor-connection
 ```
 
-This module has a peer dependency on `@prisma/client`. You can check the dependency version on [package.json](https://github.com/devoxa/prisma-relay-cursor-connection/blob/master/package.json).
+This module has a peer dependency on `@prisma/client`. You can check the supported versions in the
+[package.json](./package.json) (`peerDependencies`).
 
 ## Usage
 
