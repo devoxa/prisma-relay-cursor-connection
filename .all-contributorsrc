@@ -101,6 +101,15 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "JeffGuKang",
+      "name": "Jeff Gu Kang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/216363?v=4",
+      "profile": "http://stackoverflow.com/users/515932/jeff-gu-kang?tab=profile",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "files": [
