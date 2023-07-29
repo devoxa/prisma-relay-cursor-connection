@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // Output Options
-    "target": "es2015",
+    "target": "es2022",
     "module": "commonjs",
     "jsx": "react",
     "noEmitOnError": true,
@@ -16,7 +16,7 @@
     "incremental": true,
 
     // Type-Checking Options
-    "lib": ["esnext"],
+    "lib": ["es2022"],
     "strict": true,
     "skipLibCheck": true,
     "strictPropertyInitialization": false,
