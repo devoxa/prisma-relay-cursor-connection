@@ -529,3 +529,52 @@ describe('prisma-relay-cursor-connection', () => {
     })
   })
 })
+
+// These are not real tests which run, but rather a way to ensure that the types are correct
+// when tsc runs
+const typecheckForInferredTypes = async () => {
+  let client: PrismaClient
+    // Default will get the inferred types from prisma
+  ;(await findManyCursorConnection(
+    (args) => client.todo.findMany(args),
+    () => client.todo.count(),
+    {}
+  )) satisfies {
+    edges: { cursor: string; node: { id: string; text: string; isCompleted: boolean } }[]
+  }
+
+  // Handles edge type additions
+  ;(await findManyCursorConnection(
+    (args) => client.todo.findMany(args),
+    () => client.todo.count(),
+    {},
+    {
+      recordToEdge: (record) => ({ node: record, extraEdgeField: 'Bar' }),
+    }
+  )) satisfies {
+    edges: {
+      cursor: string
+      node: { id: string; text: string; isCompleted: boolean }
+      extraEdgeField: string
+    }[]
+  }
+
+  // Handles edge type additions
+  ;(await findManyCursorConnection(
+    (args) => client.todo.findMany(args),
+    () => client.todo.count(),
+    {},
+    {
+      recordToEdge: (record) => ({
+        node: { ...record, extraNodeField: 'a' },
+      }),
+    }
+  )) satisfies {
+    edges: {
+      cursor: string
+      node: { id: string; text: string; isCompleted: boolean; extraNodeField: string }
+    }[]
+  }
+}
+
+typecheckForInferredTypes
