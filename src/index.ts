@@ -90,11 +90,18 @@ export async function findManyCursorConnection<
   const endCursor =
     records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
 
+  // Allow the recordToEdge function to return a custom edge type which will be inferred
+  type EdgeExtended = typeof options.recordToEdge extends (record: Record) => infer X
+    ? X extends CustomEdge
+      ? X & { cursor: string }
+      : CustomEdge
+    : CustomEdge
+
   const edges = records.map((record) => {
     return {
       ...options.recordToEdge(record),
       cursor: encodeCursor(record, options),
-    } as CustomEdge
+    } as EdgeExtended
   })
 
   return {
