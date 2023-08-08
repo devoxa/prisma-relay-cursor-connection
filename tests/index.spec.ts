@@ -39,12 +39,12 @@ describe('prisma-relay-cursor-connection', () => {
       }
     })
 
-    it('returns all todos with the base client (sanity check)', async () => {
+    test('returns all todos with the base client (sanity check)', async () => {
       const result = await client.todo.findMany({})
       expect(result).toEqual(TODO_FIXTURES)
     })
 
-    it('returns the paginated todos with the base client (sanity check)', async () => {
+    test('returns the paginated todos with the base client (sanity check)', async () => {
       const result = await client.todo.findMany({ cursor: { id: 'id_05' }, take: 5, skip: 1 })
       expect(result).toMatchSnapshot()
     })
@@ -74,7 +74,7 @@ describe('prisma-relay-cursor-connection', () => {
       expect(result).toMatchSnapshot()
     })
 
-    it('returns the first 5 completed todos', async () => {
+    test('returns the first 5 completed todos', async () => {
       const baseArgs = {
         select: { id: true, isCompleted: true },
         where: { isCompleted: true },
@@ -118,12 +118,12 @@ describe('prisma-relay-cursor-connection', () => {
       }
     })
 
-    it('returns all users with the base client (sanity check)', async () => {
+    test('returns all users with the base client (sanity check)', async () => {
       const result = await client.user.findMany({})
       expect(result).toEqual(USER_FIXTURES)
     })
 
-    it('returns the paginated users with the base client (sanity check)', async () => {
+    test('returns the paginated users with the base client (sanity check)', async () => {
       const result = await client.user.findMany({ cursor: { id: 5 }, take: 5, skip: 1 })
       expect(result).toMatchSnapshot()
     })
@@ -196,12 +196,12 @@ describe('prisma-relay-cursor-connection', () => {
       }
     })
 
-    it('returns all users with the base client (sanity check)', async () => {
+    test('returns all users with the base client (sanity check)', async () => {
       const result = await client.user.findMany({})
       expect(result).toEqual(USER_FIXTURES)
     })
 
-    it('returns the paginated users with the base client (sanity check)', async () => {
+    test('returns the paginated users with the base client (sanity check)', async () => {
       const result = await client.user.findMany({
         cursor: { email: 'user5@email.com' },
         take: 5,
@@ -275,12 +275,12 @@ describe('prisma-relay-cursor-connection', () => {
       }
     })
 
-    it('returns all profiles with the base client (sanity check)', async () => {
+    test('returns all profiles with the base client (sanity check)', async () => {
       const result = await client.profile.findMany({})
       expect(result).toEqual(PROFILE_FIXTURES)
     })
 
-    it('returns the paginated profiles with the base client (sanity check)', async () => {
+    test('returns the paginated profiles with the base client (sanity check)', async () => {
       const result = await client.profile.findMany({
         cursor: { firstname_lastname: { firstname: 'foo5', lastname: 'bar1' } },
         take: 5,
@@ -390,12 +390,12 @@ describe('prisma-relay-cursor-connection', () => {
       }
     })
 
-    it('returns all todos with the base client (sanity check)', async () => {
+    test('returns all todos with the base client (sanity check)', async () => {
       const result = await client.todo.findMany({})
       expect(result).toEqual(TODO_FIXTURES)
     })
 
-    it('returns the paginated todos with the base client (sanity check)', async () => {
+    test('returns the paginated todos with the base client (sanity check)', async () => {
       const result = await client.todo.findMany({ cursor: { id: 'id_05' }, take: 5, skip: 1 })
       expect(result).toMatchSnapshot()
     })
@@ -456,12 +456,12 @@ describe('prisma-relay-cursor-connection', () => {
       }
     })
 
-    it('returns all todos with the base client (sanity check)', async () => {
+    test('returns all todos with the base client (sanity check)', async () => {
       const result = await client.todo.findMany({})
       expect(result).toEqual(TODO_FIXTURES)
     })
 
-    it('returns the paginated todos with the base client (sanity check)', async () => {
+    test('returns the paginated todos with the base client (sanity check)', async () => {
       const result = await client.todo.findMany({ cursor: { id: 'id_05' }, take: 5, skip: 1 })
       expect(result).toMatchSnapshot()
     })
