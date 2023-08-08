@@ -2,6 +2,7 @@ version = 1
 
 [merge]
 delete_branch_on_merge = true
+priority_merge_label = "priority-automerge"
 
 [merge.automerge_dependencies]
 usernames = ["renovate"]
