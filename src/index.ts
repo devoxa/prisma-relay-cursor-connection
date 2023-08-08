@@ -21,7 +21,7 @@ export async function findManyCursorConnection<
   pOptions?: Options<Record, Cursor, Node, CustomEdge>
 ): Promise<Connection<Node, CustomEdge>> {
   // Make sure the connection arguments are valid and throw an error otherwise
-  // istanbul ignore next
+  /* c8 ignore next 3 */
   if (!validateArgs(args)) {
     throw new Error('This code path can never happen, only here for type safety')
   }

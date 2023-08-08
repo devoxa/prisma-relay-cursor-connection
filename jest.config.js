@@ -1,8 +1,9 @@
 module.exports = {
-  preset: 'ts-jest',
+  transform: { '^.+\\.tsx?$': '@swc/jest' },
+  coverageProvider: 'v8',
   testEnvironment: 'node',
   modulePathIgnorePatterns: ['<rootDir>/dist'],
-  snapshotFormat: {
-    printBasicPrototype: false,
-  },
+  collectCoverageFrom: ['<rootDir>/src/**/*'],
+  coverageThreshold: { global: { branches: 100, functions: 100, lines: 100, statements: 100 } },
+  snapshotFormat: { printBasicPrototype: false },
 }
