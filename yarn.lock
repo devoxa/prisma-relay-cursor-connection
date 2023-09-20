@@ -1108,10 +1108,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/graphql-fields@1.3.5":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@types/graphql-fields/-/graphql-fields-1.3.5.tgz#e1c78bb200a3d20d5a5a4ed4c34d3a09e8b696b6"
-  integrity sha512-F6Nkra4p4MeBRFhg4zfkrnl/2gL4HZdt5lkFgLKZaA+3U/5+eA1dMqSHuSHX7aFUbCFE48ch8qCBXB/udcRhMg==
+"@types/graphql-fields@1.3.6":
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/@types/graphql-fields/-/graphql-fields-1.3.6.tgz#fc73326082f142ac63394f8167d272c21604f74e"
+  integrity sha512-tLiskj9g5ftYgiVxq8VlvBEYDRow23IwY/LMnhljXfWvBhi+LIo9YEMa6AACjgIa3rG+edS9xh3v6Rja2UPbDg==
   dependencies:
     graphql "*"
 
