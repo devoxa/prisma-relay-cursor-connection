@@ -44,8 +44,9 @@ export async function findManyCursorConnection<
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
-    records = await findMany({ cursor, take, skip })
-    totalCount = hasRequestedField('totalCount') ? await aggregate() : -1
+    const results = await Promise.all([findMany({ cursor, take, skip }), hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1)])
+    records = results[0]
+    totalCount = results[1]
 
     // See if we are "after" another record, indicating a previous page
     hasPreviousPage = !!args.after
@@ -64,8 +65,9 @@ export async function findManyCursorConnection<
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
-    records = await findMany({ cursor, take, skip })
-    totalCount = hasRequestedField('totalCount') ? await aggregate() : -1
+    const results = await Promise.all([findMany({ cursor, take, skip }), hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1)])
+    records = results[0]
+    totalCount = results[1]
 
     // See if we are "before" another record, indicating a next page
     hasNextPage = !!args.before
@@ -77,8 +79,12 @@ export async function findManyCursorConnection<
     if (hasPreviousPage) records.shift()
   } else {
     // Execute the underlying query operations
-    records = hasRequestedField('edges') || hasRequestedField('nodes') ? await findMany({}) : []
-    totalCount = hasRequestedField('totalCount') ? await aggregate() : -1
+	const results = await Promise.all([
+		hasRequestedField('edges') || hasRequestedField('nodes') ? findMany({}) : Promise.resolve([]),
+		hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1)
+	])
+    records = results[0]
+    totalCount = results[1]
 
     // Since we are getting all records, there are no pages
     hasNextPage = false
