@@ -44,7 +44,10 @@ export async function findManyCursorConnection<
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
-    const results = await Promise.all([findMany({ cursor, take, skip }), hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1)])
+    const results = await Promise.all([
+      findMany({ cursor, take, skip }),
+      hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1),
+    ])
     records = results[0]
     totalCount = results[1]
 
@@ -65,7 +68,10 @@ export async function findManyCursorConnection<
     const skip = cursor ? 1 : undefined
 
     // Execute the underlying query operations
-    const results = await Promise.all([findMany({ cursor, take, skip }), hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1)])
+    const results = await Promise.all([
+      findMany({ cursor, take, skip }),
+      hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1),
+    ])
     records = results[0]
     totalCount = results[1]
 
@@ -79,10 +85,10 @@ export async function findManyCursorConnection<
     if (hasPreviousPage) records.shift()
   } else {
     // Execute the underlying query operations
-	const results = await Promise.all([
-		hasRequestedField('edges') || hasRequestedField('nodes') ? findMany({}) : Promise.resolve([]),
-		hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1)
-	])
+    const results = await Promise.all([
+      hasRequestedField('edges') || hasRequestedField('nodes') ? findMany({}) : Promise.resolve([]),
+      hasRequestedField('totalCount') ? aggregate() : Promise.resolve(-1),
+    ])
     records = results[0]
     totalCount = results[1]
 
