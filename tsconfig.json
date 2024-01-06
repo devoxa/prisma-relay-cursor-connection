@@ -16,7 +16,7 @@
     "incremental": true,
 
     // Type-Checking Options
-    "lib": ["es2022"],
+    "lib": ["es2023"],
     "strict": true,
     "skipLibCheck": true,
     "strictPropertyInitialization": false,
