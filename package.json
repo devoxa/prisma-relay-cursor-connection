@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@devoxa/eslint-config": "3.0.11",
-    "@devoxa/prettier-config": "2.0.2",
+    "@devoxa/prettier-config": "2.0.3",
     "@prisma/client": "5.13.0",
     "@swc/core": "1.5.0",
     "@swc/jest": "0.2.36",
