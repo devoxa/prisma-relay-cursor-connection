@@ -2145,6 +2145,77 @@ exports[`prisma-relay-cursor-connection number id returns all users 1`] = `
 }
 `;
 
+exports[`prisma-relay-cursor-connection number id returns the first 5 completed todos 1`] = `
+{
+  "edges": [
+    {
+      "cursor": 1,
+      "node": {
+        "email": "user1@email.com",
+        "id": 1,
+      },
+    },
+    {
+      "cursor": 2,
+      "node": {
+        "email": "user2@email.com",
+        "id": 2,
+      },
+    },
+    {
+      "cursor": 3,
+      "node": {
+        "email": "user3@email.com",
+        "id": 3,
+      },
+    },
+    {
+      "cursor": 4,
+      "node": {
+        "email": "user4@email.com",
+        "id": 4,
+      },
+    },
+    {
+      "cursor": 5,
+      "node": {
+        "email": "user5@email.com",
+        "id": 5,
+      },
+    },
+  ],
+  "nodes": [
+    {
+      "email": "user1@email.com",
+      "id": 1,
+    },
+    {
+      "email": "user2@email.com",
+      "id": 2,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
+    },
+    {
+      "email": "user5@email.com",
+      "id": 5,
+    },
+  ],
+  "pageInfo": {
+    "endCursor": 5,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": 1,
+  },
+  "totalCount": 20,
+}
+`;
+
 exports[`prisma-relay-cursor-connection number id returns the first 5 users 1`] = `
 {
   "edges": [

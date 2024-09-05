@@ -184,6 +184,39 @@ describe('prisma-relay-cursor-connection', () => {
 
       expect(result).toMatchSnapshot()
     })
+
+    test('returns the first 5 completed todos', async () => {
+      const baseArgs = {
+        select: { id: true, email: true },
+        where: { email: { contains: '@email' } },
+      }
+
+      const result = await findManyCursorConnection<User, { id: number }>(
+        (args) => client.user.findMany({ ...args, ...baseArgs }),
+        () => client.user.count({ where: baseArgs.where }),
+        { first: 5 }
+      )
+
+      expect(result).toMatchSnapshot()
+
+      // Test that the return types work via TS
+      result.edges[0].node.email
+
+      // @ts-expect-error Typo in selected field
+      result.edges[0].node.emmail
+
+      // @ts-expect-error Not selected field
+      result.edges[0].node.text
+
+      // Test that the return types work via TS
+      result.nodes[0].email
+
+      // @ts-expect-error Typo in selected field
+      result.nodes[0].emmail
+
+      // @ts-expect-error Not selected field
+      result.nodes[0].text
+    })
   })
 
   describe('unique field', () => {
