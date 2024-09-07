@@ -11,16 +11,34 @@ model Todo {
   id          String  @id
   text        String
   isCompleted Boolean @default(false)
+
+  tag   Tag?    @relation(fields: [tagId], references: [id])
+  tagId String?
 }
 
 model User {
   id    Int    @id
   email String @unique
+
+  tag   Tag?    @relation(fields: [tagId], references: [id])
+  tagId String?
 }
 
 model Profile {
   firstname String
   lastname  String
 
+  tag   Tag?    @relation(fields: [tagId], references: [id])
+  tagId String?
+
   @@unique([firstname, lastname])
+}
+
+model Tag {
+  id   String @id
+  text String
+
+  todos    Todo[]
+  users    User[]
+  profiles Profile[]
 }

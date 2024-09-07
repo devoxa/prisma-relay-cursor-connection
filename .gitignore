@@ -3,7 +3,7 @@ dist/
 
 # Tests
 coverage/
-prisma/dev.db
+prisma/dev.db*
 
 # Dependencies
 node_modules/
