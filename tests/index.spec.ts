@@ -3,7 +3,7 @@ import { GraphQLResolveInfo } from 'graphql'
 import graphqlFields from 'graphql-fields'
 import { mocked } from 'jest-mock'
 import { ConnectionArguments, findManyCursorConnection } from '../src'
-import { PROFILE_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
+import { PROFILE_FIXTURES, TAG_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
 
 function encodeCursor<Cursor>(prismaCursor: Cursor) {
   return Buffer.from(JSON.stringify(prismaCursor)).toString('base64')
@@ -31,9 +31,14 @@ describe('prisma-relay-cursor-connection', () => {
 
   describe('string id', () => {
     beforeAll(async () => {
+      await client.tag.deleteMany({})
       await client.todo.deleteMany({})
 
       // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TAG_FIXTURES.length; i++) {
+        await client.tag.create({ data: TAG_FIXTURES[i] })
+      }
+
       for (let i = 0; i !== TODO_FIXTURES.length; i++) {
         await client.todo.create({ data: TODO_FIXTURES[i] })
       }
@@ -88,31 +93,36 @@ describe('prisma-relay-cursor-connection', () => {
 
       expect(result).toMatchSnapshot()
 
-      // Test that the return types work via TS
+      // Test: Selected field
       result.edges[0].node.isCompleted
 
-      // @ts-expect-error Typo in selected field
+      // @ts-expect-error Test: Selected field typo
       result.edges[0].node.isCompletedd
 
-      // @ts-expect-error Not selected field
+      // @ts-expect-error Test: Not selected field
       result.edges[0].node.text
 
-      // Test that the return types work via TS
+      // Test: Selected field
       result.nodes[0].isCompleted
 
-      // @ts-expect-error Typo in selected field
+      // @ts-expect-error Test: Selected field typo
       result.nodes[0].isCompletedd
 
-      // @ts-expect-error Not selected field
+      // @ts-expect-error Test: Not selected field
       result.nodes[0].text
     })
   })
 
   describe('number id', () => {
     beforeAll(async () => {
+      await client.tag.deleteMany({})
       await client.user.deleteMany({})
 
       // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TAG_FIXTURES.length; i++) {
+        await client.tag.create({ data: TAG_FIXTURES[i] })
+      }
+
       for (let i = 0; i !== USER_FIXTURES.length; i++) {
         await client.user.create({ data: USER_FIXTURES[i] })
       }
@@ -199,31 +209,36 @@ describe('prisma-relay-cursor-connection', () => {
 
       expect(result).toMatchSnapshot()
 
-      // Test that the return types work via TS
+      // Test: Selected field
       result.edges[0].node.email
 
-      // @ts-expect-error Typo in selected field
+      // @ts-expect-error Test: Selected field typo
       result.edges[0].node.emmail
 
-      // @ts-expect-error Not selected field
+      // @ts-expect-error Test: Not selected field
       result.edges[0].node.text
 
-      // Test that the return types work via TS
+      // Test: Selected field
       result.nodes[0].email
 
-      // @ts-expect-error Typo in selected field
+      // @ts-expect-error Test: Selected field typo
       result.nodes[0].emmail
 
-      // @ts-expect-error Not selected field
+      // @ts-expect-error Test: Not selected field
       result.nodes[0].text
     })
   })
 
   describe('unique field', () => {
     beforeAll(async () => {
+      await client.tag.deleteMany({})
       await client.user.deleteMany({})
 
       // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TAG_FIXTURES.length; i++) {
+        await client.tag.create({ data: TAG_FIXTURES[i] })
+      }
+
       for (let i = 0; i !== USER_FIXTURES.length; i++) {
         await client.user.create({ data: USER_FIXTURES[i] })
       }
@@ -300,9 +315,14 @@ describe('prisma-relay-cursor-connection', () => {
 
   describe('multi field id', () => {
     beforeAll(async () => {
+      await client.tag.deleteMany({})
       await client.profile.deleteMany({})
 
       // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TAG_FIXTURES.length; i++) {
+        await client.tag.create({ data: TAG_FIXTURES[i] })
+      }
+
       for (let i = 0; i !== PROFILE_FIXTURES.length; i++) {
         await client.profile.create({ data: PROFILE_FIXTURES[i] })
       }
@@ -415,9 +435,14 @@ describe('prisma-relay-cursor-connection', () => {
 
   describe('custom edge fields', () => {
     beforeAll(async () => {
+      await client.tag.deleteMany({})
       await client.todo.deleteMany({})
 
       // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TAG_FIXTURES.length; i++) {
+        await client.tag.create({ data: TAG_FIXTURES[i] })
+      }
+
       for (let i = 0; i !== TODO_FIXTURES.length; i++) {
         await client.todo.create({ data: TODO_FIXTURES[i] })
       }
@@ -481,9 +506,14 @@ describe('prisma-relay-cursor-connection', () => {
 
   describe('requested fields via resolveInfo', () => {
     beforeAll(async () => {
+      await client.tag.deleteMany({})
       await client.todo.deleteMany({})
 
       // Build up the fixtures sequentially so they are in a consistent order
+      for (let i = 0; i !== TAG_FIXTURES.length; i++) {
+        await client.tag.create({ data: TAG_FIXTURES[i] })
+      }
+
       for (let i = 0; i !== TODO_FIXTURES.length; i++) {
         await client.todo.create({ data: TODO_FIXTURES[i] })
       }
@@ -587,7 +617,7 @@ const typecheckForInferredTypes = async () => {
   )) satisfies {
     edges: {
       cursor: string
-      node: { id: string; text: string; isCompleted: boolean }
+      node: { id: string; text: string; isCompleted: boolean; tagId: string | null }
       extraEdgeField: string
     }[]
   }
@@ -605,7 +635,13 @@ const typecheckForInferredTypes = async () => {
   )) satisfies {
     edges: {
       cursor: string
-      node: { id: string; text: string; isCompleted: boolean; extraNodeField: string }
+      node: {
+        id: string
+        text: string
+        isCompleted: boolean
+        extraNodeField: string
+        tagId: string | null
+      }
     }[]
   }
 }
