@@ -10,16 +10,18 @@ import {
 export * from './interfaces'
 
 export async function findManyCursorConnection<
-  Record = { id: string },
-  Cursor = { id: string },
-  Node = Record,
-  CustomEdge extends Edge<Node> = Edge<Node>,
+  TRecord = { id: string },
+  TCursor = { id: string },
+  TNode = TRecord,
+  TCustomEdge extends Edge<TNode> = Edge<TNode>,
 >(
-  findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Record[]>,
+  findMany: (args: PrismaFindManyArguments<TCursor>) => Promise<TRecord[]>,
   aggregate: () => Promise<number>,
-  args: ConnectionArguments = {},
-  pOptions?: Options<Record, Cursor, Node, CustomEdge>
-): Promise<Connection<Node, CustomEdge>> {
+  args?: ConnectionArguments,
+  pOptions?: Options<TRecord, TCursor, TNode, TCustomEdge>
+): Promise<Connection<TNode, TCustomEdge>> {
+  args = args || {}
+
   // Make sure the connection arguments are valid and throw an error otherwise
   /* c8 ignore next 3 */
   if (!validateArgs(args)) {
@@ -30,7 +32,7 @@ export async function findManyCursorConnection<
   const requestedFields = options.resolveInfo && Object.keys(graphqlFields(options.resolveInfo))
   const hasRequestedField = (key: string) => !requestedFields || requestedFields.includes(key)
 
-  let records: Array<Record>
+  let records: Array<TRecord>
   let totalCount: number
   let hasNextPage: boolean
   let hasPreviousPage: boolean
@@ -103,11 +105,11 @@ export async function findManyCursorConnection<
     records.length > 0 ? encodeCursor(records[records.length - 1], options) : undefined
 
   // Allow the recordToEdge function to return a custom edge type which will be inferred
-  type EdgeExtended = typeof options.recordToEdge extends (record: Record) => infer X
-    ? X extends CustomEdge
+  type EdgeExtended = typeof options.recordToEdge extends (record: TRecord) => infer X
+    ? X extends TCustomEdge
       ? X & { cursor: string }
-      : CustomEdge
-    : CustomEdge
+      : TCustomEdge
+    : TCustomEdge
 
   const edges = records.map((record) => {
     return {
