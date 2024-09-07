@@ -79,7 +79,7 @@ describe('prisma-relay-cursor-connection', () => {
       expect(result).toMatchSnapshot()
     })
 
-    test('returns the first 5 completed todos', async () => {
+    test('returns the first 5 filtered todos', async () => {
       const baseArgs = {
         select: { id: true, isCompleted: true },
         where: { isCompleted: true },
@@ -110,6 +110,39 @@ describe('prisma-relay-cursor-connection', () => {
 
       // @ts-expect-error Test: Not selected field
       result.nodes[0].text
+    })
+
+    test('returns the first 5 filtered todos (include)', async () => {
+      const baseArgs = {
+        include: { tag: true },
+        where: { isCompleted: false },
+      }
+
+      const result = await findManyCursorConnection(
+        (args) => client.todo.findMany({ ...args, ...baseArgs }),
+        () => client.todo.count({ where: baseArgs.where }),
+        { first: 5 }
+      )
+
+      expect(result).toMatchSnapshot()
+
+      // Test: Included field
+      result.edges[0].node.tag?.id
+
+      // @ts-expect-error Test: Included field typo
+      result.edges[0].node.tagg?.id
+
+      // @ts-expect-error Test: Not included field
+      result.edges[0].node.text?.id
+
+      // Test: Included field
+      result.nodes[0].tag?.id
+
+      // @ts-expect-error Test: Included field typo
+      result.nodes[0].tagg?.id
+
+      // @ts-expect-error Test: Not included field
+      result.nodes[0].text?.id
     })
   })
 
@@ -195,7 +228,7 @@ describe('prisma-relay-cursor-connection', () => {
       expect(result).toMatchSnapshot()
     })
 
-    test('returns the first 5 completed todos', async () => {
+    test('returns the first 5 filtered users', async () => {
       const baseArgs = {
         select: { id: true, email: true },
         where: { email: { contains: '@email' } },
@@ -226,6 +259,39 @@ describe('prisma-relay-cursor-connection', () => {
 
       // @ts-expect-error Test: Not selected field
       result.nodes[0].text
+    })
+
+    test('returns the first 5 filtered users (include)', async () => {
+      const baseArgs = {
+        include: { tag: true },
+        where: { email: { contains: '@email' } },
+      }
+
+      const result = await findManyCursorConnection<User, { id: number }>(
+        (args) => client.user.findMany({ ...args, ...baseArgs }),
+        () => client.user.count({ where: baseArgs.where }),
+        { first: 5 }
+      )
+
+      expect(result).toMatchSnapshot()
+
+      // Test: Included field
+      result.edges[0].node.tag?.id
+
+      // @ts-expect-error Test: Included field typo
+      result.edges[0].node.tagg?.id
+
+      // @ts-expect-error Test: Not included field
+      result.edges[0].node.text?.id
+
+      // Test: Included field
+      result.nodes[0].tag?.id
+
+      // @ts-expect-error Test: Included field typo
+      result.nodes[0].tagg?.id
+
+      // @ts-expect-error Test: Not included field
+      result.nodes[0].text?.id
     })
   })
 

@@ -2408,7 +2408,104 @@ exports[`prisma-relay-cursor-connection number id returns all users 1`] = `
 }
 `;
 
-exports[`prisma-relay-cursor-connection number id returns the first 5 completed todos 1`] = `
+exports[`prisma-relay-cursor-connection number id returns the first 5 filtered users (include) 1`] = `
+{
+  "edges": [
+    {
+      "cursor": 1,
+      "node": {
+        "email": "user1@email.com",
+        "id": 1,
+        "tag": {
+          "id": "id_01",
+          "text": "Foo",
+        },
+        "tagId": "id_01",
+      },
+    },
+    {
+      "cursor": 2,
+      "node": {
+        "email": "user2@email.com",
+        "id": 2,
+        "tag": null,
+        "tagId": null,
+      },
+    },
+    {
+      "cursor": 3,
+      "node": {
+        "email": "user3@email.com",
+        "id": 3,
+        "tag": null,
+        "tagId": null,
+      },
+    },
+    {
+      "cursor": 4,
+      "node": {
+        "email": "user4@email.com",
+        "id": 4,
+        "tag": null,
+        "tagId": null,
+      },
+    },
+    {
+      "cursor": 5,
+      "node": {
+        "email": "user5@email.com",
+        "id": 5,
+        "tag": null,
+        "tagId": null,
+      },
+    },
+  ],
+  "nodes": [
+    {
+      "email": "user1@email.com",
+      "id": 1,
+      "tag": {
+        "id": "id_01",
+        "text": "Foo",
+      },
+      "tagId": "id_01",
+    },
+    {
+      "email": "user2@email.com",
+      "id": 2,
+      "tag": null,
+      "tagId": null,
+    },
+    {
+      "email": "user3@email.com",
+      "id": 3,
+      "tag": null,
+      "tagId": null,
+    },
+    {
+      "email": "user4@email.com",
+      "id": 4,
+      "tag": null,
+      "tagId": null,
+    },
+    {
+      "email": "user5@email.com",
+      "id": 5,
+      "tag": null,
+      "tagId": null,
+    },
+  ],
+  "pageInfo": {
+    "endCursor": 5,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": 1,
+  },
+  "totalCount": 20,
+}
+`;
+
+exports[`prisma-relay-cursor-connection number id returns the first 5 filtered users 1`] = `
 {
   "edges": [
     {
@@ -4615,7 +4712,114 @@ exports[`prisma-relay-cursor-connection string id returns all todos 1`] = `
 }
 `;
 
-exports[`prisma-relay-cursor-connection string id returns the first 5 completed todos 1`] = `
+exports[`prisma-relay-cursor-connection string id returns the first 5 filtered todos (include) 1`] = `
+{
+  "edges": [
+    {
+      "cursor": "id_01",
+      "node": {
+        "id": "id_01",
+        "isCompleted": false,
+        "tag": {
+          "id": "id_01",
+          "text": "Foo",
+        },
+        "tagId": "id_01",
+        "text": "veritatis molestias qui",
+      },
+    },
+    {
+      "cursor": "id_02",
+      "node": {
+        "id": "id_02",
+        "isCompleted": false,
+        "tag": null,
+        "tagId": null,
+        "text": "occaecati a dolor",
+      },
+    },
+    {
+      "cursor": "id_03",
+      "node": {
+        "id": "id_03",
+        "isCompleted": false,
+        "tag": null,
+        "tagId": null,
+        "text": "ut enim quia",
+      },
+    },
+    {
+      "cursor": "id_07",
+      "node": {
+        "id": "id_07",
+        "isCompleted": false,
+        "tag": null,
+        "tagId": null,
+        "text": "accusamus aut labore",
+      },
+    },
+    {
+      "cursor": "id_11",
+      "node": {
+        "id": "id_11",
+        "isCompleted": false,
+        "tag": null,
+        "tagId": null,
+        "text": "unde et quasi",
+      },
+    },
+  ],
+  "nodes": [
+    {
+      "id": "id_01",
+      "isCompleted": false,
+      "tag": {
+        "id": "id_01",
+        "text": "Foo",
+      },
+      "tagId": "id_01",
+      "text": "veritatis molestias qui",
+    },
+    {
+      "id": "id_02",
+      "isCompleted": false,
+      "tag": null,
+      "tagId": null,
+      "text": "occaecati a dolor",
+    },
+    {
+      "id": "id_03",
+      "isCompleted": false,
+      "tag": null,
+      "tagId": null,
+      "text": "ut enim quia",
+    },
+    {
+      "id": "id_07",
+      "isCompleted": false,
+      "tag": null,
+      "tagId": null,
+      "text": "accusamus aut labore",
+    },
+    {
+      "id": "id_11",
+      "isCompleted": false,
+      "tag": null,
+      "tagId": null,
+      "text": "unde et quasi",
+    },
+  ],
+  "pageInfo": {
+    "endCursor": "id_11",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "startCursor": "id_01",
+  },
+  "totalCount": 9,
+}
+`;
+
+exports[`prisma-relay-cursor-connection string id returns the first 5 filtered todos 1`] = `
 {
   "edges": [
     {
