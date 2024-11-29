@@ -566,8 +566,9 @@ describe('prisma-relay-cursor-connection', () => {
 // These are not real tests which run, but rather a way to ensure that the types are correct
 // when tsc runs
 const typecheckForInferredTypes = async () => {
-  let client: PrismaClient
-    // Default will get the inferred types from prisma
+  const client = new PrismaClient()
+
+  // Default will get the inferred types from prisma
   ;(await findManyCursorConnection(
     (args) => client.todo.findMany(args),
     () => client.todo.count(),
