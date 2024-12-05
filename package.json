@@ -12,12 +12,9 @@
     "test": "jest",
     "format": "prettier --ignore-path='.gitignore' --list-different --write .",
     "format:check": "prettier --ignore-path='.gitignore' --check .",
-    "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.ts'",
+    "lint": "eslint '{src,tests}/**/*.ts'",
     "build": "rm -rf dist/ && tsc",
     "preversion": "yarn build"
-  },
-  "eslintConfig": {
-    "extends": "@devoxa"
   },
   "prettier": "@devoxa/prettier-config",
   "dependencies": {
