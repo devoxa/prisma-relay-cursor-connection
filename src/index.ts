@@ -15,7 +15,7 @@ export async function findManyCursorConnection<
   Node = Record,
   CustomEdge extends Edge<Node> = Edge<Node>,
 >(
-  findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Record[]>,
+  findMany: (args: PrismaFindManyArguments<Cursor>) => Promise<Array<Record>>,
   aggregate: () => Promise<number>,
   args: ConnectionArguments = {},
   pOptions?: Options<Record, Cursor, Node, CustomEdge>
