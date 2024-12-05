@@ -573,7 +573,7 @@ export const typecheckForInferredTypes = async (): Promise<void> => {
     () => client.todo.count(),
     {}
   )) satisfies {
-    edges: { cursor: string; node: { id: string; text: string; isCompleted: boolean } }[]
+    edges: Array<{ cursor: string; node: { id: string; text: string; isCompleted: boolean } }>
   }
 
   // Handles edge type additions
@@ -585,11 +585,11 @@ export const typecheckForInferredTypes = async (): Promise<void> => {
       recordToEdge: (record) => ({ node: record, extraEdgeField: 'Bar' }),
     }
   )) satisfies {
-    edges: {
+    edges: Array<{
       cursor: string
       node: { id: string; text: string; isCompleted: boolean }
       extraEdgeField: string
-    }[]
+    }>
   }
 
   // Handles edge type additions
@@ -603,9 +603,9 @@ export const typecheckForInferredTypes = async (): Promise<void> => {
       }),
     }
   )) satisfies {
-    edges: {
+    edges: Array<{
       cursor: string
       node: { id: string; text: string; isCompleted: boolean; extraNodeField: string }
-    }[]
+    }>
   }
 }
