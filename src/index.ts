@@ -27,8 +27,14 @@ export async function findManyCursorConnection<
   }
 
   const options = mergeDefaultOptions(pOptions)
-  const requestedFields = options.resolveInfo && Object.keys(graphqlFields(options.resolveInfo))
-  const hasRequestedField = (key: string) => !requestedFields || requestedFields.includes(key)
+
+  let requestedFields: Array<string> | undefined = undefined
+  if (options.resolveInfo) {
+    const _graphqlFields = graphqlFields(options.resolveInfo) as { [key: string]: unknown }
+    requestedFields = Object.keys(_graphqlFields)
+  }
+  const hasRequestedField = (key: string): boolean =>
+    !requestedFields || requestedFields.includes(key)
 
   let records: Array<Record>
   let totalCount: number

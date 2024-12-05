@@ -1,6 +1,8 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": { "source.organizeImports": true },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
   "[typescript]": { "editor.formatOnSave": true },
   "[json]": { "editor.formatOnSave": true },
   "[prisma]": { "editor.formatOnSave": true, "editor.defaultFormatter": "Prisma.prisma" },

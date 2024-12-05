@@ -5,11 +5,11 @@ import { mocked } from 'jest-mock'
 import { ConnectionArguments, findManyCursorConnection } from '../src'
 import { PROFILE_FIXTURES, TODO_FIXTURES, USER_FIXTURES } from './fixtures'
 
-function encodeCursor<Cursor>(prismaCursor: Cursor) {
+function encodeCursor<Cursor>(prismaCursor: Cursor): string {
   return Buffer.from(JSON.stringify(prismaCursor)).toString('base64')
 }
 
-function decodeCursor(cursor: string) {
+function decodeCursor<Cursor>(cursor: string): Cursor {
   return JSON.parse(Buffer.from(cursor, 'base64').toString('ascii'))
 }
 
@@ -21,7 +21,7 @@ describe('prisma-relay-cursor-connection', () => {
   jest.setTimeout(10000)
   let client: PrismaClient
 
-  beforeAll(async () => {
+  beforeAll(() => {
     client = new PrismaClient()
   })
 
@@ -89,22 +89,22 @@ describe('prisma-relay-cursor-connection', () => {
       expect(result).toMatchSnapshot()
 
       // Test that the return types work via TS
-      result.edges[0].node.isCompleted
+      expect(result.edges[0].node.isCompleted)
 
       // @ts-expect-error Typo in selected field
-      result.edges[0].node.isCompletedd
+      expect(result.edges[0].node.isCompletedd)
 
       // @ts-expect-error Not selected field
-      result.edges[0].node.text
+      expect(result.edges[0].node.text)
 
       // Test that the return types work via TS
-      result.nodes[0].isCompleted
+      expect(result.nodes[0].isCompleted)
 
       // @ts-expect-error Typo in selected field
-      result.nodes[0].isCompletedd
+      expect(result.nodes[0].isCompletedd)
 
       // @ts-expect-error Not selected field
-      result.nodes[0].text
+      expect(result.nodes[0].text)
     })
   })
 
@@ -200,22 +200,22 @@ describe('prisma-relay-cursor-connection', () => {
       expect(result).toMatchSnapshot()
 
       // Test that the return types work via TS
-      result.edges[0].node.email
+      expect(result.edges[0].node.email)
 
       // @ts-expect-error Typo in selected field
-      result.edges[0].node.emmail
+      expect(result.edges[0].node.emmail)
 
       // @ts-expect-error Not selected field
-      result.edges[0].node.text
+      expect(result.edges[0].node.text)
 
       // Test that the return types work via TS
-      result.nodes[0].email
+      expect(result.nodes[0].email)
 
       // @ts-expect-error Typo in selected field
-      result.nodes[0].emmail
+      expect(result.nodes[0].emmail)
 
       // @ts-expect-error Not selected field
-      result.nodes[0].text
+      expect(result.nodes[0].text)
     })
   })
 
@@ -469,13 +469,13 @@ describe('prisma-relay-cursor-connection', () => {
       expect(result).toMatchSnapshot()
 
       // Test that the node.extraNodeField return types work via TS
-      result.edges[0]?.node.extraNodeField
+      expect(result.edges[0]?.node.extraNodeField)
 
       // Test that the extraEdgeField return type work via TS
-      result.edges[0]?.extraEdgeField
+      expect(result.edges[0]?.extraEdgeField)
 
       // Test that the node.extraNodeField return types work via TS
-      result.nodes[0]?.extraNodeField
+      expect(result.nodes[0]?.extraNodeField)
     })
   })
 
@@ -564,8 +564,7 @@ describe('prisma-relay-cursor-connection', () => {
 })
 
 // These are not real tests which run, but rather a way to ensure that the types are correct
-// when tsc runs
-const typecheckForInferredTypes = async () => {
+export const typecheckForInferredTypes = async (): Promise<void> => {
   const client = new PrismaClient()
 
   // Default will get the inferred types from prisma
@@ -610,5 +609,3 @@ const typecheckForInferredTypes = async () => {
     }[]
   }
 }
-
-typecheckForInferredTypes
