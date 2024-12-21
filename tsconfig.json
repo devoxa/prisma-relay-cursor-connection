@@ -3,7 +3,7 @@
     // Output Options
     "target": "es2022",
     "module": "commonjs",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "noEmitOnError": true,
     "newLine": "lf",
     "outDir": "dist/",
