@@ -34,7 +34,7 @@ export async function findManyCursorConnection<
     requestedFields = Object.keys(_graphqlFields)
   }
   const hasRequestedField = (key: string): boolean =>
-    !requestedFields || requestedFields.includes(key)
+    requestedFields && requestedFields.includes(key)
 
   let records: Array<Record>
   let totalCount: number
