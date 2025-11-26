@@ -23,7 +23,7 @@ jobs:
       - name: 'Setup Node.JS'
         uses: actions/setup-node@v4
         with:
-          node-version: '20.19.5'
+          node-version: '20.19.6'
 
       - name: 'Cache dependencies'
         uses: buildjet/cache@v4
