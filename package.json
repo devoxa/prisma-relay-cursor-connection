@@ -1,7 +1,7 @@
 {
   "name": "@devoxa/prisma-relay-cursor-connection",
   "description": "Extend Prisma's `findMany` method to support Relay Cursor Connections",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "main": "dist/src/index.js",
   "license": "MIT",
   "repository": {
