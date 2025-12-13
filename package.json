@@ -27,7 +27,7 @@
     "@devoxa/eslint-config": "4.0.2",
     "@devoxa/prettier-config": "2.0.3",
     "@prisma/client": "6.19.1",
-    "@swc/core": "1.15.3",
+    "@swc/core": "1.15.4",
     "@swc/jest": "0.2.39",
     "@types/graphql-fields": "1.3.9",
     "@types/jest": "29.5.14",
