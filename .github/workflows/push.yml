@@ -18,15 +18,15 @@ jobs:
 
     steps:
       - name: 'Checkout the repository'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.4.0
 
       - name: 'Setup Node.JS'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.4.0
         with:
           node-version: '20.20.2'
 
       - name: 'Cache dependencies'
-        uses: buildjet/cache@v4
+        uses: buildjet/cache@v4.0.2
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
@@ -41,7 +41,7 @@ jobs:
         run: yarn test --coverage
 
       - name: 'Save test coverage'
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v5.5.5
 
       - name: 'Check code formatting'
         run: yarn format:check
